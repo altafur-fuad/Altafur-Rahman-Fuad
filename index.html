@@ -7,83 +7,53 @@
 <meta name="description" content="Altafur Rahman Fuad — Flutter developer and CS undergraduate at BGC Trust University Bangladesh, building AI-powered agriculture research and full-stack mobile apps.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   DEMON SLAYER x ATTACK ON TITAN — DUAL ANIME THEME
-   Premium Dark Portfolio — Bento Grid & Glassmorphism
+   PROFESSIONAL PORTFOLIO — Warm Cream / Forest Green / Gold
+   Mixed from Olivia Smith + Marino Valerie Demo Styles
    ============================================================ */
 
-/* ========== THEME VARIABLES ========== */
+/* ========== CSS VARIABLES ========== */
 :root {
-  /* Demon Slayer — Tanjiro Hinokami Kagura Theme (Default) */
-  --bg-dark:       #08060a;
-  --bg-deep:       #110c14;
-  --bg-panel:      rgba(18, 12, 22, 0.85);
-  --bg-card:       rgba(22, 16, 28, 0.65);
-  --bg-card-hover: rgba(36, 22, 44, 0.85);
-  --bg-glass:      rgba(255, 255, 255, 0.03);
-  --bg-glass-hover:rgba(255, 255, 255, 0.06);
+  --bg-cream:      #faf7f2;
+  --bg-warm:       #f5f0e8;
+  --bg-card:       #ffffff;
+  --bg-card-alt:   #f0ebe2;
+  --bg-dark:       #1a1a1a;
+  --bg-dark-card:  #232323;
 
-  --text-white:    #f5f0ff;
-  --text-bright:   #d8cce8;
-  --text-dim:      #9a8aad;
-  --text-muted:    #5e5070;
+  --green-deep:    #1a4d2e;
+  --green-mid:     #2d7a4a;
+  --green-light:   #e8f5e9;
+  --green-accent:  #3d9e5c;
 
-  --accent-primary:   #ff6a00;
-  --accent-secondary: #ff2d2d;
-  --accent-glow:      #ffa040;
-  --accent-alt:       #ffd700;
+  --gold:          #d4a039;
+  --gold-light:    #f0d68a;
+  --gold-dark:     #b8882d;
+  --gold-bg:       rgba(212, 160, 57, 0.08);
 
-  --border:        rgba(255, 255, 255, 0.06);
-  --border-accent: rgba(255, 106, 0, 0.25);
-  --border-alt:    rgba(255, 45, 45, 0.25);
-  --border-hover:  rgba(255, 106, 0, 0.5);
-  --glow-primary:  rgba(255, 106, 0, 0.2);
-  --glow-alt:      rgba(255, 45, 45, 0.2);
+  --orange-soft:   #e8824a;
+  --orange-bg:     rgba(232, 130, 74, 0.08);
 
-  --grad-start: var(--accent-primary);
-  --grad-end:   var(--accent-secondary);
+  --text-dark:     #1a1a1a;
+  --text-body:     #4a4a4a;
+  --text-muted:    #8a8a7a;
+  --text-light:    #b0a898;
+  --text-white:    #ffffff;
 
-  /* Layout */
-  --max-w: 1140px;
-  --radius: 16px;
-  --radius-sm: 8px;
-  --radius-xs: 4px;
+  --border:        rgba(26, 26, 26, 0.08);
+  --border-medium: rgba(26, 26, 26, 0.12);
+  --shadow-sm:     0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md:     0 4px 20px rgba(0,0,0,0.06);
+  --shadow-lg:     0 8px 40px rgba(0,0,0,0.08);
+  --shadow-xl:     0 16px 60px rgba(0,0,0,0.1);
 
-  /* Theme transition */
-  --theme-speed: 0.8s;
-}
-
-/* ========== AOT — LEVI SURVEY CORPS THEME ========== */
-body.theme-levi {
-  --bg-dark:       #060a08;
-  --bg-deep:       #0a140e;
-  --bg-panel:      rgba(10, 20, 14, 0.85);
-  --bg-card:       rgba(14, 28, 18, 0.65);
-  --bg-card-hover: rgba(20, 44, 28, 0.85);
-  --bg-glass:      rgba(255, 255, 255, 0.03);
-  --bg-glass-hover:rgba(255, 255, 255, 0.06);
-
-  --text-white:    #ebfff0;
-  --text-bright:   #c0f0d0;
-  --text-dim:      #7ab890;
-  --text-muted:    #507a60;
-
-  --accent-primary:   #00cc66;
-  --accent-secondary: #00ff88;
-  --accent-glow:      #40ffa0;
-  --accent-alt:       #88ddaa;
-
-  --border:        rgba(255, 255, 255, 0.06);
-  --border-accent: rgba(0, 204, 102, 0.25);
-  --border-alt:    rgba(0, 255, 136, 0.25);
-  --border-hover:  rgba(0, 204, 102, 0.5);
-  --glow-primary:  rgba(0, 204, 102, 0.2);
-  --glow-alt:      rgba(0, 255, 136, 0.2);
-
-  --grad-start: var(--accent-primary);
-  --grad-end:   var(--accent-secondary);
+  --max-w: 1180px;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-xs: 8px;
+  --radius-pill: 100px;
 }
 
 /* ========== RESET & BASE ========== */
@@ -91,259 +61,254 @@ body.theme-levi {
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg-dark);
-  color: var(--text-bright);
-  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg-cream);
+  color: var(--text-body);
+  font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.7;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  position: relative;
-  transition: background var(--theme-speed) ease, color var(--theme-speed) ease;
 }
 
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
+ul { list-style: none; }
 
 .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
 @media (max-width: 640px) { .wrap { padding: 0 20px; } }
 
-/* Ambient Background */
-body::before {
-  content: "";
-  position: fixed; inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(ellipse 80% 50% at 10% 20%, var(--glow-primary) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 70%, var(--glow-alt) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 30% at 50% 100%, var(--glow-primary) 0%, transparent 50%);
-  transition: background var(--theme-speed) ease;
-}
-
-/* Subtle dot grid overlay */
-body::after {
-  content: "";
-  position: fixed; inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 32px 32px;
-  transition: background-image var(--theme-speed) ease;
-}
-
 /* ========== SCROLLBAR ========== */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-track { background: var(--bg-cream); }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(to bottom, var(--green-deep), var(--gold));
   border-radius: 3px;
 }
 
-/* ========== CONTENT LAYER ========== */
-#content-wrap {
-  position: relative;
-  z-index: 2;
+/* ========== SELECTION ========== */
+::selection {
+  background: var(--green-deep);
+  color: var(--text-white);
 }
 
-/* ========== THEME TRANSITION FLASH ========== */
-.theme-flash {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0;
-}
-.theme-flash.active {
-  animation: flashBang 0.6s ease-out forwards;
-}
-@keyframes flashBang {
-  0% { opacity: 0; }
-  15% { opacity: 0.7; }
-  100% { opacity: 0; }
-}
-body:not(.theme-levi) .theme-flash {
-  background: radial-gradient(circle, rgba(255,106,0,0.5), rgba(255,45,45,0.3), transparent 70%);
-}
-body.theme-levi .theme-flash {
-  background: radial-gradient(circle, rgba(0,204,102,0.5), rgba(0,255,136,0.3), transparent 70%);
-}
-
-/* ========== NAV ========== */
+/* ========== NAVIGATION ========== */
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(8, 6, 10, 0.8);
-  backdrop-filter: blur(24px) saturate(1.4);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  background: rgba(250, 247, 242, 0.85);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
   border-bottom: 1px solid var(--border);
-  transition: background var(--theme-speed) ease, border-color var(--theme-speed) ease;
+  transition: box-shadow 0.3s ease;
 }
-body.theme-levi header {
-  background: rgba(6, 10, 8, 0.8);
+header.scrolled {
+  box-shadow: var(--shadow-md);
 }
 
 nav.wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 72px;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1rem;
-  color: var(--text-white);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  transition: color var(--theme-speed) ease;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
 }
 
 .brand-icon {
-  width: 32px; height: 32px;
+  width: 38px; height: 38px;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--bg-dark);
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  font-size: 1.1rem;
+  color: var(--text-white);
+  background: var(--green-deep);
   border-radius: var(--radius-xs);
-  box-shadow: 0 0 14px var(--glow-primary);
-  transition: all var(--theme-speed) ease;
+  letter-spacing: 0.02em;
 }
 
-.nav-links {
+.nav-center {
   display: flex;
   gap: 4px;
 }
 
-.nav-links a {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
+.nav-center a {
+  font-size: 0.88rem;
   font-weight: 500;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  padding: 8px 14px;
-  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
   position: relative;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+}
+.nav-center a:hover {
+  color: var(--green-deep);
+  background: var(--green-light);
+}
+.nav-center a.active {
+  color: var(--green-deep);
+  font-weight: 600;
 }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: 4px; left: 50%; transform: translateX(-50%);
-  width: 0; height: 2px;
-  background: var(--accent-primary);
-  box-shadow: 0 0 8px var(--accent-primary);
-  border-radius: 1px;
-  transition: width 0.3s;
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.nav-links a:hover {
+.btn-contact {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--green-deep);
   color: var(--text-white);
-  background: var(--bg-glass-hover);
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  letter-spacing: 0.01em;
 }
-.nav-links a:hover::after,
-.nav-links a.active::after { width: 50%; }
-.nav-links a.active { color: var(--accent-primary); }
+.btn-contact:hover {
+  background: var(--green-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(26, 77, 46, 0.3);
+}
 
 .nav-toggle {
   display: none;
   background: none;
-  border: 1px solid var(--border);
-  color: var(--accent-primary);
-  width: 40px; height: 40px;
+  border: 1px solid var(--border-medium);
+  color: var(--text-dark);
+  width: 42px; height: 42px;
   border-radius: var(--radius-xs);
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   transition: all 0.3s;
 }
-.nav-toggle:hover { border-color: var(--accent-primary); }
+.nav-toggle:hover { border-color: var(--green-deep); color: var(--green-deep); }
 
-@media (max-width: 760px) {
-  .nav-links {
+@media (max-width: 860px) {
+  .nav-center {
     position: absolute;
-    top: 64px; left: 0; right: 0;
-    background: rgba(8, 6, 10, 0.98);
-    backdrop-filter: blur(24px);
-    flex-direction: column; gap: 0;
+    top: 72px; left: 0; right: 0;
+    background: rgba(250, 247, 242, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    gap: 0;
     border-bottom: 1px solid var(--border);
     max-height: 0; overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  body.theme-levi .nav-links {
-    background: rgba(6, 10, 8, 0.98);
-  }
-  .nav-links.open { max-height: 500px; }
-  .nav-links a {
-    padding: 16px 28px;
-    border-bottom: 1px solid var(--border);
+  .nav-center.open { max-height: 500px; }
+  .nav-center a {
+    padding: 16px 32px;
     border-radius: 0;
+    border-bottom: 1px solid var(--border);
   }
-  .nav-links a::after { display: none; }
   .nav-toggle { display: flex; align-items: center; justify-content: center; }
+  .btn-contact { display: none; }
 }
 
 /* ========== SECTION BASE ========== */
 section {
-  position: relative;
-  z-index: 2;
   padding: 100px 0;
+  position: relative;
 }
 @media (max-width: 640px) { section { padding: 70px 0; } }
 
 .section-header {
   margin-bottom: 48px;
 }
-.section-header .overline {
+.section-overline {
   font-family: 'Fira Code', monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-primary);
+  color: var(--green-deep);
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  transition: color var(--theme-speed) ease;
+  gap: 10px;
 }
-.section-header .overline::before {
-  content: "";
-  width: 28px; height: 2px;
-  background: var(--accent-primary);
-  box-shadow: 0 0 8px var(--accent-primary);
-  transition: all var(--theme-speed) ease;
+.section-overline::before {
+  content: "✦";
+  font-size: 0.65rem;
+  color: var(--gold);
 }
-.section-header h2 {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  color: var(--text-white);
-  letter-spacing: -0.01em;
-  transition: color var(--theme-speed) ease;
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
 }
 
-/* ========== GLASS CARD ========== */
-.glass-card {
+/* ========== DECORATIVE ELEMENTS ========== */
+.star-decoration {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+.star-decoration::before,
+.star-decoration::after {
+  content: "✦";
+}
+
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background: var(--border-medium);
+  margin: 0;
+}
+
+.dashed-border {
+  border: 2px dashed var(--border-medium);
+}
+
+/* ========== CARDS ========== */
+.card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  padding: 28px;
   transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
 }
-.glass-card:hover {
-  border-color: var(--border-accent);
-  background: var(--bg-card-hover);
-  box-shadow: 0 8px 32px var(--glow-primary), 0 0 0 1px var(--border-accent);
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  border-color: var(--border-medium);
+}
+
+.card-alt {
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+.card-alt:hover {
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+}
+
+.card-dark {
+  background: var(--bg-dark);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 28px;
+  color: var(--text-white);
 }
 
 /* ========== HERO ========== */
@@ -351,367 +316,390 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 64px;
-  position: relative;
+  padding-top: 72px;
+  background: var(--bg-cream);
   overflow: hidden;
+  position: relative;
 }
 
-/* Kanji Background Watermark */
-.hero::before {
-  content: "炎柱鬼滅";
+/* Large watermark text */
+.hero-watermark {
   position: absolute;
-  right: -20px; top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: clamp(8rem, 20vw, 16rem);
-  color: rgba(255, 106, 0, 0.02);
-  writing-mode: vertical-rl;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(6rem, 18vw, 16rem);
+  color: rgba(26, 77, 46, 0.03);
+  letter-spacing: 0.05em;
   pointer-events: none;
   user-select: none;
-  line-height: 1;
-  transition: color var(--theme-speed) ease;
-}
-body.theme-levi .hero::before {
-  content: "自由翼兵";
-  color: rgba(0, 204, 102, 0.02);
+  white-space: nowrap;
+  z-index: 0;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 860px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero::before { display: none; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
 }
 
 .hero-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+@media (max-width: 860px) {
+  .hero-badges { justify-content: center; }
 }
 
-.badge {
+.hero-badge {
   font-family: 'Fira Code', monospace;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 100px;
-  transition: all var(--theme-speed) ease;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.badge.primary {
-  border: 1px solid var(--accent-primary);
-  color: var(--accent-primary);
-  background: rgba(255, 106, 0, 0.08);
-  box-shadow: 0 0 12px var(--glow-primary);
+.hero-badge.green {
+  border: 1px solid var(--green-deep);
+  color: var(--green-deep);
+  background: rgba(26, 77, 46, 0.06);
 }
-body.theme-levi .badge.primary {
-  background: rgba(0, 204, 102, 0.08);
+.hero-badge.gold {
+  border: 1px solid var(--gold);
+  color: var(--gold-dark);
+  background: var(--gold-bg);
 }
-.badge.secondary {
-  border: 1px solid var(--accent-secondary);
-  color: var(--accent-secondary);
-  background: rgba(255, 45, 45, 0.08);
-  box-shadow: 0 0 12px var(--glow-alt);
+
+.hero-hello {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-body);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-body.theme-levi .badge.secondary {
-  background: rgba(0, 255, 136, 0.08);
+@media (max-width: 860px) {
+  .hero-hello { justify-content: center; }
 }
 
 .hero-name {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--text-white);
-  transition: text-shadow var(--theme-speed) ease, color var(--theme-speed) ease;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--text-dark);
+  margin-bottom: 6px;
 }
-
 .hero-name .accent {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-glow), var(--accent-secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background var(--theme-speed) ease;
+  color: var(--green-deep);
+  position: relative;
+}
+.hero-name .accent::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--gold-light);
+  border-radius: 3px;
+  z-index: -1;
+  opacity: 0.6;
 }
 
-.tagline {
-  margin-top: 20px;
-  font-size: 1.05rem;
-  color: var(--text-bright);
-  max-width: 50ch;
-  line-height: 1.75;
-  font-weight: 400;
-  transition: color var(--theme-speed) ease;
+.hero-role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.tagline .typed-text { color: var(--accent-primary); transition: color var(--theme-speed) ease; }
-.tagline .cursor-blink {
+@media (max-width: 860px) {
+  .hero-role { justify-content: center; }
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--text-body);
+  max-width: 52ch;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.hero-desc .typed-text { color: var(--green-deep); font-weight: 500; }
+.hero-desc .cursor-blink {
   display: inline-block;
   width: 2px; height: 1.1em;
-  background: var(--accent-primary);
-  box-shadow: 0 0 8px var(--accent-primary);
+  background: var(--green-deep);
   margin-left: 2px;
   vertical-align: text-bottom;
   animation: blink 1s step-end infinite;
-  transition: background var(--theme-speed) ease, box-shadow var(--theme-speed) ease;
 }
 
 .hero-meta {
-  margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.8rem;
-  color: var(--text-dim);
-  transition: color var(--theme-speed) ease;
+  gap: 6px 18px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
 }
-.hero-meta span b {
-  color: var(--text-white);
-  font-weight: 600;
+.hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.hero-meta span::before {
-  content: "🔥 ";
-  color: var(--accent-primary);
-}
-body.theme-levi .hero-meta span::before {
-  content: "⚔️ ";
+.hero-meta .dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
 }
 
 .hero-cta {
-  margin-top: 32px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
 }
+@media (max-width: 860px) {
+  .hero-cta { justify-content: center; }
+}
 
-.btn {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
+.btn-primary {
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 14px 28px;
-  border-radius: var(--radius-sm);
-  border: 1px solid;
+  padding: 14px 30px;
+  border-radius: var(--radius-pill);
+  background: var(--green-deep);
+  color: var(--text-white);
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
+  border: 2px solid var(--green-deep);
   transition: all 0.35s ease;
-}
-
-.btn.primary {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  border-color: transparent;
-  color: #fff;
-  box-shadow: 0 4px 20px var(--glow-primary);
-  font-weight: 700;
-}
-.btn.primary:hover {
-  box-shadow: 0 6px 30px var(--glow-primary), 0 0 20px var(--glow-alt);
-  transform: translateY(-3px);
-}
-
-.btn.ghost {
-  background: var(--bg-glass);
-  border-color: var(--border);
-  color: var(--text-white);
-  backdrop-filter: blur(8px);
-}
-body.theme-levi .btn.ghost {
-  background: var(--bg-glass);
-}
-.btn.ghost:hover {
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
-  box-shadow: 0 4px 20px var(--glow-primary);
-  transform: translateY(-3px);
-}
-
-/* ========== FLIP CARD PORTRAIT ========== */
-.portrait-card {
-  position: relative;
-  perspective: 1200px;
   cursor: pointer;
 }
-
-.flip-hint {
-  position: absolute;
-  bottom: -36px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Fira Code', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-primary);
-  opacity: 0.7;
-  animation: hintPulse 2s ease-in-out infinite;
-  white-space: nowrap;
-  transition: color var(--theme-speed) ease;
-}
-@keyframes hintPulse {
-  0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
-  50% { opacity: 1; transform: translateX(-50%) translateY(3px); }
+.btn-primary:hover {
+  background: var(--green-mid);
+  border-color: var(--green-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(26, 77, 46, 0.25);
 }
 
-.portrait-flipper {
+.btn-outline {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--border-medium);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  border-color: var(--green-deep);
+  color: var(--green-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* Hero Photo */
+.hero-photo-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo-frame {
   position: relative;
   width: 100%;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-}
-.portrait-card.flipped .portrait-flipper {
-  transform: rotateY(180deg);
-}
-
-.portrait-front,
-.portrait-back {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: var(--radius);
-  padding: 10px;
-  position: relative;
-  transition: border-color var(--theme-speed) ease, box-shadow var(--theme-speed) ease;
-}
-
-.portrait-front {
-  background: var(--bg-card);
-  border: 2px solid var(--accent-primary);
-  box-shadow: 0 8px 40px var(--glow-primary), 0 0 60px var(--glow-alt);
-}
-
-.portrait-back {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  background: rgba(10, 20, 14, 0.85);
-  border: 2px solid #00cc66;
-  box-shadow: 0 8px 40px rgba(0, 204, 102, 0.3), 0 0 60px rgba(0, 255, 136, 0.2);
-  transform: rotateY(180deg);
-}
-
-.portrait-front img,
-.portrait-back img {
-  border-radius: calc(var(--radius) - 4px);
-  width: 100%;
+  max-width: 400px;
   aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 3px solid var(--green-deep);
+  box-shadow: var(--shadow-xl);
+}
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: contrast(1.05) saturate(1.1);
+  filter: contrast(1.02) saturate(1.05);
 }
 
-/* Anime Frame Corners */
-.portrait-front::before,
-.portrait-front::after,
-.portrait-back::before,
-.portrait-back::after {
-  content: "";
+.hero-photo-badge {
   position: absolute;
-  width: 32px; height: 32px;
-  transition: all 0.4s;
-}
-.portrait-front::before {
-  top: -2px; left: -2px;
-  border: 3px solid var(--accent-primary);
-  border-right: none; border-bottom: none;
-  border-radius: var(--radius-xs) 0 0 0;
-}
-.portrait-front::after {
-  bottom: -2px; right: -2px;
-  border: 3px solid var(--accent-secondary);
-  border-left: none; border-top: none;
-  border-radius: 0 0 var(--radius-xs) 0;
-}
-.portrait-back::before {
-  top: -2px; left: -2px;
-  border: 3px solid #00cc66;
-  border-right: none; border-bottom: none;
-  border-radius: var(--radius-xs) 0 0 0;
-}
-.portrait-back::after {
-  bottom: -2px; right: -2px;
-  border: 3px solid #00ff88;
-  border-left: none; border-top: none;
-  border-radius: 0 0 var(--radius-xs) 0;
-}
-
-.portrait-card:hover .portrait-front::before,
-.portrait-card:hover .portrait-front::after,
-.portrait-card:hover .portrait-back::before,
-.portrait-card:hover .portrait-back::after {
-  width: 44px; height: 44px;
-}
-
-.portrait-tag {
-  position: absolute;
-  bottom: 0; left: 20px;
-  background: var(--bg-dark);
-  border: 1px solid var(--accent-primary);
-  padding: 6px 16px;
+  bottom: 16px;
+  left: 16px;
+  background: var(--green-deep);
+  color: var(--text-white);
   font-family: 'Fira Code', monospace;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent-primary);
-  border-radius: var(--radius-xs) var(--radius-xs) 0 0;
-  box-shadow: 0 0 14px var(--glow-primary);
-  transition: all var(--theme-speed) ease;
-}
-.portrait-back .portrait-tag {
-  color: #00cc66;
-  border-color: #00cc66;
-  box-shadow: 0 0 14px rgba(0, 204, 102, 0.3);
-}
-
-/* ========== THEME INDICATOR ========== */
-.theme-indicator {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 200;
+  padding: 8px 16px;
+  border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: var(--bg-panel);
-  border: 1px solid var(--border-accent);
-  padding: 10px 18px;
-  border-radius: 100px;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent-primary);
-  box-shadow: 0 4px 20px var(--glow-primary);
-  backdrop-filter: blur(16px);
-  transition: all var(--theme-speed) ease;
-  cursor: pointer;
-  user-select: none;
+  gap: 8px;
 }
-.theme-indicator:hover {
-  box-shadow: 0 4px 30px var(--glow-primary), 0 0 20px var(--glow-alt);
-  transform: translateY(-2px);
-}
-.theme-indicator .dot {
+.hero-photo-badge .pulse-dot {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--accent-primary);
-  box-shadow: 0 0 8px var(--accent-primary);
+  background: #4ade80;
   animation: pulse 2s ease-in-out infinite;
+}
+
+/* Decorative corners on photo */
+.hero-photo-wrap::before,
+.hero-photo-wrap::after {
+  content: "";
+  position: absolute;
+  width: 60px; height: 60px;
+  border: 3px solid var(--gold);
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+.hero-photo-wrap::before {
+  top: -12px; right: -12px;
+  border-left: none; border-bottom: none;
+  border-radius: 0 var(--radius-xs) 0 0;
+}
+.hero-photo-wrap::after {
+  bottom: -12px; left: -12px;
+  border-right: none; border-top: none;
+  border-radius: 0 0 0 var(--radius-xs);
+}
+.hero-photo-wrap:hover::before,
+.hero-photo-wrap:hover::after {
+  width: 80px; height: 80px;
+}
+
+/* ========== STATS BAR ========== */
+.stats-bar {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 3;
+  box-shadow: var(--shadow-lg);
+}
+@media (max-width: 760px) {
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+    margin-top: -20px;
+  }
+}
+
+.stat-item {
+  text-align: center;
+  position: relative;
+}
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: var(--border-medium);
+}
+@media (max-width: 760px) {
+  .stat-item:nth-child(2)::after { display: none; }
+}
+
+.stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  color: var(--green-deep);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+.stat-number .plus {
+  color: var(--gold);
+  font-size: 1.8rem;
+}
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========== MARQUEE BANNER ========== */
+.marquee-banner {
+  background: var(--green-deep);
+  padding: 16px 0;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-track {
+  display: flex;
+  animation: marqueeScroll 25s linear infinite;
+  width: max-content;
+}
+.marquee-track span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-white);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+}
+.marquee-track .star {
+  color: var(--gold-light);
+  font-size: 0.7rem;
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ========== ABOUT — BENTO GRID ========== */
 .about-intro {
-  color: var(--text-bright);
   font-size: 1.05rem;
+  color: var(--text-body);
   line-height: 1.85;
   max-width: 72ch;
   margin-bottom: 40px;
-  transition: color var(--theme-speed) ease;
+}
+.about-intro strong {
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 .bento-grid {
@@ -727,118 +715,224 @@ body.theme-levi .btn.ghost {
 }
 
 .bento-card {
-  padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
-.bento-card.span-2 {
-  grid-column: span 2;
-}
+.bento-card.span-2 { grid-column: span 2; }
 @media (max-width: 520px) {
   .bento-card.span-2 { grid-column: span 1; }
 }
 
-.bento-card .bento-icon {
-  font-size: 1.8rem;
+.bento-icon {
+  font-size: 1.6rem;
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.bento-card .bento-label {
+.bento-label {
   font-family: 'Fira Code', monospace;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-primary);
-  transition: color var(--theme-speed) ease;
+  color: var(--green-deep);
+  font-weight: 500;
 }
-.bento-card .bento-value {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.1rem;
-  color: var(--text-white);
+.bento-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
   letter-spacing: -0.01em;
-  transition: color var(--theme-speed) ease;
 }
-.bento-card .bento-desc {
-  font-size: 0.88rem;
-  color: var(--text-dim);
+.bento-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
   line-height: 1.6;
-  transition: color var(--theme-speed) ease;
 }
 
+/* ========== SERVICES / WHAT I DO ========== */
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.view-all-btn {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  border: 1px solid var(--green-deep);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+.view-all-btn:hover {
+  background: var(--green-deep);
+  color: var(--text-white);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 800px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+.service-card {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--green-deep), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: var(--green-light);
+  border: 1px solid rgba(26, 77, 46, 0.1);
+  transition: all 0.35s ease;
+}
+.service-card:hover .service-icon {
+  background: var(--green-deep);
+  transform: translateY(-2px) scale(1.05);
+}
+.service-card:hover .service-icon-text {
+  filter: brightness(10);
+}
+
+.service-card h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
+}
+.service-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+.service-learn-more {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+  transition: gap 0.3s ease;
+}
+.service-learn-more:hover { gap: 8px; }
+
 /* ========== EDUCATION ========== */
-.edu-list { display: flex; flex-direction: column; gap: 12px; }
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
 .edu-row {
   display: grid;
-  grid-template-columns: 120px 1fr auto;
+  grid-template-columns: 130px 1fr auto;
   gap: 24px;
   align-items: center;
-  padding: 24px;
-  transition: all 0.35s;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
 }
+.edu-row::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 3px; height: 100%;
+  background: var(--green-deep);
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+}
+.edu-row:hover::before {
+  transform: scaleY(1);
+}
+
 @media (max-width: 700px) {
-  .edu-row { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
+  .edu-row { grid-template-columns: 1fr; gap: 10px; padding: 22px; }
 }
 
 .edu-year {
   font-family: 'Fira Code', monospace;
   font-size: 0.85rem;
-  color: var(--accent-primary);
-  transition: color var(--theme-speed) ease;
+  font-weight: 500;
+  color: var(--green-deep);
 }
-
 .edu-name h3 {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1rem;
-  color: var(--text-white);
-  transition: color var(--theme-speed) ease;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.15rem;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
 }
 .edu-name p {
   margin-top: 4px;
-  color: var(--text-dim);
+  color: var(--text-muted);
   font-size: 0.88rem;
-  transition: color var(--theme-speed) ease;
 }
 
 .gpa-badge {
   font-family: 'Fira Code', monospace;
   font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  color: var(--accent-secondary);
-  border: 1px solid var(--accent-secondary);
-  padding: 6px 14px;
-  border-radius: 100px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  border: 1px solid var(--gold);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
   white-space: nowrap;
-  background: rgba(255, 45, 45, 0.08);
-  box-shadow: 0 0 10px var(--glow-alt);
-  transition: all var(--theme-speed) ease;
-}
-body.theme-levi .gpa-badge {
-  background: rgba(0, 255, 136, 0.08);
+  background: var(--gold-bg);
 }
 
 /* ========== RESEARCH ========== */
 .thesis-card {
-  background: var(--bg-panel);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--border-accent);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 40px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-  transition: all var(--theme-speed) ease;
+  box-shadow: var(--shadow-sm);
 }
-
 .thesis-card::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
-  width: 3px; height: 100%;
-  background: linear-gradient(to bottom, var(--accent-primary), var(--accent-glow), var(--accent-secondary));
-  box-shadow: 0 0 15px var(--glow-primary);
-  transition: all var(--theme-speed) ease;
+  width: 4px; height: 100%;
+  background: linear-gradient(to bottom, var(--green-deep), var(--gold), var(--green-mid));
 }
 
 .thesis-status {
@@ -847,87 +941,70 @@ body.theme-levi .gpa-badge {
   gap: 8px;
   font-family: 'Fira Code', monospace;
   font-size: 0.75rem;
+  font-weight: 500;
   letter-spacing: 0.08em;
-  color: var(--accent-primary);
-  border: 1px solid var(--accent-primary);
+  color: var(--green-deep);
+  border: 1px solid var(--green-deep);
   padding: 6px 16px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   margin-bottom: 20px;
-  background: rgba(255, 106, 0, 0.08);
-  transition: all var(--theme-speed) ease;
-}
-body.theme-levi .thesis-status {
-  background: rgba(0, 204, 102, 0.08);
+  background: rgba(26, 77, 46, 0.05);
 }
 .thesis-status::before {
   content: "";
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--accent-primary);
-  box-shadow: 0 0 8px var(--accent-primary);
+  background: var(--green-mid);
   animation: pulse 2s ease-in-out infinite;
 }
 
 .thesis-card h3 {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.6rem;
-  margin-bottom: 8px;
-  color: var(--text-white);
-  letter-spacing: 0.01em;
-  transition: color var(--theme-speed) ease;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
 }
-
 .thesis-sub {
-  color: var(--accent-primary);
+  color: var(--green-deep);
   font-size: 0.95rem;
   margin-bottom: 16px;
   font-weight: 600;
-  transition: color var(--theme-speed) ease;
 }
-
 .thesis-card p.desc {
-  color: var(--text-bright);
+  color: var(--text-body);
   max-width: 72ch;
   margin-bottom: 24px;
   line-height: 1.85;
   font-size: 0.95rem;
-  transition: color var(--theme-speed) ease;
 }
 
 .branch-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
-
 .btag {
   font-family: 'Fira Code', monospace;
   font-size: 0.72rem;
   padding: 6px 14px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   border: 1px solid;
+  font-weight: 500;
   transition: all 0.3s;
 }
 .btag.dis {
-  color: var(--accent-primary);
-  border-color: var(--accent-primary);
-  background: rgba(255, 106, 0, 0.08);
-}
-body.theme-levi .btag.dis {
-  background: rgba(0, 204, 102, 0.08);
+  color: var(--green-deep);
+  border-color: var(--green-deep);
+  background: rgba(26, 77, 46, 0.06);
 }
 .btag.pest {
-  color: var(--accent-secondary);
-  border-color: var(--accent-secondary);
-  background: rgba(255, 45, 45, 0.08);
-}
-body.theme-levi .btag.pest {
-  background: rgba(0, 255, 136, 0.08);
+  color: var(--gold-dark);
+  border-color: var(--gold);
+  background: var(--gold-bg);
 }
 
 .thesis-links { display: flex; gap: 20px; flex-wrap: wrap; }
 .thesis-links a {
-  font-family: 'Inter', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--accent-primary);
+  color: var(--green-deep);
   position: relative;
   transition: all 0.3s;
 }
@@ -935,40 +1012,38 @@ body.theme-levi .btag.pest {
   content: "";
   position: absolute;
   bottom: -2px; left: 0;
-  width: 100%; height: 1px;
-  background: var(--accent-primary);
-  opacity: 0.3;
-  transition: opacity 0.3s;
+  width: 100%; height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
-.thesis-links a:hover { color: var(--text-white); }
-.thesis-links a:hover::after { opacity: 1; }
+.thesis-links a:hover::after { transform: scaleX(1); }
 
 .research-sub-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px; margin-top: 24px;
+  gap: 16px;
+  margin-top: 24px;
 }
 @media (max-width: 700px) { .research-sub-grid { grid-template-columns: 1fr; } }
 
-.research-sub {
-  padding: 24px;
-}
+.research-sub { padding: 24px; }
 .research-sub .tag {
   font-family: 'Fira Code', monospace;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
-  color: var(--accent-secondary);
+  color: var(--gold-dark);
   text-transform: uppercase;
-  transition: color var(--theme-speed) ease;
+  font-weight: 500;
 }
 .research-sub h4 {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.05rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
   margin: 10px 0 8px;
-  color: var(--text-white);
-  transition: color var(--theme-speed) ease;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
 }
-.research-sub p { color: var(--text-dim); font-size: 0.88rem; transition: color var(--theme-speed) ease; }
+.research-sub p { color: var(--text-muted); font-size: 0.88rem; }
 
 /* ========== PROJECTS ========== */
 .proj-grid {
@@ -980,92 +1055,90 @@ body.theme-levi .btag.pest {
 
 .proj-card {
   padding: 28px;
-  display: flex; flex-direction: column; gap: 14px;
-  position: relative; overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
 }
-
 .proj-card::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
-  opacity: 0;
-  transition: opacity 0.4s, background var(--theme-speed) ease;
+  height: 3px;
+  background: linear-gradient(to right, var(--green-deep), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
 }
-.proj-card:hover::before { opacity: 1; }
+.proj-card:hover::before { transform: scaleX(1); }
 
-.proj-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.proj-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
 
 .proj-card h3 {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.1rem;
-  color: var(--text-white);
-  transition: color var(--theme-speed) ease;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
 }
-
 .proj-status {
   font-family: 'Fira Code', monospace;
   font-size: 0.7rem;
   letter-spacing: 0.06em;
   padding: 4px 12px;
-  border-radius: 100px;
-  border: 1px solid var(--border);
-  color: var(--text-dim);
-  white-space: nowrap; flex-shrink: 0;
-  transition: all var(--theme-speed) ease;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-medium);
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 500;
 }
 .proj-status.live {
-  color: var(--accent-primary);
-  border-color: var(--accent-primary);
-  background: rgba(255, 106, 0, 0.08);
-  box-shadow: 0 0 10px var(--glow-primary);
-}
-body.theme-levi .proj-status.live {
-  background: rgba(0, 204, 102, 0.08);
+  color: var(--green-deep);
+  border-color: var(--green-deep);
+  background: rgba(26, 77, 46, 0.06);
 }
 .proj-status.live::before {
   content: "";
   display: inline-block;
   width: 5px; height: 5px;
   border-radius: 50%;
-  background: var(--accent-primary);
+  background: var(--green-mid);
   margin-right: 6px;
   animation: pulse 2s ease-in-out infinite;
 }
 
-.proj-card p { color: var(--text-bright); font-size: 0.9rem; flex: 1; transition: color var(--theme-speed) ease; }
+.proj-card p {
+  color: var(--text-body);
+  font-size: 0.9rem;
+  flex: 1;
+}
 .proj-stack {
   font-family: 'Fira Code', monospace;
   font-size: 0.72rem;
-  color: var(--accent-secondary);
-  transition: color var(--theme-speed) ease;
+  color: var(--gold-dark);
+  font-weight: 500;
 }
 .proj-link {
-  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--accent-primary);
+  color: var(--green-deep);
   width: fit-content;
-  transition: all 0.3s;
-  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.3s ease;
 }
-.proj-link::after {
-  content: "";
-  position: absolute;
-  bottom: -2px; left: 0;
-  width: 100%; height: 1px;
-  background: var(--accent-primary);
-  opacity: 0.3;
-  transition: opacity 0.3s;
-}
-.proj-link:hover { color: var(--text-white); }
-.proj-link:hover::after { opacity: 1; }
+.proj-link:hover { gap: 8px; }
 
 .proj-card.full { grid-column: 1 / -1; }
 
-/* Featured project — Lumio */
+/* Featured Lumio */
 .proj-featured {
   grid-column: 1 / -1;
   padding: 0;
@@ -1080,25 +1153,42 @@ body.theme-levi .proj-status.live {
   .proj-featured-inner { grid-template-columns: 1fr; }
 }
 .proj-featured-content {
-  padding: 32px;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 .proj-featured-visual {
-  padding: 24px;
+  padding: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(255,106,0,0.05), rgba(255,45,45,0.05));
+  background: linear-gradient(135deg, rgba(26,77,46,0.04), rgba(212,160,57,0.04));
   border-left: 1px solid var(--border);
-  transition: background var(--theme-speed) ease;
-}
-body.theme-levi .proj-featured-visual {
-  background: linear-gradient(135deg, rgba(0,204,102,0.05), rgba(0,255,136,0.05));
 }
 @media (max-width: 760px) {
   .proj-featured-visual { border-left: none; border-top: 1px solid var(--border); }
+}
+
+.lumio-features {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 4px 0;
+}
+.lumio-features li {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+.lumio-features li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--green-deep);
+  font-weight: 700;
 }
 
 .feature-tags {
@@ -1112,61 +1202,64 @@ body.theme-levi .proj-featured-visual {
   font-size: 0.65rem;
   letter-spacing: 0.04em;
   padding: 4px 10px;
-  border-radius: 100px;
-  border: 1px solid var(--border);
-  color: var(--text-dim);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-medium);
+  color: var(--text-muted);
+  font-weight: 500;
   transition: all 0.3s;
 }
 .feature-tag:hover {
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
+  border-color: var(--green-deep);
+  color: var(--green-deep);
+  background: var(--green-light);
 }
 
-/* ========== SKILLS — CARD GRID ========== */
-.skills-card-grid {
+/* ========== SKILLS ========== */
+.skills-highlight-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
-@media (max-width: 800px) { .skills-card-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .skills-card-grid { grid-template-columns: 1fr; } }
+@media (max-width: 800px) { .skills-highlight-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .skills-highlight-grid { grid-template-columns: 1fr; } }
 
-.skill-card {
+.skill-highlight {
   padding: 28px 24px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
-.skill-card .skill-icon {
+.skill-highlight .sh-icon {
   width: 52px; height: 52px;
-  border-radius: 14px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  background: var(--bg-glass);
-  border: 1px solid var(--border);
-  transition: all 0.35s;
+  background: var(--green-light);
+  border: 1px solid rgba(26, 77, 46, 0.1);
+  transition: all 0.35s ease;
 }
-.skill-card:hover .skill-icon {
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 20px var(--glow-primary);
+.skill-highlight:hover .sh-icon {
+  background: var(--green-deep);
   transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(26, 77, 46, 0.2);
 }
-.skill-card h4 {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: 0.95rem;
-  color: var(--text-white);
-  transition: color var(--theme-speed) ease;
+.skill-highlight:hover .sh-icon-inner { filter: brightness(10); }
+
+.skill-highlight h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
 }
-.skill-card p {
+.skill-highlight p {
   font-size: 0.82rem;
-  color: var(--text-dim);
+  color: var(--text-muted);
   line-height: 1.6;
-  transition: color var(--theme-speed) ease;
 }
 
 .skills-detail-grid {
@@ -1176,47 +1269,107 @@ body.theme-levi .proj-featured-visual {
 }
 @media (max-width: 700px) { .skills-detail-grid { grid-template-columns: 1fr; } }
 
-.skill-group {
-  padding: 28px;
-}
+.skill-group { padding: 28px; }
 .skill-group h3 {
   font-family: 'Fira Code', monospace;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--accent-primary);
+  color: var(--green-deep);
   margin-bottom: 16px;
-  transition: color var(--theme-speed) ease;
+  font-weight: 600;
 }
-
 .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
-
 .pill {
   font-family: 'Fira Code', monospace;
   font-size: 0.75rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-medium);
   padding: 6px 14px;
-  border-radius: 100px;
-  color: var(--text-white);
-  background: var(--bg-glass);
+  border-radius: var(--radius-pill);
+  color: var(--text-dark);
+  background: var(--bg-cream);
+  font-weight: 500;
   transition: all 0.3s;
 }
 .pill:hover {
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
-  box-shadow: 0 0 14px var(--glow-primary);
+  border-color: var(--green-deep);
+  color: var(--green-deep);
+  background: var(--green-light);
   transform: translateY(-1px);
 }
-
 .pill.learning {
-  color: var(--text-dim);
+  color: var(--text-muted);
   border-style: dashed;
 }
 .pill.learning:hover {
-  border-color: var(--accent-secondary);
-  color: var(--accent-secondary);
+  border-color: var(--gold);
+  color: var(--gold-dark);
   border-style: solid;
-  box-shadow: 0 0 14px var(--glow-alt);
+  background: var(--gold-bg);
+}
+
+/* ========== VISION SECTION ========== */
+.vision-section {
+  background: var(--bg-dark);
+  color: var(--text-white);
+}
+.vision-section .section-overline {
+  color: var(--gold-light);
+}
+.vision-section .section-overline::before {
+  color: var(--gold);
+}
+.vision-section .section-title {
+  color: var(--text-white);
+}
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .vision-grid { grid-template-columns: 1fr; }
+}
+
+.vision-text p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+}
+.vision-text strong {
+  color: var(--gold-light);
+}
+
+.vision-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+.vision-card .vision-icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: rgba(212, 160, 57, 0.1);
+  border: 1px solid rgba(212, 160, 57, 0.2);
+  margin-bottom: 16px;
+}
+.vision-card h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  color: var(--text-white);
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+.vision-card p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
 }
 
 /* ========== CONTACT ========== */
@@ -1224,16 +1377,16 @@ body.theme-levi .proj-featured-visual {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  align-items: start;
 }
 @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
 
 .contact-note {
-  color: var(--text-bright);
+  color: var(--text-body);
   font-size: 1rem;
   max-width: 48ch;
   margin-bottom: 24px;
   line-height: 1.8;
-  transition: color var(--theme-speed) ease;
 }
 
 .contact-list .c-row {
@@ -1241,108 +1394,150 @@ body.theme-levi .proj-featured-visual {
   justify-content: space-between;
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
-  font-family: 'Fira Code', monospace;
-  font-size: 0.82rem;
-  gap: 16px; flex-wrap: wrap;
+  font-size: 0.88rem;
+  gap: 16px;
+  flex-wrap: wrap;
   transition: all 0.3s;
 }
 .contact-list .c-row:first-child { border-top: 1px solid var(--border); }
-.contact-list .c-row:hover { background: rgba(255, 106, 0, 0.03); padding-left: 8px; }
-body.theme-levi .contact-list .c-row:hover { background: rgba(0, 204, 102, 0.03); }
-.c-key { color: var(--text-dim); transition: color var(--theme-speed) ease; }
-.c-val { color: var(--text-white); font-weight: 600; transition: color var(--theme-speed) ease; }
+.contact-list .c-row:hover {
+  background: rgba(26, 77, 46, 0.03);
+  padding-left: 8px;
+}
+.c-key {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.c-val {
+  color: var(--text-dark);
+  font-weight: 600;
+}
 
-.social-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
 .social-row a {
-  font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  border: 1px solid var(--border);
-  padding: 10px 20px;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--border-medium);
+  padding: 12px 22px;
   border-radius: var(--radius-sm);
-  color: var(--text-bright);
-  background: var(--bg-glass);
-  transition: all 0.3s;
+  color: var(--text-dark);
+  background: var(--bg-card);
+  transition: all 0.35s ease;
 }
 .social-row a:hover {
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
-  box-shadow: 0 4px 18px var(--glow-primary);
+  border-color: var(--green-deep);
+  color: var(--green-deep);
+  background: var(--green-light);
   transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(26, 77, 46, 0.1);
+}
+
+/* ========== CTA BANNER ========== */
+.cta-banner {
+  background: var(--green-deep);
+  border-radius: var(--radius);
+  padding: 48px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%; right: -30%;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: rgba(212, 160, 57, 0.08);
+  pointer-events: none;
+}
+.cta-banner h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--text-white);
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  position: relative;
+}
+.cta-banner p {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  position: relative;
+}
+.cta-banner .btn-gold {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: var(--radius-pill);
+  background: var(--gold);
+  color: var(--text-dark);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.35s ease;
+  position: relative;
+  letter-spacing: 0.01em;
+}
+.cta-banner .btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212, 160, 57, 0.3);
 }
 
 /* ========== FOOTER ========== */
 footer {
-  position: relative; z-index: 2;
   text-align: center;
   padding: 40px 0;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  transition: color var(--theme-speed) ease;
+  background: var(--bg-cream);
 }
 footer::before {
   content: "";
   display: block;
-  width: 160px; height: 1px;
+  width: 120px; height: 1px;
   margin: 0 auto 20px;
-  background: linear-gradient(to right, transparent, var(--accent-primary), var(--accent-secondary), transparent);
-  transition: background var(--theme-speed) ease;
+  background: linear-gradient(to right, transparent, var(--green-deep), var(--gold), transparent);
 }
-
-/* Footer theme text swap */
-.footer-text-tanjiro { display: inline; }
-.footer-text-levi { display: none; }
-body.theme-levi .footer-text-tanjiro { display: none; }
-body.theme-levi .footer-text-levi { display: inline; }
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+footer .footer-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+}
 
 /* ========== ANIMATIONS ========== */
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
-
 @keyframes blink {
   50% { opacity: 0; }
-}
-
-/* Katana slash animation on theme switch */
-@keyframes katanaSlash {
-  0% { transform: scaleX(0); opacity: 0; }
-  30% { transform: scaleX(1); opacity: 1; }
-  100% { transform: scaleX(1); opacity: 0; }
-}
-.katana-slash {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  z-index: 10000;
-  pointer-events: none;
-  transform-origin: left center;
-  transform: scaleX(0);
-  opacity: 0;
-}
-.katana-slash.active {
-  animation: katanaSlash 0.5s ease-out forwards;
-}
-body:not(.theme-levi) .katana-slash {
-  background: linear-gradient(to right, transparent, var(--accent-primary), var(--accent-glow), transparent);
-  box-shadow: 0 0 20px var(--accent-primary);
-}
-body.theme-levi .katana-slash {
-  background: linear-gradient(to right, transparent, #00cc66, #00ff88, transparent);
-  box-shadow: 0 0 20px #00cc66;
 }
 
 /* ========== SCROLL REVEAL ========== */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reveal.visible {
   opacity: 1;
@@ -1361,137 +1556,63 @@ body.theme-levi .katana-slash {
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
-  .tagline .cursor-blink { animation: none; }
 }
 
-/* ========== ANIME QUOTE DIVIDER ========== */
-.anime-divider {
-  text-align: center;
-  padding: 48px 0;
-  position: relative;
-  z-index: 2;
-}
-.anime-divider .line {
-  width: 100px; height: 1px;
-  background: linear-gradient(to right, transparent, var(--accent-primary), var(--accent-secondary), transparent);
-  margin: 0 auto 20px;
-  transition: background var(--theme-speed) ease;
-}
-.anime-divider blockquote {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1rem;
-  color: var(--text-white);
-  letter-spacing: 0.01em;
-  max-width: 600px;
-  margin: 0 auto;
-  transition: color var(--theme-speed) ease;
-}
-.anime-divider .attr {
-  font-family: 'Fira Code', monospace;
-  font-size: 0.75rem;
-  color: var(--accent-primary);
-  margin-top: 10px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transition: color var(--theme-speed) ease;
-}
-
-/* Quote swap between themes */
-.quote-tanjiro { display: block; }
-.quote-levi { display: none; }
-body.theme-levi .quote-tanjiro { display: none; }
-body.theme-levi .quote-levi { display: block; }
-
-/* Badge text swap */
-.badge-text-tanjiro { display: inline; }
-.badge-text-levi { display: none; }
-body.theme-levi .badge-text-tanjiro { display: none; }
-body.theme-levi .badge-text-levi { display: inline; }
-
-/* ========== FLOATING PARTICLES ========== */
-.particles {
+/* ========== BACK TO TOP ========== */
+.back-to-top {
   position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
-}
-.particle {
-  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  width: 44px; height: 44px;
   border-radius: 50%;
-  opacity: 0;
-  animation: floatParticle linear infinite;
-}
-@keyframes floatParticle {
-  0% { transform: translateY(100vh) scale(0); opacity: 0; }
-  10% { opacity: 0.5; }
-  90% { opacity: 0.2; }
-  100% { transform: translateY(-20vh) scale(1); opacity: 0; }
-}
-
-/* Tanjiro particles — fire embers */
-body:not(.theme-levi) .particle {
-  background: radial-gradient(circle, var(--accent-primary), var(--accent-secondary));
-  box-shadow: 0 0 4px var(--accent-primary);
-}
-/* Levi particles — green mist */
-body.theme-levi .particle {
-  background: radial-gradient(circle, #00cc66, #00ff88);
-  box-shadow: 0 0 4px #00cc66;
-}
-
-/* ========== LUMIO FEATURES LIST ========== */
-.lumio-features {
-  list-style: none;
+  background: var(--green-deep);
+  color: var(--text-white);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin: 4px 0;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(26, 77, 46, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.35s ease;
+  pointer-events: none;
 }
-.lumio-features li {
-  font-size: 0.82rem;
-  color: var(--text-dim);
-  padding-left: 16px;
-  position: relative;
-  line-height: 1.6;
-  transition: color var(--theme-speed) ease;
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
-.lumio-features li::before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: var(--accent-primary);
-  font-weight: 700;
-  transition: color var(--theme-speed) ease;
+.back-to-top:hover {
+  background: var(--green-mid);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(26, 77, 46, 0.4);
 }
 </style>
 </head>
 <body>
 
-<!-- Theme transition effects -->
-<div class="theme-flash" id="themeFlash"></div>
-<div class="katana-slash" id="katanaSlash"></div>
-
-<!-- Floating particles -->
-<div class="particles" id="particles"></div>
-
-<div id="content-wrap">
-
-<!-- NAV -->
-<header>
+<!-- ==================== NAVIGATION ==================== -->
+<header id="siteHeader">
   <nav class="wrap">
     <a href="#top" class="brand">
       <span class="brand-icon">AF</span>
       A. R. Fuad
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-    <div class="nav-links" id="navLinks">
+    <div class="nav-center" id="navLinks">
       <a href="#about">About</a>
+      <a href="#services">Services</a>
       <a href="#education">Education</a>
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn-contact">Contact Me</a>
     </div>
   </nav>
 </header>
@@ -1500,60 +1621,93 @@ body.theme-levi .particle {
 
   <!-- ==================== HERO ==================== -->
   <section class="hero">
+    <div class="hero-watermark">PORTFOLIO</div>
     <div class="wrap hero-grid">
       <div>
         <div class="hero-badges reveal">
-          <span class="badge primary">
-            <span class="badge-text-tanjiro">Hinokami Kagura · Sun Breathing</span>
-            <span class="badge-text-levi">Wings of Freedom · Survey Corps</span>
-          </span>
-          <span class="badge secondary">
-            <span class="badge-text-tanjiro">Demon Slayer · 8th Sem</span>
-            <span class="badge-text-levi">Humanity's Strongest · 8th Sem</span>
-          </span>
+          <span class="hero-badge green">✦ Flutter Developer</span>
+          <span class="hero-badge gold">✦ CS Undergrad · 8th Sem</span>
         </div>
-        <h1 class="hero-name reveal">Altafur<br>Rahman <span class="accent">Fuad</span></h1>
-        <p class="tagline reveal">
+        <p class="hero-hello reveal">
+          <span>👋</span> Hello, I'm
+        </p>
+        <h1 class="hero-name reveal">
+          ALTAFUR<br>RAHMAN <span class="accent">FUAD</span>
+        </h1>
+        <p class="hero-role reveal">
+          <span class="star-decoration">Flutter Developer & AI Researcher</span>
+        </p>
+        <p class="hero-desc reveal">
           <span class="typed-text" id="typedText"></span><span class="cursor-blink"></span>
         </p>
         <div class="hero-meta reveal">
-          <span>Based in <b>Chandanaish, Bangladesh</b></span>
-          <span>Studying at <b>BGC Trust University Bangladesh</b></span>
-          <span><b>Currently seeking opportunities</b></span>
+          <span><span class="dot"></span> Chandanaish, Bangladesh</span>
+          <span><span class="dot"></span> BGC Trust University</span>
+          <span><span class="dot"></span> Available for Opportunities</span>
         </div>
         <div class="hero-cta reveal">
-          <a href="#research" class="btn primary">View Research →</a>
-          <a href="#contact" class="btn ghost">Get in Touch</a>
+          <a href="#projects" class="btn-primary">View My Projects →</a>
+          <a href="#contact" class="btn-outline">Get in Touch</a>
         </div>
       </div>
-      <div class="portrait-card reveal" id="portraitCard">
-        <div class="portrait-flipper" id="portraitFlipper">
-          <!-- FRONT — Tanjiro / Demon Slayer -->
-          <div class="portrait-front">
-            <img src="assets/fuad-tanjiro.png" alt="Portrait of Altafur Rahman Fuad — Demon Slayer Tanjiro Hinokami Kagura Style">
-            <div class="portrait-tag">🔥 Hinokami Kagura</div>
-          </div>
-          <!-- BACK — Levi / Attack on Titan -->
-          <div class="portrait-back">
-            <img src="assets/fuad-levi.png" alt="Portrait of Altafur Rahman Fuad — Attack on Titan Levi Ackerman Style">
-            <div class="portrait-tag">⚔️ Wings of Freedom</div>
+      <div class="hero-photo-wrap reveal">
+        <div class="hero-photo-frame">
+          <img src="assets/fuad-photo.jpeg" alt="Altafur Rahman Fuad — Flutter Developer & CS Undergraduate">
+          <div class="hero-photo-badge">
+            <span class="pulse-dot"></span>
+            Open to Work
           </div>
         </div>
-        <div class="flip-hint" id="flipHint">↻ Tap to switch theme</div>
       </div>
     </div>
   </section>
 
-  <!-- Anime Quote Divider -->
-  <div class="anime-divider reveal">
-    <div class="line"></div>
-    <div class="quote-tanjiro">
-      <blockquote>"I will become stronger. I promise. I'll save you… I'll make sure you never suffer again!"</blockquote>
-      <p class="attr">— Tanjiro Kamado, Demon Slayer (Hinokami Kagura)</p>
+  <!-- ==================== STATS BAR ==================== -->
+  <div class="wrap">
+    <div class="stats-bar reveal">
+      <div class="stat-item">
+        <div class="stat-number"><span class="counter" data-target="5">0</span><span class="plus">+</span></div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span class="counter" data-target="3" data-decimal="64">0</span></div>
+        <div class="stat-label">Current CGPA</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span class="counter" data-target="8">0</span><span class="plus">th</span></div>
+        <div class="stat-label">Semester</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span class="counter" data-target="1">0</span><span class="plus">+</span></div>
+        <div class="stat-label">Research Paper</div>
+      </div>
     </div>
-    <div class="quote-levi">
-      <blockquote>"Give up on your dreams and die. Lead the recruits straight into hell."</blockquote>
-      <p class="attr">— Levi Ackerman, Attack on Titan (Survey Corps Captain)</p>
+  </div>
+
+  <!-- ==================== MARQUEE ==================== -->
+  <div class="marquee-banner">
+    <div class="marquee-track">
+      <span>Flutter Development <span class="star">✦</span></span>
+      <span>Mobile Apps <span class="star">✦</span></span>
+      <span>AI / ML Research <span class="star">✦</span></span>
+      <span>UI/UX Design <span class="star">✦</span></span>
+      <span>Full-Stack <span class="star">✦</span></span>
+      <span>Agricultural AI <span class="star">✦</span></span>
+      <span>Vision Mamba <span class="star">✦</span></span>
+      <span>Dart <span class="star">✦</span></span>
+      <span>Firebase <span class="star">✦</span></span>
+      <span>Supabase <span class="star">✦</span></span>
+      <!-- Duplicate for seamless loop -->
+      <span>Flutter Development <span class="star">✦</span></span>
+      <span>Mobile Apps <span class="star">✦</span></span>
+      <span>AI / ML Research <span class="star">✦</span></span>
+      <span>UI/UX Design <span class="star">✦</span></span>
+      <span>Full-Stack <span class="star">✦</span></span>
+      <span>Agricultural AI <span class="star">✦</span></span>
+      <span>Vision Mamba <span class="star">✦</span></span>
+      <span>Dart <span class="star">✦</span></span>
+      <span>Firebase <span class="star">✦</span></span>
+      <span>Supabase <span class="star">✦</span></span>
     </div>
   </div>
 
@@ -1561,45 +1715,108 @@ body.theme-levi .particle {
   <section id="about">
     <div class="wrap">
       <div class="section-header reveal">
-        <p class="overline">About Me</p>
-        <h2>Who I Am</h2>
+        <p class="section-overline">About Me</p>
+        <h2 class="section-title">WHO IS ALTAFUR RAHMAN FUAD?</h2>
       </div>
       <p class="about-intro reveal">
-        I'm a Computer Science &amp; Engineering undergraduate at BGC Trust University Bangladesh,
-        currently in my 8th semester. My work sits at the intersection of full-stack mobile
-        development and applied AI research — on one side, I build production-ready Flutter apps
-        end-to-end; on the other, I'm developing CrossMamba-Agri, a Vision Mamba architecture for
+        I'm a <strong>Computer Science & Engineering</strong> undergraduate at BGC Trust University Bangladesh,
+        currently in my <strong>8th semester</strong>. My work sits at the intersection of full-stack mobile
+        development and applied AI research — on one side, I build production-ready <strong>Flutter apps</strong>
+        end-to-end; on the other, I'm developing <strong>CrossMamba-Agri</strong>, a Vision Mamba architecture for
         joint plant disease and pest classification, as my thesis proposal. I'm also exploring
         Bangla NLP, quantum computing, and other research directions I plan to carry forward into
         published work.
       </p>
       <div class="bento-grid stagger-children">
-        <div class="bento-card glass-card reveal">
+        <div class="bento-card card reveal">
           <span class="bento-icon">📍</span>
           <span class="bento-label">Location</span>
           <span class="bento-value">Chattogram, Bangladesh</span>
         </div>
-        <div class="bento-card glass-card reveal">
+        <div class="bento-card card reveal">
           <span class="bento-icon">🎓</span>
           <span class="bento-label">University</span>
           <span class="bento-value">BGC Trust University Bangladesh</span>
         </div>
-        <div class="bento-card glass-card reveal">
+        <div class="bento-card card reveal">
           <span class="bento-icon">📘</span>
           <span class="bento-label">Program</span>
           <span class="bento-value">BSc in CSE</span>
           <span class="bento-desc">Session Jan–Jun 2026</span>
         </div>
-        <div class="bento-card glass-card span-2 reveal">
+        <div class="bento-card card span-2 reveal">
           <span class="bento-icon">🎯</span>
           <span class="bento-label">Focus Areas</span>
           <span class="bento-value">Flutter Development · AI/ML Research</span>
-          <span class="bento-desc">Building production mobile apps &amp; advancing agricultural AI</span>
+          <span class="bento-desc">Building production mobile apps & advancing agricultural AI</span>
         </div>
-        <div class="bento-card glass-card reveal">
+        <div class="bento-card card reveal">
           <span class="bento-icon">🚀</span>
           <span class="bento-label">Status</span>
           <span class="bento-value">Seeking Opportunities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES / WHAT I DO ==================== -->
+  <section id="services" style="background: var(--bg-warm);">
+    <div class="wrap">
+      <div class="services-header">
+        <div class="section-header reveal" style="margin-bottom: 0;">
+          <p class="section-overline">Services</p>
+          <h2 class="section-title">SERVICES I PROVIDE</h2>
+        </div>
+        <a href="#skills" class="view-all-btn reveal">View All Skills <span>+</span></a>
+      </div>
+      <div class="services-grid stagger-children">
+        <div class="service-card card reveal">
+          <div class="service-icon">
+            <span class="service-icon-text">📱</span>
+          </div>
+          <h4>FLUTTER DEVELOPMENT</h4>
+          <p>Production-ready cross-platform mobile apps with beautiful UI, smooth animations, and optimal performance.</p>
+          <a href="#projects" class="service-learn-more">Learn more →</a>
+        </div>
+        <div class="service-card card reveal">
+          <div class="service-icon">
+            <span class="service-icon-text">🤖</span>
+          </div>
+          <h4>AI / ML RESEARCH</h4>
+          <p>Applied machine learning research for agriculture — plant disease classification, pest detection using Vision Mamba architectures.</p>
+          <a href="#research" class="service-learn-more">Learn more →</a>
+        </div>
+        <div class="service-card card reveal">
+          <div class="service-icon">
+            <span class="service-icon-text">🌐</span>
+          </div>
+          <h4>WEB DEVELOPMENT</h4>
+          <p>Responsive web applications using Flutter Web, with adaptive layouts that scale beautifully from mobile to desktop.</p>
+          <a href="#projects" class="service-learn-more">Learn more →</a>
+        </div>
+        <div class="service-card card reveal">
+          <div class="service-icon">
+            <span class="service-icon-text">🎨</span>
+          </div>
+          <h4>UI/UX DESIGN</h4>
+          <p>Clean, intuitive user interfaces with thoughtful UX patterns, design systems, and smooth micro-interactions.</p>
+          <a href="#projects" class="service-learn-more">Learn more →</a>
+        </div>
+        <div class="service-card card reveal">
+          <div class="service-icon">
+            <span class="service-icon-text">☁️</span>
+          </div>
+          <h4>BACKEND INTEGRATION</h4>
+          <p>Firebase, Supabase, and REST API integrations for authentication, real-time databases, and cloud storage.</p>
+          <a href="#skills" class="service-learn-more">Learn more →</a>
+        </div>
+        <div class="service-card card reveal">
+          <div class="service-icon">
+            <span class="service-icon-text">🔬</span>
+          </div>
+          <h4>RESEARCH & PUBLICATIONS</h4>
+          <p>Academic research in computer vision, NLP, and quantum computing — with thesis work currently in progress.</p>
+          <a href="#research" class="service-learn-more">Learn more →</a>
         </div>
       </div>
     </div>
@@ -1609,30 +1826,30 @@ body.theme-levi .particle {
   <section id="education">
     <div class="wrap">
       <div class="section-header reveal">
-        <p class="overline">Education</p>
-        <h2>Academic Background</h2>
+        <p class="section-overline">Education</p>
+        <h2 class="section-title">ACADEMIC BACKGROUND</h2>
       </div>
       <div class="edu-list stagger-children">
-        <div class="edu-row glass-card reveal">
+        <div class="edu-row card reveal">
           <div class="edu-year">2026 — Running</div>
           <div class="edu-name">
-            <h3>BSc in Computer Science &amp; Engineering</h3>
+            <h3>BSC IN COMPUTER SCIENCE & ENGINEERING</h3>
             <p>BGC Trust University Bangladesh · Session January–June 2026 · 8th Semester Running</p>
           </div>
           <span class="gpa-badge">7th Sem CGPA: 3.64</span>
         </div>
-        <div class="edu-row glass-card reveal">
+        <div class="edu-row card reveal">
           <div class="edu-year">2020</div>
           <div class="edu-name">
-            <h3>Higher Secondary Certificate (HSC)</h3>
+            <h3>HIGHER SECONDARY CERTIFICATE (HSC)</h3>
             <p>Hazera Taju Degree College</p>
           </div>
           <span class="gpa-badge">GPA 5.00</span>
         </div>
-        <div class="edu-row glass-card reveal">
+        <div class="edu-row card reveal">
           <div class="edu-year">2018</div>
           <div class="edu-name">
-            <h3>Secondary School Certificate (SSC)</h3>
+            <h3>SECONDARY SCHOOL CERTIFICATE (SSC)</h3>
             <p>Kazem Ali High School</p>
           </div>
           <span class="gpa-badge">GPA 5.00</span>
@@ -1642,23 +1859,23 @@ body.theme-levi .particle {
   </section>
 
   <!-- ==================== RESEARCH ==================== -->
-  <section id="research">
+  <section id="research" style="background: var(--bg-warm);">
     <div class="wrap">
       <div class="section-header reveal">
-        <p class="overline">Research</p>
-        <h2>Academic Research</h2>
+        <p class="section-overline">Research</p>
+        <h2 class="section-title">ACADEMIC RESEARCH</h2>
       </div>
 
       <div class="thesis-card reveal">
         <span class="thesis-status">Thesis Proposal · Research in Progress</span>
-        <h3>CrossMamba-Agri</h3>
+        <h3>CROSSMAMBA-AGRI</h3>
         <p class="thesis-sub">Cross-Attention Vision Mamba for Joint Pest and Disease Classification</p>
         <p class="desc">
           A dual-purpose Vision Mamba architecture that jointly classifies plant diseases and insect
           pests through a shared bidirectional encoder, a Background Suppression Module for noisy
           field imagery, and task-specific cross-attention routing — designed for accurate, resource-
           efficient diagnostics deployable on edge hardware. Supervised by Mohammad Salah Uddin
-          Chowdhury, Assistant Professor &amp; Chairman, CSE, BGC Trust University Bangladesh.
+          Chowdhury, Assistant Professor & Chairman, CSE, BGC Trust University Bangladesh.
         </p>
         <div class="branch-tags">
           <span class="btag dis">Disease Branch — PlantVillage</span>
@@ -1671,14 +1888,14 @@ body.theme-levi .particle {
       </div>
 
       <div class="research-sub-grid">
-        <div class="research-sub glass-card reveal">
+        <div class="research-sub card reveal">
           <span class="tag">Upcoming Research</span>
-          <h4>Future Publications</h4>
+          <h4>FUTURE PUBLICATIONS</h4>
           <p>Additional research directions currently being explored, to be published as papers. Details to follow as work begins.</p>
         </div>
-        <div class="research-sub glass-card reveal">
+        <div class="research-sub card reveal">
           <span class="tag">Emerging Interest</span>
-          <h4>Quantum Computing</h4>
+          <h4>QUANTUM COMPUTING</h4>
           <p>Actively exploring this field and open to collaboration or opportunities in quantum computing research.</p>
         </div>
       </div>
@@ -1689,27 +1906,27 @@ body.theme-levi .particle {
   <section id="projects">
     <div class="wrap">
       <div class="section-header reveal">
-        <p class="overline">Projects</p>
-        <h2>What I've Built</h2>
+        <p class="section-overline">Projects</p>
+        <h2 class="section-title">WHAT I'VE BUILT</h2>
       </div>
       <div class="proj-grid stagger-children">
 
         <!-- FEATURED — Lumio -->
-        <div class="proj-featured glass-card reveal">
+        <div class="proj-featured card reveal">
           <div class="proj-featured-inner">
             <div class="proj-featured-content">
               <div class="proj-top">
-                <h3>Lumio 🚀</h3>
+                <h3>LUMIO 🚀</h3>
                 <span class="proj-status live">Live</span>
               </div>
-              <p><strong>Share moments. Connect people.</strong> — A modern, high-performance social media application built with Flutter &amp; Dart, supporting Android and Responsive Web from a single codebase.</p>
+              <p><strong>Share moments. Connect people.</strong> — A modern, high-performance social media application built with Flutter & Dart, supporting Android and Responsive Web from a single codebase.</p>
               <ul class="lumio-features">
                 <li>Social Feed with stories row, post cards, like animations</li>
                 <li>Immersive 9:16 Reels with double-tap heart animations</li>
-                <li>Explore &amp; Search with adaptive staggered media grid</li>
-                <li>Create Studio with image filters &amp; aspect ratio switches</li>
+                <li>Explore & Search with adaptive staggered media grid</li>
+                <li>Create Studio with image filters & aspect ratio switches</li>
                 <li>Adaptive Navigation — bottom bar, rail, or full sidebar</li>
-                <li>100% Dark &amp; Light Mode with custom design system</li>
+                <li>100% Dark & Light Mode with custom design system</li>
               </ul>
               <div class="feature-tags">
                 <span class="feature-tag">Social Feed</span>
@@ -1725,16 +1942,16 @@ body.theme-levi .particle {
             <div class="proj-featured-visual">
               <div style="text-align: center;">
                 <div style="font-size: 4rem; margin-bottom: 12px;">📱</div>
-                <div style="font-family: 'Dela Gothic One', sans-serif; font-size: 1.4rem; color: var(--text-white);">Lumio</div>
-                <div style="font-family: 'Fira Code', monospace; font-size: 0.72rem; color: var(--text-dim); margin-top: 6px;">Android · Web · iOS (Soon)</div>
+                <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--text-dark); letter-spacing: 0.05em;">LUMIO</div>
+                <div style="font-family: 'Fira Code', monospace; font-size: 0.72rem; color: var(--text-muted); margin-top: 6px;">Android · Web · iOS (Soon)</div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="proj-card glass-card full reveal" data-tilt>
+        <div class="proj-card card full reveal">
           <div class="proj-top">
-            <h3>CrossMamba-Agri Tracker</h3>
+            <h3>CROSSMAMBA-AGRI TRACKER</h3>
             <span class="proj-status live">Live</span>
           </div>
           <p>Progress tracker for the CrossMamba-Agri thesis proposal — logging research milestones, experiments, and results as the project moves through its phases.</p>
@@ -1742,9 +1959,9 @@ body.theme-levi .particle {
           <a class="proj-link" href="https://github.com/altafur-fuad/crossmamba-agri-tracker" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
 
-        <div class="proj-card glass-card reveal" data-tilt>
+        <div class="proj-card card reveal">
           <div class="proj-top">
-            <h3>Taqwa Tracker</h3>
+            <h3>TAQWA TRACKER</h3>
             <span class="proj-status">Mostly Complete</span>
           </div>
           <p>Daily Salah, Hijri date, and sunrise/sunset tracking app built to help Muslims stay consistent with daily religious practice.</p>
@@ -1752,9 +1969,9 @@ body.theme-levi .particle {
           <a class="proj-link" href="https://github.com/altafur-fuad/Taqwa_Tracker" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
 
-        <div class="proj-card glass-card reveal" data-tilt>
+        <div class="proj-card card reveal">
           <div class="proj-top">
-            <h3>Asrar-E-Tibb</h3>
+            <h3>ASRAR-E-TIBB</h3>
             <span class="proj-status">SPD-2 · In Progress</span>
           </div>
           <p>All-in-one healthcare super-app: medicine details, pharmacy purchases, a social feed for doctors/patients/pharmacists/shop owners, a notepad, medicine reminders, and pharmacy chat.</p>
@@ -1762,9 +1979,9 @@ body.theme-levi .particle {
           <a class="proj-link" href="https://github.com/altafur-fuad/Asrar-E-Tibb" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
 
-        <div class="proj-card glass-card reveal" data-tilt>
+        <div class="proj-card card reveal">
           <div class="proj-top">
-            <h3>MediLens</h3>
+            <h3>MEDILENS</h3>
             <span class="proj-status">SDP-1</span>
           </div>
           <p>Bilingual (Bangla + English) medicine information app covering vet, herbal, Unani, Ayurvedic, and English medicine, with natural ingredient details.</p>
@@ -1772,55 +1989,54 @@ body.theme-levi .particle {
           <a class="proj-link" href="https://github.com/altafur-fuad/SDP1_Medilens" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
 
-        <div class="proj-card glass-card reveal" data-tilt>
+        <div class="proj-card card reveal">
           <div class="proj-top">
-            <h3>DSA Practice</h3>
+            <h3>DSA PRACTICE</h3>
             <span class="proj-status">Ongoing</span>
           </div>
           <p>A running repository of data structures and algorithms practice — problems, solutions, and notes as I sharpen core CS fundamentals.</p>
           <span class="proj-stack">DSA · Problem Solving</span>
           <a class="proj-link" href="https://github.com/altafur-fuad/DSA" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- ==================== SKILLS ==================== -->
-  <section id="skills">
+  <section id="skills" style="background: var(--bg-warm);">
     <div class="wrap">
       <div class="section-header reveal">
-        <p class="overline">Skills</p>
-        <h2>My Skills & Development</h2>
+        <p class="section-overline">Skills</p>
+        <h2 class="section-title">MY SKILLS & DEVELOPMENT</h2>
       </div>
 
       <!-- Highlight Cards -->
-      <div class="skills-card-grid stagger-children">
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">⚡</div>
-          <h4>Fast</h4>
+      <div class="skills-highlight-grid stagger-children">
+        <div class="skill-highlight card reveal">
+          <div class="sh-icon"><span class="sh-icon-inner">⚡</span></div>
+          <h4>FAST</h4>
           <p>Optimized Flutter apps with efficient state management and smooth 60fps performance</p>
         </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">📱</div>
-          <h4>Responsive</h4>
+        <div class="skill-highlight card reveal">
+          <div class="sh-icon"><span class="sh-icon-inner">📱</span></div>
+          <h4>RESPONSIVE</h4>
           <p>Adaptive layouts that scale beautifully from mobile to desktop with a single codebase</p>
         </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">🎨</div>
-          <h4>Intuitive</h4>
+        <div class="skill-highlight card reveal">
+          <div class="sh-icon"><span class="sh-icon-inner">🎨</span></div>
+          <h4>INTUITIVE</h4>
           <p>Clean, user-friendly interfaces with thoughtful UX patterns and smooth interactions</p>
         </div>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-icon">🔬</div>
-          <h4>Research-Driven</h4>
+        <div class="skill-highlight card reveal">
+          <div class="sh-icon"><span class="sh-icon-inner">🔬</span></div>
+          <h4>RESEARCH-DRIVEN</h4>
           <p>Applying cutting-edge AI/ML research to solve real-world agriculture problems</p>
         </div>
       </div>
 
       <!-- Detail Pills -->
       <div class="skills-detail-grid stagger-children">
-        <div class="skill-group glass-card reveal">
+        <div class="skill-group card reveal">
           <h3>Core — Flutter Development</h3>
           <div class="pill-row">
             <span class="pill">Flutter (Android + Web)</span>
@@ -1831,7 +2047,7 @@ body.theme-levi .particle {
             <span class="pill">Supabase Auth</span>
           </div>
         </div>
-        <div class="skill-group glass-card reveal">
+        <div class="skill-group card reveal">
           <h3>Currently Learning</h3>
           <div class="pill-row">
             <span class="pill learning">System Design</span>
@@ -1845,25 +2061,35 @@ body.theme-levi .particle {
     </div>
   </section>
 
-  <!-- Anime Quote Divider -->
-  <div class="anime-divider reveal">
-    <div class="line"></div>
-    <div class="quote-tanjiro">
-      <blockquote>"No matter how many people you may lose, you have no choice but to go on living."</blockquote>
-      <p class="attr">— Tanjiro Kamado, Demon Slayer</p>
+  <!-- ==================== VISION SECTION ==================== -->
+  <section class="vision-section">
+    <div class="wrap">
+      <div class="vision-grid">
+        <div>
+          <div class="section-header reveal">
+            <p class="section-overline">My Vision & Mission</p>
+            <h2 class="section-title">BUILDING TECHNOLOGY<br>THAT MATTERS</h2>
+          </div>
+          <div class="vision-text reveal">
+            <p>I believe technology should <strong>solve real problems</strong>. Whether it's helping farmers detect crop diseases early through AI, or building social platforms that bring people together — every project I take on is driven by purpose.</p>
+            <p>My mission is to bridge the gap between <strong>academic research</strong> and <strong>practical application</strong>, creating tools that are not just technically excellent, but genuinely useful for people who need them most.</p>
+          </div>
+        </div>
+        <div class="vision-card reveal">
+          <div class="vision-icon">🌱</div>
+          <h4>MY APPROACH</h4>
+          <p>Research-driven development. I start with understanding the problem deeply, prototype solutions rapidly using Flutter, and iterate with real user feedback. I combine academic rigor with practical engineering to build software that works in the real world.</p>
+        </div>
+      </div>
     </div>
-    <div class="quote-levi">
-      <blockquote>"The only thing we're allowed to do is believe that we won't regret the choice we made."</blockquote>
-      <p class="attr">— Levi Ackerman, Attack on Titan</p>
-    </div>
-  </div>
+  </section>
 
   <!-- ==================== CONTACT ==================== -->
   <section id="contact">
     <div class="wrap">
       <div class="section-header reveal">
-        <p class="overline">Contact</p>
-        <h2>Get in Touch</h2>
+        <p class="section-overline">Contact</p>
+        <h2 class="section-title">GET IN TOUCH</h2>
       </div>
       <div class="contact-grid">
         <div>
@@ -1871,6 +2097,7 @@ body.theme-levi .particle {
           <div class="contact-list reveal">
             <div class="c-row"><span class="c-key">Email</span><span class="c-val">altaf1fuad2@gmail.com</span></div>
             <div class="c-row"><span class="c-key">Academic Email</span><span class="c-val">arfuad@bgctub.ac.bd</span></div>
+            <div class="c-row"><span class="c-key">Location</span><span class="c-val">Chandanaish, Chattogram, Bangladesh</span></div>
           </div>
         </div>
         <div class="reveal">
@@ -1881,6 +2108,13 @@ body.theme-levi .particle {
             <a href="https://github.com/altafur-fuad" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.linkedin.com/in/altafur-rahman-fuad" target="_blank" rel="noopener">LinkedIn</a>
           </div>
+
+          <!-- CTA Banner -->
+          <div class="cta-banner" style="margin-top: 32px;">
+            <h3>LET'S BUILD SOMETHING AMAZING</h3>
+            <p>Have a project in mind? Let's talk about it.</p>
+            <a href="mailto:altaf1fuad2@gmail.com" class="btn-gold">Book a Free Call ✦</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1890,28 +2124,25 @@ body.theme-levi .particle {
 
 <footer>
   <div class="wrap">
-    <span class="footer-text-tanjiro">© 2026 Altafur Rahman Fuad · Forged in the flames of Hinokami Kagura 🔥</span>
-    <span class="footer-text-levi">© 2026 Altafur Rahman Fuad · Dedicating hearts to Wings of Freedom ⚔️</span>
+    <p>© 2026 Altafur Rahman Fuad <span class="footer-dot"></span> Crafted with Passion & Purpose ✦</p>
   </div>
 </footer>
 
-</div><!-- end content-wrap -->
-
-<!-- Theme Indicator -->
-<div class="theme-indicator" id="themeIndicator" title="Click to switch theme">
-  <span class="dot"></span>
-  <span id="themeLabel">Demon Slayer Mode</span>
-</div>
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <script>
 /* ============================================================
-   INTERACTIONS — DEMON SLAYER x ATTACK ON TITAN DUAL THEME
+   PROFESSIONAL PORTFOLIO — INTERACTIONS & ANIMATIONS
    ============================================================ */
 
-// === Theme state ===
-let isLeviTheme = false;
+// === Header scroll shadow ===
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
 
-// === Nav toggle ===
+// === Nav toggle (mobile) ===
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 let menuOpen = false;
@@ -1930,7 +2161,7 @@ navLinks.querySelectorAll('a').forEach(a => {
 
 // === Scroll spy ===
 const sects = document.querySelectorAll('section[id]');
-const navAs = document.querySelectorAll('.nav-links a');
+const navAs = document.querySelectorAll('.nav-center a');
 function updateNav() {
   const sy = window.scrollY + 200;
   sects.forEach(s => {
@@ -1947,13 +2178,13 @@ window.addEventListener('scroll', updateNav, { passive: true });
 
 // === Typing effect ===
 const typedEl = document.getElementById('typedText');
-const fullText = "Flutter developer & CS undergrad — building AI-powered agriculture research and full-stack mobile apps.";
+const fullText = "Building AI-powered agriculture research and full-stack mobile apps with Flutter & Dart.";
 let ci = 0;
 function typeChar() {
   if (ci < fullText.length) {
     typedEl.textContent += fullText.charAt(ci);
     ci++;
-    setTimeout(typeChar, 30 + Math.random() * 35);
+    setTimeout(typeChar, 28 + Math.random() * 30);
   }
 }
 const heroObs = new IntersectionObserver((entries) => {
@@ -1972,13 +2203,55 @@ const revObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 revEls.forEach(el => revObs.observe(el));
 
+// === Counter animation ===
+const counters = document.querySelectorAll('.counter');
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      const decimal = el.dataset.decimal;
+      const duration = 1500;
+      const start = Date.now();
+
+      function updateCounter() {
+        const elapsed = Date.now() - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        if (decimal) {
+          const fullValue = parseFloat(target + '.' + decimal);
+          const current = (eased * fullValue).toFixed(2);
+          el.textContent = current;
+        } else {
+          el.textContent = Math.round(eased * target);
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          if (decimal) {
+            el.textContent = target + '.' + decimal;
+          } else {
+            el.textContent = target;
+          }
+        }
+      }
+      requestAnimationFrame(updateCounter);
+      counterObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObs.observe(c));
+
 // === 3D tilt on project cards ===
-document.querySelectorAll('[data-tilt]').forEach(card => {
+document.querySelectorAll('.proj-card, .proj-featured').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const r = card.getBoundingClientRect();
     const x = e.clientX - r.left, y = e.clientY - r.top;
-    const rx = ((y - r.height / 2) / (r.height / 2)) * -3;
-    const ry = ((x - r.width / 2) / (r.width / 2)) * 3;
+    const rx = ((y - r.height / 2) / (r.height / 2)) * -2;
+    const ry = ((x - r.width / 2) / (r.width / 2)) * 2;
     card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`;
   });
   card.addEventListener('mouseleave', () => {
@@ -1986,84 +2259,14 @@ document.querySelectorAll('[data-tilt]').forEach(card => {
   });
 });
 
-// === FLIP CARD & THEME SWITCH ===
-const portraitCard = document.getElementById('portraitCard');
-const themeFlash = document.getElementById('themeFlash');
-const katanaSlash = document.getElementById('katanaSlash');
-const themeIndicator = document.getElementById('themeIndicator');
-const themeLabel = document.getElementById('themeLabel');
-const flipHint = document.getElementById('flipHint');
-
-function switchTheme() {
-  isLeviTheme = !isLeviTheme;
-  
-  // Flip the card
-  portraitCard.classList.toggle('flipped');
-  
-  // Katana slash effect
-  katanaSlash.classList.remove('active');
-  void katanaSlash.offsetWidth; // force reflow
-  katanaSlash.classList.add('active');
-  
-  // Flash effect
-  setTimeout(() => {
-    themeFlash.classList.remove('active');
-    void themeFlash.offsetWidth;
-    themeFlash.classList.add('active');
-    
-    // Switch theme
-    document.body.classList.toggle('theme-levi');
-    
-    // Update indicator
-    themeLabel.textContent = isLeviTheme ? 'Attack on Titan Mode' : 'Demon Slayer Mode';
-    
-    // Hide hint after first flip
-    flipHint.style.opacity = '0';
-    setTimeout(() => { flipHint.style.display = 'none'; }, 300);
-  }, 200);
-}
-
-// Click/tap on portrait to flip
-portraitCard.addEventListener('click', (e) => {
-  e.preventDefault();
-  switchTheme();
+// === Back to top button ===
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('visible', window.scrollY > 500);
+}, { passive: true });
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
-// Also allow clicking the theme indicator
-themeIndicator.addEventListener('click', (e) => {
-  e.preventDefault();
-  switchTheme();
-});
-
-// Clean up flash/slash animations
-themeFlash.addEventListener('animationend', () => themeFlash.classList.remove('active'));
-katanaSlash.addEventListener('animationend', () => katanaSlash.classList.remove('active'));
-
-// === Floating Particles ===
-const particlesContainer = document.getElementById('particles');
-function createParticle() {
-  const particle = document.createElement('div');
-  particle.className = 'particle';
-  const size = Math.random() * 3 + 1.5;
-  particle.style.width = size + 'px';
-  particle.style.height = size + 'px';
-  particle.style.left = Math.random() * 100 + '%';
-  particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
-  particle.style.animationDelay = (Math.random() * 5) + 's';
-  particlesContainer.appendChild(particle);
-  
-  // Remove after animation
-  setTimeout(() => {
-    if (particle.parentNode) particle.parentNode.removeChild(particle);
-  }, 18000);
-}
-
-// Spawn particles periodically
-setInterval(createParticle, 1000);
-// Initial burst
-for (let i = 0; i < 12; i++) {
-  setTimeout(createParticle, i * 250);
-}
 </script>
 
 </body>

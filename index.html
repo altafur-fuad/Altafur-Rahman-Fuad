@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Altafur Rahman Fuad — Flutter Developer & CS Undergrad</title>
-<meta name="description" content="Altafur Rahman Fuad — Flutter developer and CS undergraduate at BGC Trust University Bangladesh, building AI-powered agriculture research and full-stack mobile apps.">
+<title>Altafur Rahman Fuad — Flutter Developer & AI Researcher</title>
+<meta name="description" content="Altafur Rahman Fuad — Flutter developer and CS undergraduate at BGC Trust University Bangladesh, building AI-powered agriculture research and full-stack mobile & web apps.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%231a4d2e%22/><text x=%2250%25%22 y=%2256%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22system-ui,sans-serif%22 font-weight=%22800%22 font-size=%2244%22 fill=%22%23faf7f2%22>AF</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1214,6 +1215,216 @@ section {
   background: var(--green-light);
 }
 
+/* Project Card Thumbnails & Action Rows */
+.proj-thumb {
+  width: 100%;
+  height: 195px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border);
+  margin-bottom: 2px;
+  position: relative;
+}
+.proj-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.proj-card:hover .proj-thumb img {
+  transform: scale(1.035);
+}
+
+.proj-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.proj-link.live-link {
+  background: rgba(26, 77, 46, 0.07);
+  color: var(--green-deep);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(26, 77, 46, 0.2);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.proj-link.live-link:hover {
+  background: var(--green-deep);
+  color: var(--text-white);
+  border-color: var(--green-deep);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(26, 77, 46, 0.25);
+}
+
+.apk-badge {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-medium);
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* ========== CV & RESUME (CREDENTIALS) ========== */
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 760px) { .doc-grid { grid-template-columns: 1fr; } }
+
+.doc-card {
+  padding: 32px;
+  display: flex;
+  gap: 22px;
+  position: relative;
+  overflow: hidden;
+  align-items: flex-start;
+}
+.doc-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--green-deep), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.doc-card:hover::before { transform: scaleX(1); }
+
+.doc-icon {
+  font-size: 2.2rem;
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.doc-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.doc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.doc-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.35rem;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
+}
+.doc-card p {
+  color: var(--text-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.72rem;
+  color: var(--gold-dark);
+}
+.doc-meta .doc-path {
+  color: var(--text-muted);
+  background: var(--bg-warm);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.doc-actions {
+  margin-top: 6px;
+}
+.doc-btn {
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--green-deep);
+  background: var(--green-deep);
+  color: var(--text-white);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.doc-btn:hover:not(.disabled) {
+  background: var(--green-mid);
+  border-color: var(--green-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(26, 77, 46, 0.25);
+}
+.doc-btn.disabled {
+  background: var(--bg-card-alt);
+  border-color: var(--border-medium);
+  color: var(--text-muted);
+  cursor: default;
+}
+.doc-state {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(0,0,0,0.06);
+}
+
+/* Toast notice popup */
+.portfolio-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--bg-dark);
+  color: var(--text-white);
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(255,255,255,0.1);
+  z-index: 9999;
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.portfolio-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
 /* ========== SKILLS ========== */
 .skills-highlight-grid {
   display: grid;
@@ -1609,6 +1820,7 @@ footer .footer-dot {
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#resume">Credentials</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
@@ -1647,6 +1859,7 @@ footer .footer-dot {
         </div>
         <div class="hero-cta reveal">
           <a href="#projects" class="btn-primary">View My Projects →</a>
+          <a href="#resume" class="btn-outline">CV / Resume</a>
           <a href="#contact" class="btn-outline">Get in Touch</a>
         </div>
       </div>
@@ -1666,7 +1879,7 @@ footer .footer-dot {
   <div class="wrap">
     <div class="stats-bar reveal">
       <div class="stat-item">
-        <div class="stat-number"><span class="counter" data-target="5">0</span><span class="plus">+</span></div>
+        <div class="stat-number"><span class="counter" data-target="7">0</span><span class="plus">+</span></div>
         <div class="stat-label">Projects Built</div>
       </div>
       <div class="stat-item">
@@ -1678,8 +1891,8 @@ footer .footer-dot {
         <div class="stat-label">Semester</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number"><span class="counter" data-target="1">0</span><span class="plus">+</span></div>
-        <div class="stat-label">Research Paper</div>
+        <div class="stat-number"><span class="counter" data-target="1">0</span></div>
+        <div class="stat-label">Ongoing Research</div>
       </div>
     </div>
   </div>
@@ -1867,36 +2080,43 @@ footer .footer-dot {
       </div>
 
       <div class="thesis-card reveal">
-        <span class="thesis-status">Thesis Proposal · Research in Progress</span>
+        <span class="thesis-status">Research in Progress · 1 Ongoing Project</span>
         <h3>CROSSMAMBA-AGRI</h3>
         <p class="thesis-sub">Cross-Attention Vision Mamba for Joint Pest and Disease Classification</p>
         <p class="desc">
-          A dual-purpose Vision Mamba architecture that jointly classifies plant diseases and insect
-          pests through a shared bidirectional encoder, a Background Suppression Module for noisy
-          field imagery, and task-specific cross-attention routing — designed for accurate, resource-
-          efficient diagnostics deployable on edge hardware. Supervised by Mohammad Salah Uddin
+          A unified Vision Mamba (State Space Model) architecture that jointly classifies plant diseases
+          and insect pests in a single network. Incorporates a Background Suppression Module (BSM) for noisy
+          field imagery, multi-scale patch embeddings, a shared bidirectional Mamba encoder, and task-specific
+          cross-attention routing for resource-efficient diagnostic deployment. Supervised by Mohammad Salah Uddin
           Chowdhury, Assistant Professor & Chairman, CSE, BGC Trust University Bangladesh.
         </p>
         <div class="branch-tags">
-          <span class="btag dis">Disease Branch — PlantVillage</span>
-          <span class="btag pest">Pest Branch — IP102</span>
+          <span class="btag dis">Disease Branch — PlantVillage (17 Classes)</span>
+          <span class="btag pest">Pest Branch — IP102 (5 Classes)</span>
+          <span class="btag" style="color: var(--gold-dark); border-color: var(--gold); background: var(--gold-bg);">Architecture: 38.61M Parameters</span>
         </div>
         <div class="thesis-links">
-          <a href="assets/crossmamba-agri-thesis-proposal.pdf" target="_blank" rel="noopener">Read Full Proposal (PDF) →</a>
-          <a href="https://github.com/altafur-fuad/crossmamba-agri-tracker" target="_blank" rel="noopener">Progress Tracker (Live) →</a>
+          <a href="assets/crossmamba-agri-thesis-proposal.pdf" target="_blank" rel="noopener noreferrer">Read Full Proposal (PDF) →</a>
+          <a href="https://crossmamba-agri-tracker.vercel.app/" target="_blank" rel="noopener noreferrer">Progress Tracker (Live) ↗</a>
+          <a href="https://github.com/altafur-fuad/CrossMamba-Agri-Thesis" target="_blank" rel="noopener noreferrer">Model & Research Repo →</a>
         </div>
       </div>
 
       <div class="research-sub-grid">
         <div class="research-sub card reveal">
-          <span class="tag">Upcoming Research</span>
-          <h4>FUTURE PUBLICATIONS</h4>
-          <p>Additional research directions currently being explored, to be published as papers. Details to follow as work begins.</p>
+          <span class="tag">Primary Interests</span>
+          <h4>RESEARCH INTERESTS</h4>
+          <p>Active exploration in <strong>Artificial Intelligence & Machine Learning</strong>, <strong>Medical and Healthcare AI</strong>, <strong>Computer Vision & Vision Mamba</strong>, and <strong>Agricultural AI</strong> (joint plant disease and pest diagnostics).</p>
         </div>
         <div class="research-sub card reveal">
-          <span class="tag">Emerging Interest</span>
+          <span class="tag">Emerging Focus</span>
           <h4>QUANTUM COMPUTING</h4>
-          <p>Actively exploring this field and open to collaboration or opportunities in quantum computing research.</p>
+          <p>Actively exploring quantum computing fundamentals, quantum algorithms, and potential applications to hybrid quantum-classical machine learning architectures.</p>
+        </div>
+        <div class="research-sub card reveal" style="grid-column: 1 / -1;">
+          <span class="tag">Publication Record</span>
+          <h4>CURRENT STATUS · 0 PUBLISHED PAPERS</h4>
+          <p>I currently have <strong>0 published papers</strong> and <strong>1 ongoing research project</strong>. Experimental evaluations for the CrossMamba-Agri thesis are in progress, with peer-reviewed conference/journal submissions targeted upon completion of benchmarking.</p>
         </div>
       </div>
     </div>
@@ -1937,67 +2157,191 @@ footer .footer-dot {
                 <span class="feature-tag">Profile</span>
               </div>
               <span class="proj-stack">Flutter 3.35+ · Dart 3.9+ · Outfit + Inter · Mate Design System</span>
-              <a class="proj-link" href="https://github.com/altafur-fuad/Lumio" target="_blank" rel="noopener">View on GitHub →</a>
+              <div class="proj-links">
+                <a class="proj-link live-link" href="https://lumio-ebon.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+                <a class="proj-link" href="https://github.com/altafur-fuad/Lumio" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+                <span class="apk-badge">APK Coming Soon</span>
+              </div>
             </div>
             <div class="proj-featured-visual">
-              <div style="text-align: center;">
-                <div style="font-size: 4rem; margin-bottom: 12px;">📱</div>
-                <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--text-dark); letter-spacing: 0.05em;">LUMIO</div>
-                <div style="font-family: 'Fira Code', monospace; font-size: 0.72rem; color: var(--text-muted); margin-top: 6px;">Android · Web · iOS (Soon)</div>
-              </div>
+              <img src="assets/projects/lumio-preview.png" alt="Lumio Social Media App Desktop & Mobile Interface Preview" style="width: 100%; height: auto; max-height: 380px; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-md);">
             </div>
           </div>
         </div>
 
-        <div class="proj-card card full reveal">
+        <!-- PAYMENT CHASER — Priority Project -->
+        <div class="proj-card card reveal">
+          <div class="proj-thumb">
+            <img src="assets/projects/payment-chaser-preview.png" alt="Payment Chaser Invoicing and Reminder Platform Interface">
+          </div>
+          <div class="proj-top">
+            <h3>PAYMENT CHASER 💸</h3>
+            <span class="proj-status live">Live</span>
+          </div>
+          <p>Automated accounts receivable and intelligent payment reminder platform for freelancers, agencies, and businesses. Features real-time financial tracking, multi-tier reminder escalation across email and WhatsApp, and client CRM management.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Financial KPIs</span>
+            <span class="feature-tag">Multi-Tier Escalation</span>
+            <span class="feature-tag">Client CRM</span>
+            <span class="feature-tag">Next.js 16</span>
+          </div>
+          <span class="proj-stack">Next.js 16 · TypeScript · Tailwind CSS v4 · Supabase RLS · Vercel</span>
+          <div class="proj-links">
+            <a class="proj-link live-link" href="https://payment-chaser-x45p.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+            <a class="proj-link" href="https://github.com/altafur-fuad/Payment_Chaser" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+          </div>
+        </div>
+
+        <!-- AUPA — Priority Project -->
+        <div class="proj-card card reveal">
+          <div class="proj-thumb">
+            <img src="assets/projects/aupa-preview.png" alt="Aupa Food Delivery Platform Bangladesh Interface">
+          </div>
+          <div class="proj-top">
+            <h3>AUPA ⚡</h3>
+            <span class="proj-status live">Live</span>
+          </div>
+          <p>Modern food-delivery platform for Bangladesh engineered with a high-performance Flutter mobile client, Go REST backend API under /v1, Supabase PostgreSQL with defense-in-depth RLS, and server-authoritative checkout in poisha.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Food Delivery</span>
+            <span class="feature-tag">Go REST API</span>
+            <span class="feature-tag">Poisha Currency</span>
+            <span class="feature-tag">Idempotent Orders</span>
+          </div>
+          <span class="proj-stack">Flutter · Go REST API · Supabase PostgreSQL · Docker · Vercel</span>
+          <div class="proj-links">
+            <a class="proj-link live-link" href="https://aupa-ten.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+            <a class="proj-link" href="https://github.com/altafur-fuad/Aupa" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            <span class="apk-badge">APK Coming Soon</span>
+          </div>
+        </div>
+
+        <!-- ASRAR-E-TIBB -->
+        <div class="proj-card card reveal">
+          <div class="proj-thumb">
+            <img src="assets/projects/asrar-farmacia.png" alt="Asrar-E-Tibb Healthcare Platform Interface">
+          </div>
+          <div class="proj-top">
+            <h3>ASRAR-E-TIBB 💊</h3>
+            <span class="proj-status live">Live</span>
+          </div>
+          <p>Comprehensive healthcare ecosystem combining a responsive web storefront, native Flutter Android app, and high-performance Rust Axum API with 2,900+ curated medicine records, Farmacia e-pharmacy checkout, and TibbNews social feed.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Medicine Catalog</span>
+            <span class="feature-tag">Farmacia Checkout</span>
+            <span class="feature-tag">TibbNews Feed</span>
+            <span class="feature-tag">Rust Axum</span>
+          </div>
+          <span class="proj-stack">Flutter · Next.js 14 · Rust Axum · Supabase Realtime</span>
+          <div class="proj-links">
+            <a class="proj-link live-link" href="https://asrar-e-tibb.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+            <a class="proj-link" href="https://github.com/altafur-fuad/Asrar-E-Tibb" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            <span class="apk-badge">APK Coming Soon</span>
+          </div>
+        </div>
+
+        <!-- CROSSMAMBA-AGRI TRACKER -->
+        <div class="proj-card card reveal">
+          <div class="proj-thumb">
+            <img src="assets/projects/crossmamba-tracker-preview.png" alt="CrossMamba-Agri Thesis Progress Tracker Interface">
+          </div>
           <div class="proj-top">
             <h3>CROSSMAMBA-AGRI TRACKER</h3>
             <span class="proj-status live">Live</span>
           </div>
-          <p>Progress tracker for the CrossMamba-Agri thesis proposal — logging research milestones, experiments, and results as the project moves through its phases.</p>
-          <span class="proj-stack">Research Tooling</span>
-          <a class="proj-link" href="https://github.com/altafur-fuad/crossmamba-agri-tracker" target="_blank" rel="noopener">View on GitHub →</a>
+          <p>Live progress tracker for the CrossMamba-Agri undergraduate thesis proposal — logging research milestones, dataset preprocessing protocols, and dual-task diagnostic results as the research advances.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Thesis Tooling</span>
+            <span class="feature-tag">Vision Mamba</span>
+            <span class="feature-tag">Milestone Logging</span>
+          </div>
+          <span class="proj-stack">Research Tooling · HTML/CSS/JS · Vercel</span>
+          <div class="proj-links">
+            <a class="proj-link live-link" href="https://crossmamba-agri-tracker.vercel.app/" target="_blank" rel="noopener noreferrer">Live Tracker ↗</a>
+            <a class="proj-link" href="https://github.com/altafur-fuad/crossmamba-agri-tracker" target="_blank" rel="noopener noreferrer">Tracker Repo →</a>
+            <a class="proj-link" href="https://github.com/altafur-fuad/CrossMamba-Agri-Thesis" target="_blank" rel="noopener noreferrer">Model Repo →</a>
+          </div>
         </div>
 
+        <!-- TAQWA TRACKER -->
         <div class="proj-card card reveal">
+          <div class="proj-thumb">
+            <img src="assets/projects/taqwa-tracker-preview.png" alt="Taqwa Tracker Prayer Times Web App Interface">
+          </div>
           <div class="proj-top">
             <h3>TAQWA TRACKER</h3>
-            <span class="proj-status">Mostly Complete</span>
+            <span class="proj-status live">Live</span>
           </div>
-          <p>Daily Salah, Hijri date, and sunrise/sunset tracking app built to help Muslims stay consistent with daily religious practice.</p>
-          <span class="proj-stack">Flutter · Android · Web</span>
-          <a class="proj-link" href="https://github.com/altafur-fuad/Taqwa_Tracker" target="_blank" rel="noopener">View on GitHub →</a>
+          <p>Daily Salah prayer times calculation, Hijri date tracking, and sunrise/sunset monitoring app built to help Muslims stay consistent with daily religious practice across web and mobile.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Prayer Times</span>
+            <span class="feature-tag">Hijri Calendar</span>
+            <span class="feature-tag">Spiritual Habits</span>
+          </div>
+          <span class="proj-stack">Flutter · Android · Web · Codemagic</span>
+          <div class="proj-links">
+            <a class="proj-link live-link" href="https://taqwa-tracker-three.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+            <a class="proj-link" href="https://github.com/altafur-fuad/Taqwa_Tracker" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            <span class="apk-badge">APK Coming Soon</span>
+          </div>
         </div>
 
+        <!-- APPLYX — Discovered from Audit -->
         <div class="proj-card card reveal">
           <div class="proj-top">
-            <h3>ASRAR-E-TIBB</h3>
-            <span class="proj-status">SPD-2 · In Progress</span>
+            <h3>APPLYX 🎯</h3>
+            <span class="proj-status">In Progress</span>
           </div>
-          <p>All-in-one healthcare super-app: medicine details, pharmacy purchases, a social feed for doctors/patients/pharmacists/shop owners, a notepad, medicine reminders, and pharmacy chat.</p>
-          <span class="proj-stack">Flutter · Firebase · Supabase</span>
-          <a class="proj-link" href="https://github.com/altafur-fuad/Asrar-E-Tibb" target="_blank" rel="noopener">View on GitHub →</a>
+          <p>Mobile-first agentic AI opportunity-management app for students and early-career users. Built around observable tool-using agent workflows for opportunity research, eligibility analysis, and application preparation with human-in-the-loop approvals.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Agentic AI</span>
+            <span class="feature-tag">FastAPI</span>
+            <span class="feature-tag">LangGraph</span>
+            <span class="feature-tag">Tool-Using Agents</span>
+          </div>
+          <span class="proj-stack">Flutter · FastAPI (Python) · Supabase RLS · LangGraph</span>
+          <div class="proj-links">
+            <a class="proj-link" href="https://github.com/altafur-fuad/ApplyX" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            <span class="apk-badge">Source Code Available</span>
+          </div>
         </div>
 
+        <!-- MEDILENS -->
         <div class="proj-card card reveal">
           <div class="proj-top">
             <h3>MEDILENS</h3>
-            <span class="proj-status">SDP-1</span>
+            <span class="proj-status">SDP-1 · Source Code</span>
           </div>
-          <p>Bilingual (Bangla + English) medicine information app covering vet, herbal, Unani, Ayurvedic, and English medicine, with natural ingredient details.</p>
-          <span class="proj-stack">Flutter · Multi-language</span>
-          <a class="proj-link" href="https://github.com/altafur-fuad/SDP1_Medilens" target="_blank" rel="noopener">View on GitHub →</a>
+          <p>Bilingual (Bangla + English) medicine information app covering veterinary, herbal, Unani, Ayurvedic, and conventional English medicine, with natural ingredient details and offline datasets.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Bilingual</span>
+            <span class="feature-tag">Unani & Herbal</span>
+            <span class="feature-tag">Offline Support</span>
+          </div>
+          <span class="proj-stack">Flutter · Multi-language · Dart</span>
+          <div class="proj-links">
+            <a class="proj-link" href="https://github.com/altafur-fuad/SDP1_Medilens" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+          </div>
         </div>
 
+        <!-- DSA PRACTICE -->
         <div class="proj-card card reveal">
           <div class="proj-top">
             <h3>DSA PRACTICE</h3>
             <span class="proj-status">Ongoing</span>
           </div>
-          <p>A running repository of data structures and algorithms practice — problems, solutions, and notes as I sharpen core CS fundamentals.</p>
-          <span class="proj-stack">DSA · Problem Solving</span>
-          <a class="proj-link" href="https://github.com/altafur-fuad/DSA" target="_blank" rel="noopener">View on GitHub →</a>
+          <p>A running repository of data structures and algorithms practice — problems, solutions, and notes as I sharpen core CS fundamentals across trees, graphs, dynamic programming, and system design.</p>
+          <div class="feature-tags">
+            <span class="feature-tag">Algorithms</span>
+            <span class="feature-tag">Data Structures</span>
+            <span class="feature-tag">Problem Solving</span>
+          </div>
+          <span class="proj-stack">DSA · Problem Solving · Core CS</span>
+          <div class="proj-links">
+            <a class="proj-link" href="https://github.com/altafur-fuad/DSA" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -2084,6 +2428,65 @@ footer .footer-dot {
     </div>
   </section>
 
+  <!-- ==================== CV & RESUME (CREDENTIALS) ==================== -->
+  <section id="resume" style="background: var(--bg-warm);">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <p class="section-overline">Credentials</p>
+        <h2 class="section-title">CURRICULUM VITAE & RESUME</h2>
+      </div>
+      <div class="doc-grid stagger-children">
+
+        <!-- Curriculum Vitae Option -->
+        <div class="doc-card card reveal">
+          <div class="doc-icon">📄</div>
+          <div class="doc-content">
+            <div class="doc-top">
+              <h3>CURRICULUM VITAE (CV)</h3>
+              <span class="proj-status" id="badgeCv">Coming Soon</span>
+            </div>
+            <p>Comprehensive academic record highlighting undergraduate coursework at BGC Trust University, Vision Mamba thesis research, laboratory projects, and full educational milestones.</p>
+            <div class="doc-meta">
+              <span class="doc-path">Target: assets/docs/cv.pdf</span>
+              <span>Academic & Research Focus</span>
+            </div>
+            <div class="doc-actions">
+              <!-- Pre-configured for assets/docs/cv.pdf; seamlessly enables once file is added -->
+              <a href="assets/docs/cv.pdf" class="doc-btn disabled" id="btnCvDownload" download="Altafur_Rahman_Fuad_CV.pdf" aria-disabled="true" onclick="handleDocDownload(event, 'CV', 'assets/docs/cv.pdf')">
+                <span>Download CV (PDF)</span>
+                <span class="doc-state">Coming Soon</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Resume Option -->
+        <div class="doc-card card reveal">
+          <div class="doc-icon">💼</div>
+          <div class="doc-content">
+            <div class="doc-top">
+              <h3>PROFESSIONAL RESUME</h3>
+              <span class="proj-status" id="badgeResume">Coming Soon</span>
+            </div>
+            <p>Industry-oriented summary detailing production Flutter development, cross-platform mobile engineering, Go/Next.js backend integrations, and deployed web application architectures.</p>
+            <div class="doc-meta">
+              <span class="doc-path">Target: assets/docs/resume.pdf</span>
+              <span>Industry & Engineering Focus</span>
+            </div>
+            <div class="doc-actions">
+              <!-- Pre-configured for assets/docs/resume.pdf; seamlessly enables once file is added -->
+              <a href="assets/docs/resume.pdf" class="doc-btn disabled" id="btnResumeDownload" download="Altafur_Rahman_Fuad_Resume.pdf" aria-disabled="true" onclick="handleDocDownload(event, 'Resume', 'assets/docs/resume.pdf')">
+                <span>Download Resume (PDF)</span>
+                <span class="doc-state">Coming Soon</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== CONTACT ==================== -->
   <section id="contact">
     <div class="wrap">
@@ -2095,25 +2498,25 @@ footer .footer-dot {
         <div>
           <p class="contact-note reveal">Open to opportunities, collaborations, and conversations about Flutter development, agricultural AI research, or quantum computing.</p>
           <div class="contact-list reveal">
-            <div class="c-row"><span class="c-key">Email</span><span class="c-val">altaf1fuad2@gmail.com</span></div>
+            <div class="c-row"><span class="c-key">Email</span><span class="c-val"><a href="mailto:altafur.rahman.fuad@gmail.com" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">altafur.rahman.fuad@gmail.com</a></span></div>
             <div class="c-row"><span class="c-key">Academic Email</span><span class="c-val">arfuad@bgctub.ac.bd</span></div>
             <div class="c-row"><span class="c-key">Location</span><span class="c-val">Chandanaish, Chattogram, Bangladesh</span></div>
           </div>
         </div>
         <div class="reveal">
           <div class="social-row">
-            <a href="mailto:altaf1fuad2@gmail.com">Email Me →</a>
-            <a href="https://www.facebook.com/share/1LbpKm7Bmy/" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://www.instagram.com/al.taf.ur" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://github.com/altafur-fuad" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/altafur-rahman-fuad" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:altafur.rahman.fuad@gmail.com">Email Me →</a>
+            <a href="https://www.facebook.com/share/1LbpKm7Bmy/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/al.taf.ur" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://github.com/altafur-fuad" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/altafur-rahman-fuad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
 
           <!-- CTA Banner -->
           <div class="cta-banner" style="margin-top: 32px;">
             <h3>LET'S BUILD SOMETHING AMAZING</h3>
             <p>Have a project in mind? Let's talk about it.</p>
-            <a href="mailto:altaf1fuad2@gmail.com" class="btn-gold">Book a Free Call ✦</a>
+            <a href="mailto:altafur.rahman.fuad@gmail.com" class="btn-gold">Book a Free Call ✦</a>
           </div>
         </div>
       </div>
@@ -2245,8 +2648,8 @@ const counterObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 counters.forEach(c => counterObs.observe(c));
 
-// === 3D tilt on project cards ===
-document.querySelectorAll('.proj-card, .proj-featured').forEach(card => {
+// === 3D tilt on project cards and doc cards ===
+document.querySelectorAll('.proj-card, .proj-featured, .doc-card').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const r = card.getBoundingClientRect();
     const x = e.clientX - r.left, y = e.clientY - r.top;
@@ -2267,7 +2670,46 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// === Toast notification system ===
+function showPortfolioToast(msg) {
+  const toast = document.getElementById('portfolioToast');
+  if (!toast) return;
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => { toast.classList.remove('show'); }, 3800);
+}
+
+// === CV & Resume PDF Handler ===
+function handleDocDownload(e, docType, filePath) {
+  const btn = e.currentTarget;
+  if (btn.classList.contains('disabled')) {
+    e.preventDefault();
+    fetch(filePath, { method: 'HEAD' })
+      .then(res => {
+        if (res.ok && res.status !== 404) {
+          btn.classList.remove('disabled');
+          btn.removeAttribute('aria-disabled');
+          const badgeId = docType === 'CV' ? 'badgeCv' : 'badgeResume';
+          const badge = document.getElementById(badgeId);
+          if (badge) {
+            badge.textContent = 'Available Now';
+            badge.classList.add('live');
+          }
+          window.open(filePath, '_blank');
+        } else {
+          showPortfolioToast(`${docType} PDF is being prepared. Check back soon or email altafur.rahman.fuad@gmail.com!`);
+        }
+      })
+      .catch(() => {
+        showPortfolioToast(`${docType} PDF is being prepared. Check back soon or email altafur.rahman.fuad@gmail.com!`);
+      });
+  }
+}
 </script>
+
+<!-- Toast Notification Popup -->
+<div class="portfolio-toast" id="portfolioToast" role="alert" aria-live="polite"></div>
 
 </body>
 </html>

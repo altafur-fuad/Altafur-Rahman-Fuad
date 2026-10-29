@@ -1,0 +1,272 @@
+/* ========== PROJECTS ========== */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 760px) {
+      .proj-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .proj-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .proj-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--green-deep), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .proj-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .proj-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .proj-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .proj-status {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-medium);
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+
+    .proj-status.live {
+      color: var(--green-deep);
+      border-color: var(--green-deep);
+      background: rgba(26, 77, 46, 0.06);
+    }
+
+    .proj-status.live::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--green-mid);
+      margin-right: 6px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .proj-card p {
+      color: var(--text-body);
+      font-size: 0.9rem;
+      flex: 1;
+    }
+
+    .proj-stack {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.72rem;
+      color: var(--gold-dark);
+      font-weight: 500;
+    }
+
+    .proj-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--green-deep);
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.3s ease;
+    }
+
+    .proj-link:hover {
+      gap: 8px;
+    }
+
+    .proj-card.full {
+      grid-column: 1 / -1;
+    }
+
+    /* Featured Lumio */
+    .proj-featured {
+      grid-column: 1 / -1;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .proj-featured-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    @media (max-width: 760px) {
+      .proj-featured-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .proj-featured-content {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .proj-featured-visual {
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(26, 77, 46, 0.04), rgba(212, 160, 57, 0.04));
+      border-left: 1px solid var(--border);
+    }
+
+    @media (max-width: 760px) {
+      .proj-featured-visual {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+    }
+
+    .lumio-features {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 4px 0;
+    }
+
+    .lumio-features li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .lumio-features li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--green-deep);
+      font-weight: 700;
+    }
+
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .feature-tag {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.04em;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-medium);
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .feature-tag:hover {
+      border-color: var(--green-deep);
+      color: var(--green-deep);
+      background: var(--green-light);
+    }
+
+    /* Project Card Thumbnails & Action Rows */
+    .proj-thumb {
+      width: 100%;
+      height: 195px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border);
+      margin-bottom: 2px;
+      position: relative;
+    }
+
+    .proj-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .proj-card:hover .proj-thumb img {
+      transform: scale(1.035);
+    }
+
+    .proj-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 6px;
+    }
+
+    .proj-link.live-link {
+      background: rgba(26, 77, 46, 0.07);
+      color: var(--green-deep);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(26, 77, 46, 0.2);
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .proj-link.live-link:hover {
+      background: var(--green-deep);
+      color: var(--text-white);
+      border-color: var(--green-deep);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(26, 77, 46, 0.25);
+    }
+
+    .apk-badge {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-medium);
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 500;
+      user-select: none;
+    }

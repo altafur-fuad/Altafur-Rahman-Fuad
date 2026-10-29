@@ -1,0 +1,58 @@
+{
+  "name": "Altafur Rahman Fuad",
+  "shortName": "A. R. Fuad",
+  "brandIcon": "AF",
+  "title": "Flutter Developer & AI Researcher",
+  "typingTagline": "Building AI-powered agriculture research and full-stack mobile apps with Flutter & Dart.",
+  "location": "Chattogram, Bangladesh",
+  "email": "altafur.rahman.fuad@gmail.com",
+  "github": "https://github.com/altafur-fuad",
+  "linkedin": "https://linkedin.com/in/altafur-rahman-fuad",
+  "discord": "altafur_fuad",
+  "avatar": "assets/fuad-photo.jpeg",
+  "education": {
+    "degree": "B.Sc. in Computer Science & Engineering",
+    "institution": "BGC Trust University Bangladesh",
+    "duration": "2022 — 2026 (Expected)",
+    "cgpa": "3.84 / 4.00",
+    "highlights": [
+      "Department Merit Scholarship Recipient",
+      "Lead Student Researcher on Vision Mamba for Agriculture",
+      "Software Development Project I & II Lead",
+      "Active Competitive Programmer & Algorithm Mentor"
+    ]
+  },
+  "stats": [
+    {
+      "value": "3+",
+      "target": 3,
+      "label": "Years Coding",
+      "subtext": "Flutter, Dart, AI, Systems"
+    },
+    {
+      "value": "8+",
+      "target": 8,
+      "label": "Projects Built",
+      "subtext": "Mobile, Web & Systems"
+    },
+    {
+      "value": "4+",
+      "target": 4,
+      "label": "Production Apps",
+      "subtext": "Deployed & Live"
+    },
+    {
+      "value": "3.84",
+      "target": 3,
+      "decimal": "84",
+      "label": "Current CGPA",
+      "subtext": "BGC Trust University"
+    }
+  ],
+  "socials": [
+    { "name": "GitHub", "url": "https://github.com/altafur-fuad", "icon": "github" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/in/altafur-rahman-fuad", "icon": "linkedin" },
+    { "name": "Email", "url": "mailto:altafur.rahman.fuad@gmail.com", "icon": "envelope" }
+  ]
+}
+

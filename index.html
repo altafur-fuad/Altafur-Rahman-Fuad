@@ -1,3 +1,8 @@
+<!-- ============================================================
+     GENERATED PRODUCTION FILE — DO NOT EDIT DIRECTLY.
+     Source files are located in src/ (sections/, styles/, scripts/, data/).
+     Run 'npm run build' or 'node scripts/build.mjs' to recompile.
+     ============================================================ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,2193 +19,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <style>
-    /* ============================================================
-   PROFESSIONAL PORTFOLIO — Warm Cream / Forest Green / Gold
-   Mixed from Olivia Smith + Marino Valerie Demo Styles
-   ============================================================ */
-
-    /* ========== CSS VARIABLES ========== */
-    :root {
-      --bg-cream: #faf7f2;
-      --bg-warm: #f5f0e8;
-      --bg-card: #ffffff;
-      --bg-card-alt: #f0ebe2;
-      --bg-dark: #1a1a1a;
-      --bg-dark-card: #232323;
-
-      --green-deep: #1a4d2e;
-      --green-mid: #2d7a4a;
-      --green-light: #e8f5e9;
-      --green-accent: #3d9e5c;
-
-      --gold: #d4a039;
-      --gold-light: #f0d68a;
-      --gold-dark: #b8882d;
-      --gold-bg: rgba(212, 160, 57, 0.08);
-
-      --orange-soft: #e8824a;
-      --orange-bg: rgba(232, 130, 74, 0.08);
-
-      --text-dark: #1a1a1a;
-      --text-body: #4a4a4a;
-      --text-muted: #8a8a7a;
-      --text-light: #b0a898;
-      --text-white: #ffffff;
-
-      --border: rgba(26, 26, 26, 0.08);
-      --border-medium: rgba(26, 26, 26, 0.12);
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-      --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
-      --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.08);
-      --shadow-xl: 0 16px 60px rgba(0, 0, 0, 0.1);
-
-      --max-w: 1180px;
-      --radius: 20px;
-      --radius-sm: 12px;
-      --radius-xs: 8px;
-      --radius-pill: 100px;
-    }
-
-    /* ========== RESET & BASE ========== */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--bg-cream);
-      color: var(--text-body);
-      font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .wrap {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    @media (max-width: 640px) {
-      .wrap {
-        padding: 0 20px;
-      }
-    }
-
-    /* ========== SCROLLBAR ========== */
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--bg-cream);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(to bottom, var(--green-deep), var(--gold));
-      border-radius: 3px;
-    }
-
-    /* ========== SELECTION ========== */
-    ::selection {
-      background: var(--green-deep);
-      color: var(--text-white);
-    }
-
-    /* ========== NAVIGATION ========== */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(250, 247, 242, 0.85);
-      backdrop-filter: blur(20px) saturate(1.5);
-      -webkit-backdrop-filter: blur(20px) saturate(1.5);
-      border-bottom: 1px solid var(--border);
-      transition: box-shadow 0.3s ease;
-    }
-
-    header.scrolled {
-      box-shadow: var(--shadow-md);
-    }
-
-    nav.wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--text-dark);
-      letter-spacing: -0.01em;
-    }
-
-    .brand-icon {
-      width: 38px;
-      height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      color: var(--text-white);
-      background: var(--green-deep);
-      border-radius: var(--radius-xs);
-      letter-spacing: 0.02em;
-    }
-
-    .nav-center {
-      display: flex;
-      gap: 4px;
-    }
-
-    .nav-center a {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      padding: 8px 16px;
-      border-radius: var(--radius-pill);
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .nav-center a:hover {
-      color: var(--green-deep);
-      background: var(--green-light);
-    }
-
-    .nav-center a.active {
-      color: var(--green-deep);
-      font-weight: 600;
-    }
-
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .btn-contact {
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 10px 24px;
-      border-radius: var(--radius-pill);
-      background: var(--green-deep);
-      color: var(--text-white);
-      border: none;
-      cursor: pointer;
-      transition: all 0.35s ease;
-      letter-spacing: 0.01em;
-    }
-
-    .btn-contact:hover {
-      background: var(--green-mid);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(26, 77, 46, 0.3);
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: 1px solid var(--border-medium);
-      color: var(--text-dark);
-      width: 42px;
-      height: 42px;
-      border-radius: var(--radius-xs);
-      cursor: pointer;
-      font-size: 1.2rem;
-      transition: all 0.3s;
-    }
-
-    .nav-toggle:hover {
-      border-color: var(--green-deep);
-      color: var(--green-deep);
-    }
-
-    @media (max-width: 860px) {
-      .nav-center {
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        background: rgba(250, 247, 242, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        gap: 0;
-        border-bottom: 1px solid var(--border);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .nav-center.open {
-        max-height: 500px;
-      }
-
-      .nav-center a {
-        padding: 16px 32px;
-        border-radius: 0;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .btn-contact {
-        display: none;
-      }
-    }
-
-    /* ========== SECTION BASE ========== */
-    section {
-      padding: 100px 0;
-      position: relative;
-    }
-
-    @media (max-width: 640px) {
-      section {
-        padding: 70px 0;
-      }
-    }
-
-    .section-header {
-      margin-bottom: 48px;
-    }
-
-    .section-overline {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green-deep);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .section-overline::before {
-      content: "✦";
-      font-size: 0.65rem;
-      color: var(--gold);
-    }
-
-    .section-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2rem, 4.5vw, 3rem);
-      color: var(--text-dark);
-      letter-spacing: 0.02em;
-      line-height: 1.1;
-    }
-
-    /* ========== DECORATIVE ELEMENTS ========== */
-    .star-decoration {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--gold);
-      font-size: 0.7rem;
-    }
-
-    .star-decoration::before,
-    .star-decoration::after {
-      content: "✦";
-    }
-
-    .divider-line {
-      width: 100%;
-      height: 1px;
-      background: var(--border-medium);
-      margin: 0;
-    }
-
-    .dashed-border {
-      border: 2px dashed var(--border-medium);
-    }
-
-    /* ========== CARDS ========== */
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-3px);
-      border-color: var(--border-medium);
-    }
-
-    .card-alt {
-      background: var(--bg-card-alt);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      transition: all 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
-    }
-
-    .card-alt:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    .card-dark {
-      background: var(--bg-dark);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: var(--radius);
-      padding: 28px;
-      color: var(--text-white);
-    }
-
-    /* ========== HERO ========== */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 72px;
-      background: var(--bg-cream);
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* Large watermark text */
-    .hero-watermark {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(6rem, 18vw, 16rem);
-      color: rgba(26, 77, 46, 0.03);
-      letter-spacing: 0.05em;
-      pointer-events: none;
-      user-select: none;
-      white-space: nowrap;
-      z-index: 0;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    @media (max-width: 860px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-      }
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 860px) {
-      .hero-badges {
-        justify-content: center;
-      }
-    }
-
-    .hero-badge {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: var(--radius-pill);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-badge.green {
-      border: 1px solid var(--green-deep);
-      color: var(--green-deep);
-      background: rgba(26, 77, 46, 0.06);
-    }
-
-    .hero-badge.gold {
-      border: 1px solid var(--gold);
-      color: var(--gold-dark);
-      background: var(--gold-bg);
-    }
-
-    .hero-hello {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--text-body);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    @media (max-width: 860px) {
-      .hero-hello {
-        justify-content: center;
-      }
-    }
-
-    .hero-name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      line-height: 0.95;
-      letter-spacing: 0.02em;
-      color: var(--text-dark);
-      margin-bottom: 6px;
-    }
-
-    .hero-name .accent {
-      color: var(--green-deep);
-      position: relative;
-    }
-
-    .hero-name .accent::after {
-      content: "";
-      position: absolute;
-      bottom: 4px;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      background: var(--gold-light);
-      border-radius: 3px;
-      z-index: -1;
-      opacity: 0.6;
-    }
-
-    .hero-role {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--green-deep);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    @media (max-width: 860px) {
-      .hero-role {
-        justify-content: center;
-      }
-    }
-
-    .hero-desc {
-      font-size: 1rem;
-      color: var(--text-body);
-      max-width: 52ch;
-      line-height: 1.8;
-      margin-bottom: 10px;
-    }
-
-    .hero-desc .typed-text {
-      color: var(--green-deep);
-      font-weight: 500;
-    }
-
-    .hero-desc .cursor-blink {
-      display: inline-block;
-      width: 2px;
-      height: 1.1em;
-      background: var(--green-deep);
-      margin-left: 2px;
-      vertical-align: text-bottom;
-      animation: blink 1s step-end infinite;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 18px;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 28px;
-    }
-
-    .hero-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-meta .dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 860px) {
-      .hero-cta {
-        justify-content: center;
-      }
-    }
-
-    .btn-primary {
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 14px 30px;
-      border-radius: var(--radius-pill);
-      background: var(--green-deep);
-      color: var(--text-white);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 2px solid var(--green-deep);
-      transition: all 0.35s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary:hover {
-      background: var(--green-mid);
-      border-color: var(--green-mid);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(26, 77, 46, 0.25);
-    }
-
-    .btn-outline {
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 14px 30px;
-      border-radius: var(--radius-pill);
-      background: transparent;
-      color: var(--text-dark);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 2px solid var(--border-medium);
-      transition: all 0.35s ease;
-      cursor: pointer;
-    }
-
-    .btn-outline:hover {
-      border-color: var(--green-deep);
-      color: var(--green-deep);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    }
-
-    /* Hero Photo */
-    .hero-photo-wrap {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-photo-frame {
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      aspect-ratio: 3 / 4;
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 3px solid var(--green-deep);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .hero-photo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      filter: contrast(1.02) saturate(1.05);
-    }
-
-    .hero-photo-badge {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      background: var(--green-deep);
-      color: var(--text-white);
-      font-family: 'Fira Code', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 8px 16px;
-      border-radius: var(--radius-xs);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hero-photo-badge .pulse-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #4ade80;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    /* Decorative corners on photo */
-    .hero-photo-wrap::before,
-    .hero-photo-wrap::after {
-      content: "";
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      border: 3px solid var(--gold);
-      z-index: 2;
-      transition: all 0.4s ease;
-    }
-
-    .hero-photo-wrap::before {
-      top: -12px;
-      right: -12px;
-      border-left: none;
-      border-bottom: none;
-      border-radius: 0 var(--radius-xs) 0 0;
-    }
-
-    .hero-photo-wrap::after {
-      bottom: -12px;
-      left: -12px;
-      border-right: none;
-      border-top: none;
-      border-radius: 0 0 0 var(--radius-xs);
-    }
-
-    .hero-photo-wrap:hover::before,
-    .hero-photo-wrap:hover::after {
-      width: 80px;
-      height: 80px;
-    }
-
-    /* ========== STATS BAR ========== */
-    .stats-bar {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 40px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: -40px;
-      position: relative;
-      z-index: 3;
-      box-shadow: var(--shadow-lg);
-    }
-
-    @media (max-width: 760px) {
-      .stats-bar {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 24px;
-        margin-top: -20px;
-      }
-    }
-
-    .stat-item {
-      text-align: center;
-      position: relative;
-    }
-
-    .stat-item:not(:last-child)::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 10%;
-      height: 80%;
-      width: 1px;
-      background: var(--border-medium);
-    }
-
-    @media (max-width: 760px) {
-      .stat-item:nth-child(2)::after {
-        display: none;
-      }
-    }
-
-    .stat-number {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.4rem;
-      color: var(--green-deep);
-      line-height: 1;
-      letter-spacing: 0.02em;
-    }
-
-    .stat-number .plus {
-      color: var(--gold);
-      font-size: 1.8rem;
-    }
-
-    .stat-label {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* ========== MARQUEE BANNER ========== */
-    .marquee-banner {
-      background: var(--green-deep);
-      padding: 16px 0;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .marquee-track {
-      display: flex;
-      animation: marqueeScroll 25s linear infinite;
-      width: max-content;
-    }
-
-    .marquee-track span {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem;
-      color: var(--text-white);
-      letter-spacing: 0.08em;
-      white-space: nowrap;
-      padding: 0 24px;
-      display: inline-flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .marquee-track .star {
-      color: var(--gold-light);
-      font-size: 0.7rem;
-    }
-
-    @keyframes marqueeScroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    /* ========== ABOUT — BENTO GRID ========== */
-    .about-intro {
-      font-size: 1.05rem;
-      color: var(--text-body);
-      line-height: 1.85;
-      max-width: 72ch;
-      margin-bottom: 40px;
-    }
-
-    .about-intro strong {
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    @media (max-width: 800px) {
-      .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 520px) {
-      .bento-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .bento-card {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .bento-card.span-2 {
-      grid-column: span 2;
-    }
-
-    @media (max-width: 520px) {
-      .bento-card.span-2 {
-        grid-column: span 1;
-      }
-    }
-
-    .bento-icon {
-      font-size: 1.6rem;
-      line-height: 1;
-      margin-bottom: 2px;
-    }
-
-    .bento-label {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green-deep);
-      font-weight: 500;
-    }
-
-    .bento-value {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      letter-spacing: -0.01em;
-    }
-
-    .bento-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* ========== SERVICES / WHAT I DO ========== */
-    .services-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 48px;
-    }
-
-    .view-all-btn {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--green-deep);
-      border: 1px solid var(--green-deep);
-      padding: 8px 20px;
-      border-radius: var(--radius-pill);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.3s ease;
-    }
-
-    .view-all-btn:hover {
-      background: var(--green-deep);
-      color: var(--text-white);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    @media (max-width: 800px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 520px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .service-card {
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(to right, var(--green-deep), var(--gold));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .service-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      background: var(--green-light);
-      border: 1px solid rgba(26, 77, 46, 0.1);
-      transition: all 0.35s ease;
-    }
-
-    .service-card:hover .service-icon {
-      background: var(--green-deep);
-      transform: translateY(-2px) scale(1.05);
-    }
-
-    .service-card:hover .service-icon-text {
-      filter: brightness(10);
-    }
-
-    .service-card h4 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.3rem;
-      color: var(--text-dark);
-      letter-spacing: 0.02em;
-    }
-
-    .service-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    .service-learn-more {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--green-deep);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: auto;
-      transition: gap 0.3s ease;
-    }
-
-    .service-learn-more:hover {
-      gap: 8px;
-    }
-
-    /* ========== EDUCATION ========== */
-    .edu-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .edu-row {
-      display: grid;
-      grid-template-columns: 130px 1fr auto;
-      gap: 24px;
-      align-items: center;
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .edu-row::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 3px;
-      height: 100%;
-      background: var(--green-deep);
-      transform: scaleY(0);
-      transition: transform 0.4s ease;
-    }
-
-    .edu-row:hover::before {
-      transform: scaleY(1);
-    }
-
-    @media (max-width: 700px) {
-      .edu-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 22px;
-      }
-    }
-
-    .edu-year {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--green-deep);
-    }
-
-    .edu-name h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.15rem;
-      color: var(--text-dark);
-      letter-spacing: 0.02em;
-    }
-
-    .edu-name p {
-      margin-top: 4px;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-
-    .gpa-badge {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--gold-dark);
-      border: 1px solid var(--gold);
-      padding: 6px 16px;
-      border-radius: var(--radius-pill);
-      white-space: nowrap;
-      background: var(--gold-bg);
-    }
-
-    /* ========== RESEARCH ========== */
-    .thesis-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .thesis-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(to bottom, var(--green-deep), var(--gold), var(--green-mid));
-    }
-
-    .thesis-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Fira Code', monospace;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: var(--green-deep);
-      border: 1px solid var(--green-deep);
-      padding: 6px 16px;
-      border-radius: var(--radius-pill);
-      margin-bottom: 20px;
-      background: rgba(26, 77, 46, 0.05);
-    }
-
-    .thesis-status::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green-mid);
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    .thesis-card h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.8rem;
-      color: var(--text-dark);
-      letter-spacing: 0.02em;
-      margin-bottom: 6px;
-    }
-
-    .thesis-sub {
-      color: var(--green-deep);
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-
-    .thesis-card p.desc {
-      color: var(--text-body);
-      max-width: 72ch;
-      margin-bottom: 24px;
-      line-height: 1.85;
-      font-size: 0.95rem;
-    }
-
-    .branch-tags {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .btag {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.72rem;
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      border: 1px solid;
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-
-    .btag.dis {
-      color: var(--green-deep);
-      border-color: var(--green-deep);
-      background: rgba(26, 77, 46, 0.06);
-    }
-
-    .btag.pest {
-      color: var(--gold-dark);
-      border-color: var(--gold);
-      background: var(--gold-bg);
-    }
-
-    .thesis-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .thesis-links a {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--green-deep);
-      position: relative;
-      transition: all 0.3s;
-    }
-
-    .thesis-links a::after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-
-    .thesis-links a:hover::after {
-      transform: scaleX(1);
-    }
-
-    .research-sub-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    @media (max-width: 700px) {
-      .research-sub-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .research-sub {
-      padding: 24px;
-    }
-
-    .research-sub .tag {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      color: var(--gold-dark);
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    .research-sub h4 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem;
-      margin: 10px 0 8px;
-      color: var(--text-dark);
-      letter-spacing: 0.02em;
-    }
-
-    .research-sub p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-
-    /* ========== PROJECTS ========== */
-    .proj-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    @media (max-width: 760px) {
-      .proj-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .proj-card {
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .proj-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(to right, var(--green-deep), var(--gold));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .proj-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .proj-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .proj-card h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.25rem;
-      color: var(--text-dark);
-      letter-spacing: 0.02em;
-    }
-
-    .proj-status {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.06em;
-      padding: 4px 12px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-medium);
-      color: var(--text-muted);
-      white-space: nowrap;
-      flex-shrink: 0;
-      font-weight: 500;
-    }
-
-    .proj-status.live {
-      color: var(--green-deep);
-      border-color: var(--green-deep);
-      background: rgba(26, 77, 46, 0.06);
-    }
-
-    .proj-status.live::before {
-      content: "";
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--green-mid);
-      margin-right: 6px;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    .proj-card p {
-      color: var(--text-body);
-      font-size: 0.9rem;
-      flex: 1;
-    }
-
-    .proj-stack {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.72rem;
-      color: var(--gold-dark);
-      font-weight: 500;
-    }
-
-    .proj-link {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--green-deep);
-      width: fit-content;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      transition: gap 0.3s ease;
-    }
-
-    .proj-link:hover {
-      gap: 8px;
-    }
-
-    .proj-card.full {
-      grid-column: 1 / -1;
-    }
-
-    /* Featured Lumio */
-    .proj-featured {
-      grid-column: 1 / -1;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .proj-featured-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-
-    @media (max-width: 760px) {
-      .proj-featured-inner {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .proj-featured-content {
-      padding: 36px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .proj-featured-visual {
-      padding: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, rgba(26, 77, 46, 0.04), rgba(212, 160, 57, 0.04));
-      border-left: 1px solid var(--border);
-    }
-
-    @media (max-width: 760px) {
-      .proj-featured-visual {
-        border-left: none;
-        border-top: 1px solid var(--border);
-      }
-    }
-
-    .lumio-features {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin: 4px 0;
-    }
-
-    .lumio-features li {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      padding-left: 16px;
-      position: relative;
-      line-height: 1.6;
-    }
-
-    .lumio-features li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--green-deep);
-      font-weight: 700;
-    }
-
-    .feature-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
-
-    .feature-tag {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.04em;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-medium);
-      color: var(--text-muted);
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-
-    .feature-tag:hover {
-      border-color: var(--green-deep);
-      color: var(--green-deep);
-      background: var(--green-light);
-    }
-
-    /* Project Card Thumbnails & Action Rows */
-    .proj-thumb {
-      width: 100%;
-      height: 195px;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      background: var(--bg-card-alt);
-      border: 1px solid var(--border);
-      margin-bottom: 2px;
-      position: relative;
-    }
-
-    .proj-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .proj-card:hover .proj-thumb img {
-      transform: scale(1.035);
-    }
-
-    .proj-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px;
-      margin-top: auto;
-      padding-top: 6px;
-    }
-
-    .proj-link.live-link {
-      background: rgba(26, 77, 46, 0.07);
-      color: var(--green-deep);
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(26, 77, 46, 0.2);
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .proj-link.live-link:hover {
-      background: var(--green-deep);
-      color: var(--text-white);
-      border-color: var(--green-deep);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(26, 77, 46, 0.25);
-    }
-
-    .apk-badge {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.04em;
-      padding: 5px 12px;
-      border-radius: var(--radius-pill);
-      background: var(--bg-card-alt);
-      border: 1px solid var(--border-medium);
-      color: var(--text-muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-weight: 500;
-      user-select: none;
-    }
-
-    /* ========== CV & RESUME (CREDENTIALS) ========== */
-    .doc-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    @media (max-width: 760px) {
-      .doc-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .doc-card {
-      padding: 32px;
-      display: flex;
-      gap: 22px;
-      position: relative;
-      overflow: hidden;
-      align-items: flex-start;
-    }
-
-    .doc-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(to right, var(--green-deep), var(--gold));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .doc-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .doc-icon {
-      font-size: 2.2rem;
-      width: 58px;
-      height: 58px;
-      border-radius: var(--radius-sm);
-      background: var(--bg-card-alt);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .doc-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .doc-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .doc-card h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.35rem;
-      color: var(--text-dark);
-      letter-spacing: 0.02em;
-    }
-
-    .doc-card p {
-      color: var(--text-body);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    .doc-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      font-family: 'Fira Code', monospace;
-      font-size: 0.72rem;
-      color: var(--gold-dark);
-    }
-
-    .doc-meta .doc-path {
-      color: var(--text-muted);
-      background: var(--bg-warm);
-      padding: 3px 8px;
-      border-radius: 4px;
-      border: 1px solid var(--border);
-    }
-
-    .doc-actions {
-      margin-top: 6px;
-    }
-
-    .doc-btn {
-      font-size: 0.88rem;
-      font-weight: 600;
-      padding: 10px 22px;
-      border-radius: var(--radius-pill);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1.5px solid var(--green-deep);
-      background: var(--green-deep);
-      color: var(--text-white);
-      transition: all 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .doc-btn:hover:not(.disabled) {
-      background: var(--green-mid);
-      border-color: var(--green-mid);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(26, 77, 46, 0.25);
-    }
-
-    .doc-btn.disabled {
-      background: var(--bg-card-alt);
-      border-color: var(--border-medium);
-      color: var(--text-muted);
-      cursor: default;
-    }
-
-    .doc-state {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.68rem;
-      font-weight: 500;
-      padding: 2px 8px;
-      border-radius: var(--radius-pill);
-      background: rgba(0, 0, 0, 0.06);
-    }
-
-    /* Toast notice popup */
-    .portfolio-toast {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: var(--bg-dark);
-      color: var(--text-white);
-      padding: 12px 24px;
-      border-radius: var(--radius-pill);
-      font-size: 0.88rem;
-      font-weight: 500;
-      box-shadow: var(--shadow-xl);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      z-index: 9999;
-      opacity: 0;
-      transition: transform 0.35s ease, opacity 0.35s ease;
-      pointer-events: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .portfolio-toast.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
-
-    /* ========== SKILLS ========== */
-    .skills-highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-bottom: 32px;
-    }
-
-    @media (max-width: 800px) {
-      .skills-highlight-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .skills-highlight-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .skill-highlight {
-      padding: 28px 24px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .skill-highlight .sh-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      background: var(--green-light);
-      border: 1px solid rgba(26, 77, 46, 0.1);
-      transition: all 0.35s ease;
-    }
-
-    .skill-highlight:hover .sh-icon {
-      background: var(--green-deep);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(26, 77, 46, 0.2);
-    }
-
-    .skill-highlight:hover .sh-icon-inner {
-      filter: brightness(10);
-    }
-
-    .skill-highlight h4 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      color: var(--text-dark);
-      letter-spacing: 0.02em;
-    }
-
-    .skill-highlight p {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .skills-detail-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    @media (max-width: 700px) {
-      .skills-detail-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .skill-group {
-      padding: 28px;
-    }
-
-    .skill-group h3 {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--green-deep);
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .pill {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.75rem;
-      border: 1px solid var(--border-medium);
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      color: var(--text-dark);
-      background: var(--bg-cream);
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-
-    .pill:hover {
-      border-color: var(--green-deep);
-      color: var(--green-deep);
-      background: var(--green-light);
-      transform: translateY(-1px);
-    }
-
-    .pill.learning {
-      color: var(--text-muted);
-      border-style: dashed;
-    }
-
-    .pill.learning:hover {
-      border-color: var(--gold);
-      color: var(--gold-dark);
-      border-style: solid;
-      background: var(--gold-bg);
-    }
-
-    /* ========== VISION SECTION ========== */
-    .vision-section {
-      background: var(--bg-dark);
-      color: var(--text-white);
-    }
-
-    .vision-section .section-overline {
-      color: var(--gold-light);
-    }
-
-    .vision-section .section-overline::before {
-      color: var(--gold);
-    }
-
-    .vision-section .section-title {
-      color: var(--text-white);
-    }
-
-    .vision-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    @media (max-width: 760px) {
-      .vision-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .vision-text p {
-      font-size: 1rem;
-      line-height: 1.85;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 20px;
-    }
-
-    .vision-text strong {
-      color: var(--gold-light);
-    }
-
-    .vision-card {
-      background: var(--bg-dark-card);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: var(--radius);
-      padding: 32px;
-    }
-
-    .vision-card .vision-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      background: rgba(212, 160, 57, 0.1);
-      border: 1px solid rgba(212, 160, 57, 0.2);
-      margin-bottom: 16px;
-    }
-
-    .vision-card h4 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.3rem;
-      color: var(--text-white);
-      letter-spacing: 0.02em;
-      margin-bottom: 10px;
-    }
-
-    .vision-card p {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.6);
-      line-height: 1.7;
-    }
-
-    /* ========== CONTACT ========== */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    @media (max-width: 760px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .contact-note {
-      color: var(--text-body);
-      font-size: 1rem;
-      max-width: 48ch;
-      margin-bottom: 24px;
-      line-height: 1.8;
-    }
-
-    .contact-list .c-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.88rem;
-      gap: 16px;
-      flex-wrap: wrap;
-      transition: all 0.3s;
-    }
-
-    .contact-list .c-row:first-child {
-      border-top: 1px solid var(--border);
-    }
-
-    .contact-list .c-row:hover {
-      background: rgba(26, 77, 46, 0.03);
-      padding-left: 8px;
-    }
-
-    .c-key {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    .c-val {
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
-    .social-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .social-row a {
-      font-size: 0.82rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      border: 1px solid var(--border-medium);
-      padding: 12px 22px;
-      border-radius: var(--radius-sm);
-      color: var(--text-dark);
-      background: var(--bg-card);
-      transition: all 0.35s ease;
-    }
-
-    .social-row a:hover {
-      border-color: var(--green-deep);
-      color: var(--green-deep);
-      background: var(--green-light);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(26, 77, 46, 0.1);
-    }
-
-    /* ========== CTA BANNER ========== */
-    .cta-banner {
-      background: var(--green-deep);
-      border-radius: var(--radius);
-      padding: 48px;
-      text-align: center;
-      margin-top: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-banner::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      right: -30%;
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      background: rgba(212, 160, 57, 0.08);
-      pointer-events: none;
-    }
-
-    .cta-banner h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: var(--text-white);
-      letter-spacing: 0.02em;
-      margin-bottom: 8px;
-      position: relative;
-    }
-
-    .cta-banner p {
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 24px;
-      font-size: 0.95rem;
-      position: relative;
-    }
-
-    .cta-banner .btn-gold {
-      font-size: 0.9rem;
-      font-weight: 700;
-      padding: 14px 32px;
-      border-radius: var(--radius-pill);
-      background: var(--gold);
-      color: var(--text-dark);
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.35s ease;
-      position: relative;
-      letter-spacing: 0.01em;
-    }
-
-    .cta-banner .btn-gold:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(212, 160, 57, 0.3);
-    }
-
-    /* ========== FOOTER ========== */
-    footer {
-      text-align: center;
-      padding: 40px 0;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      background: var(--bg-cream);
-    }
-
-    footer::before {
-      content: "";
-      display: block;
-      width: 120px;
-      height: 1px;
-      margin: 0 auto 20px;
-      background: linear-gradient(to right, transparent, var(--green-deep), var(--gold), transparent);
-    }
-
-    footer p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    footer .footer-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--gold);
-      display: inline-block;
-    }
-
-    /* ========== ANIMATIONS ========== */
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0.4;
-      }
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
-    /* ========== SCROLL REVEAL ========== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .stagger-children .reveal:nth-child(1) {
-      transition-delay: 0.05s;
-    }
-
-    .stagger-children .reveal:nth-child(2) {
-      transition-delay: 0.1s;
-    }
-
-    .stagger-children .reveal:nth-child(3) {
-      transition-delay: 0.15s;
-    }
-
-    .stagger-children .reveal:nth-child(4) {
-      transition-delay: 0.2s;
-    }
-
-    .stagger-children .reveal:nth-child(5) {
-      transition-delay: 0.25s;
-    }
-
-    .stagger-children .reveal:nth-child(6) {
-      transition-delay: 0.3s;
-    }
-
-    .stagger-children .reveal:nth-child(7) {
-      transition-delay: 0.35s;
-    }
-
-    .stagger-children .reveal:nth-child(8) {
-      transition-delay: 0.4s;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-
-      html {
-        scroll-behavior: auto;
-      }
-    }
-
-    /* ========== BACK TO TOP ========== */
-    .back-to-top {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 200;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--green-deep);
-      color: var(--text-white);
-      border: none;
-      cursor: pointer;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 16px rgba(26, 77, 46, 0.3);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.35s ease;
-      pointer-events: none;
-    }
-
-    .back-to-top.visible {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-
-    .back-to-top:hover {
-      background: var(--green-mid);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 24px rgba(26, 77, 46, 0.4);
-    }
-  </style>
+  <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body>
 
-  <!-- ==================== NAVIGATION ==================== -->
   <header id="siteHeader">
     <nav class="wrap">
       <a href="#top" class="brand">
@@ -2224,8 +47,8 @@
     </nav>
   </header>
 
-  <main id="top">
 
+  <main id="top">
     <!-- ==================== HERO ==================== -->
     <section class="hero">
       <div class="hero-watermark">PORTFOLIO</div>
@@ -2480,41 +303,102 @@
           <h2 class="section-title">ACADEMIC RESEARCH</h2>
         </div>
 
+        <!-- Primary Ongoing Research Card -->
         <div class="thesis-card reveal">
           <span class="thesis-status">Research in Progress · 1 Ongoing Project</span>
           <h3>CROSSMAMBA-AGRI</h3>
-          <p class="thesis-sub">Cross-Attention Vision Mamba for Joint Pest and Disease Classification</p>
+          <p class="thesis-sub">CrossMamba-Agri: A Vision Mamba-Based Framework for Joint Crop Disease and Pest Classification</p>
           <p class="desc">
-            A unified Vision Mamba (State Space Model) architecture that jointly classifies plant diseases
-            and insect pests in a single network. Incorporates a Background Suppression Module (BSM) for noisy
-            field imagery, multi-scale patch embeddings, a shared bidirectional Mamba encoder, and task-specific
-            cross-attention routing for resource-efficient diagnostic deployment. Supervised by Mohammad Salah Uddin
-            Chowdhury, Assistant Professor & Chairman, CSE, BGC Trust University Bangladesh.
+            A dual-head Vision Mamba (State Space Model) framework designed for joint crop disease and insect pest
+            classification on the multi-crop CCMT dataset (Cashew, Cassava, Maize, and Tomato). Incorporates a
+            Background Suppression Module (BSM) combining 2D Fast Fourier Transform (FFT) filtering with SimAM
+            parameter-free 3D attention to suppress irregular field clutter, Multi-Scale Patch Embeddings (8×8, 16×16,
+            and 32×32 patches mapped into 196 tokens, D = 512), an 8-layer Bidirectional Mamba (Bi-Mamba) encoder
+            providing linear sequence complexity O(N), and Cross-Attention Fusion (12 adaptive queries, 8 attention
+            heads) routing features to dual task-specific MLPs. Evaluated on an audited, 100% leakage-free parent-level split.
+            Supervised by Mohammad Salah Uddin Chowdhury, Assistant Professor &amp; Chairman, Department of Computer Science &amp;
+            Engineering, BGC Trust University Bangladesh.
           </p>
+
           <div class="branch-tags">
-            <span class="btag dis">Disease Branch — PlantVillage (17 Classes)</span>
-            <span class="btag pest">Pest Branch — IP102 (5 Classes)</span>
+            <span class="btag dis">Plant Condition Head — CCMT (17 Classes: Cashew, Cassava, Maize, Tomato)</span>
+            <span class="btag pest">Pest Head — CCMT (5 Classes)</span>
             <span class="btag"
               style="color: var(--gold-dark); border-color: var(--gold); background: var(--gold-bg);">Architecture:
-              38.61M Parameters</span>
+              38.61M Parameters (8 SSM Layers)</span>
+            <span class="btag"
+              style="color: var(--green-deep); border-color: var(--green-mid); background: var(--green-light);">Honest
+              Parent Split: 89.20% Accuracy</span>
           </div>
+
+          <!-- Verified Evaluation Protocol Comparison -->
+          <div class="research-eval-grid">
+            <div class="eval-card">
+              <span class="eval-tag honest">Honest Test (Protocol C)</span>
+              <div class="eval-stat">89.20%</div>
+              <p class="eval-label">Clean Parent Split (No Leakage)</p>
+              <span class="eval-sub">Disease: 87.39% · Pest: 97.58% · ROC-AUC: 0.993 / 0.998</span>
+            </div>
+            <div class="eval-card">
+              <span class="eval-tag audit">Leakage Audit (Protocol B)</span>
+              <div class="eval-stat">93.25%</div>
+              <p class="eval-label">Standard Benchmark Split</p>
+              <span class="eval-sub">7.41% leakage (1,851 pHash duplicate pairs with Hamming &lt; 6)</span>
+            </div>
+            <div class="eval-card">
+              <span class="eval-tag raw">Raw Baseline (Protocol A)</span>
+              <div class="eval-stat">82.23%</div>
+              <p class="eval-label">Unaugmented Base Split</p>
+              <span class="eval-sub">23,275 clean farm images (80% Train / 10% Val / 10% Test)</span>
+            </div>
+          </div>
+
           <div class="thesis-links">
             <a href="assets/crossmamba-agri-thesis-proposal.pdf" target="_blank" rel="noopener noreferrer">Read Full
               Proposal (PDF) →</a>
             <a href="https://crossmamba-agri-tracker.vercel.app/" target="_blank" rel="noopener noreferrer">Progress
               Tracker (Live) ↗</a>
             <a href="https://github.com/altafur-fuad/CrossMamba-Agri-Thesis" target="_blank"
-              rel="noopener noreferrer">Model & Research Repo →</a>
+              rel="noopener noreferrer">Model &amp; Research Repo →</a>
           </div>
         </div>
 
+        <!-- Dedicated Future Publication Placeholder Card -->
+        <div class="doc-card card reveal publication-doc-card" style="margin-top: 24px;">
+          <div class="doc-icon">📜</div>
+          <div class="doc-content">
+            <div class="doc-top">
+              <h3>CROSSMAMBA-AGRI MANUSCRIPT</h3>
+              <span class="proj-status" id="badgePaper">Publication Details — Coming Soon</span>
+            </div>
+            <p><strong>CrossMamba-Agri: A Vision Mamba-Based Framework for Joint Crop Disease and Pest Classification</strong></p>
+            <p class="doc-subtext" style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
+              Authored by Altafur Rahman Fuad (Department of Computer Science and Engineering, BGC Trust University Bangladesh).
+              The manuscript and publication information will be added when they are ready for public release. Currently an active
+              research manuscript under preparation; no DOI or publisher venue is prematurely assigned.
+            </p>
+            <div class="doc-meta">
+              <span class="doc-path">Target: assets/papers/crossmamba-agri-paper.pdf</span>
+              <span>0 Published Papers Currently · 1 Ongoing Research Project</span>
+            </div>
+            <div class="doc-actions">
+              <a href="assets/papers/crossmamba-agri-paper.pdf" class="doc-btn disabled" id="btnPaperDownload"
+                aria-disabled="true" onclick="handlePaperDownload(event, 'assets/papers/crossmamba-agri-paper.pdf')">
+                <span>Download Paper (PDF)</span>
+                <span class="doc-state">Coming Soon</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub Grid: Research Interests & Status -->
         <div class="research-sub-grid">
           <div class="research-sub card reveal">
             <span class="tag">Primary Interests</span>
             <h4>RESEARCH INTERESTS</h4>
-            <p>Active exploration in <strong>Artificial Intelligence & Machine Learning</strong>, <strong>Medical and
-                Healthcare AI</strong>, <strong>Computer Vision & Vision Mamba</strong>, and <strong>Agricultural
-                AI</strong> (joint plant disease and pest diagnostics).</p>
+            <p>Active exploration in <strong>Artificial Intelligence &amp; Machine Learning</strong>, <strong>Medical and
+                Healthcare AI</strong>, <strong>Computer Vision &amp; Vision Mamba</strong>, and <strong>Agricultural
+                AI</strong> (joint plant disease and pest diagnostics on edge hardware).</p>
           </div>
           <div class="research-sub card reveal">
             <span class="tag">Emerging Focus</span>
@@ -2526,8 +410,8 @@
             <span class="tag">Publication Record</span>
             <h4>CURRENT STATUS · 0 PUBLISHED PAPERS</h4>
             <p>I currently have <strong>0 published papers</strong> and <strong>1 ongoing research project</strong>.
-              Experimental evaluations for the CrossMamba-Agri thesis are in progress, with peer-reviewed
-              conference/journal submissions targeted upon completion of benchmarking.</p>
+              Experimental evaluations for the CrossMamba-Agri thesis are conducted using our honest parent-level split,
+              with formal submissions targeted upon completion of peer review.</p>
           </div>
         </div>
       </div>
@@ -2541,17 +425,99 @@
           <h2 class="section-title">WHAT I'VE BUILT</h2>
         </div>
         <div class="proj-grid stagger-children">
+                    <!-- FEATURED — ASRAR-E-TIBB -->
+          <div class="proj-featured card reveal" id="project-asrar-e-tibb">
+            <div class="proj-featured-inner">
+              <div class="proj-featured-content">
+                <div class="proj-top">
+                  <h3>ASRAR-E-TIBB 💊</h3>
+                  <span class="proj-status live">Live</span>
+                </div>
+                <p>Comprehensive healthcare ecosystem combining a responsive web storefront, native Flutter Android app, and high-performance Rust Axum API with 2,900+ curated medicine records, Farmacia e-pharmacy checkout, and TibbNews social feed.</p>
+                <ul class="lumio-features">
+                  <li>Curated catalog of 2,900+ medicines with bilingual search & classifications</li>
+                  <li>Farmacia online pharmacy checkout flow with prescription management</li>
+                  <li>High-performance backend API powered by Rust Axum with sub-millisecond responses</li>
+                  <li>TibbNews community feed delivering medical and health updates in real time</li>
+                </ul>
+                <div class="feature-tags">
+                  <span class="feature-tag">Medicine Catalog</span>
+                  <span class="feature-tag">Farmacia Checkout</span>
+                  <span class="feature-tag">TibbNews Feed</span>
+                  <span class="feature-tag">Rust Axum</span>
+                </div>
+                <span class="proj-stack">Flutter · Next.js 14 · Rust Axum · Supabase Realtime</span>
+                <div class="proj-links">
+                  <a class="proj-link live-link" href="https://asrar-e-tibb.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+                  <a class="proj-link" href="https://github.com/altafur-fuad/Asrar-E-Tibb" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+                  <span class="apk-badge">APK Coming Soon</span>
+                </div>
+              </div>
+              <div class="proj-featured-visual">
+                <img src="assets/projects/asrar-farmacia.png" alt="Asrar-E-Tibb Healthcare Platform Interface" style="width: 100%; height: auto; max-height: 380px; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-md);">
+              </div>
+            </div>
+          </div>
 
-          <!-- FEATURED — Lumio -->
-          <div class="proj-featured card reveal">
+          <!-- AUPA -->
+          <div class="proj-card card reveal" id="project-aupa">
+            <div class="proj-thumb">
+              <img src="assets/projects/aupa-preview.png" alt="Aupa Food Delivery Platform Bangladesh Interface">
+            </div>
+            <div class="proj-top">
+              <h3>AUPA ⚡</h3>
+              <span class="proj-status live">Live</span>
+            </div>
+            <p>Modern food-delivery platform for Bangladesh engineered with a high-performance Flutter mobile client, Go REST backend API under /v1, Supabase PostgreSQL with defense-in-depth RLS, and server-authoritative checkout in poisha.</p>
+            <div class="feature-tags">
+              <span class="feature-tag">Food Delivery</span>
+              <span class="feature-tag">Go REST API</span>
+              <span class="feature-tag">Poisha Currency</span>
+              <span class="feature-tag">Idempotent Orders</span>
+            </div>
+            <span class="proj-stack">Flutter · Go REST API · Supabase PostgreSQL · Docker · Vercel</span>
+            <div class="proj-links">
+              <a class="proj-link live-link" href="https://aupa-ten.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a class="proj-link" href="https://github.com/altafur-fuad/Aupa" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+              
+              <span class="apk-badge">APK Coming Soon</span>
+            </div>
+          </div>
+
+          <!-- PAYMENT CHASER -->
+          <div class="proj-card card reveal" id="project-payment-chaser">
+            <div class="proj-thumb">
+              <img src="assets/projects/payment-chaser-preview.png" alt="Payment Chaser Invoicing and Reminder Platform Interface">
+            </div>
+            <div class="proj-top">
+              <h3>PAYMENT CHASER 💸</h3>
+              <span class="proj-status live">Live</span>
+            </div>
+            <p>Automated accounts receivable and intelligent payment reminder platform for freelancers, agencies, and businesses. Features real-time financial tracking, multi-tier reminder escalation across email and WhatsApp, and client CRM management.</p>
+            <div class="feature-tags">
+              <span class="feature-tag">Financial KPIs</span>
+              <span class="feature-tag">Multi-Tier Escalation</span>
+              <span class="feature-tag">Client CRM</span>
+              <span class="feature-tag">Next.js 16</span>
+            </div>
+            <span class="proj-stack">Next.js 16 · TypeScript · Tailwind CSS v4 · Supabase RLS · Vercel</span>
+            <div class="proj-links">
+              <a class="proj-link live-link" href="https://payment-chaser-x45p.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a class="proj-link" href="https://github.com/altafur-fuad/Payment_Chaser" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+              
+              
+            </div>
+          </div>
+
+          <!-- FEATURED — LUMIO -->
+          <div class="proj-featured card reveal" id="project-lumio">
             <div class="proj-featured-inner">
               <div class="proj-featured-content">
                 <div class="proj-top">
                   <h3>LUMIO 🚀</h3>
                   <span class="proj-status live">Live</span>
                 </div>
-                <p><strong>Share moments. Connect people.</strong> — A modern, high-performance social media application
-                  built with Flutter & Dart, supporting Android and Responsive Web from a single codebase.</p>
+                <p>Share moments. Connect people. — A modern, high-performance social media application built with Flutter & Dart, supporting Android and Responsive Web from a single codebase.</p>
                 <ul class="lumio-features">
                   <li>Social Feed with stories row, post cards, like animations</li>
                   <li>Immersive 9:16 Reels with double-tap heart animations</li>
@@ -2570,145 +536,49 @@
                 </div>
                 <span class="proj-stack">Flutter 3.35+ · Dart 3.9+ · Outfit + Inter · Mate Design System</span>
                 <div class="proj-links">
-                  <a class="proj-link live-link" href="https://lumio-ebon.vercel.app/" target="_blank"
-                    rel="noopener noreferrer">Live Demo ↗</a>
-                  <a class="proj-link" href="https://github.com/altafur-fuad/Lumio" target="_blank"
-                    rel="noopener noreferrer">View on GitHub →</a>
+                  <a class="proj-link live-link" href="https://lumio-ebon.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+                  <a class="proj-link" href="https://github.com/altafur-fuad/Lumio" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
                   <span class="apk-badge">APK Coming Soon</span>
                 </div>
               </div>
               <div class="proj-featured-visual">
-                <img src="assets/projects/lumio-preview.png"
-                  alt="Lumio Social Media App Desktop & Mobile Interface Preview"
-                  style="width: 100%; height: auto; max-height: 380px; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-md);">
+                <img src="assets/projects/lumio-preview.png" alt="Lumio Social Media App Desktop & Mobile Interface Preview" style="width: 100%; height: auto; max-height: 380px; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-md);">
               </div>
             </div>
           </div>
 
-          <!-- PAYMENT CHASER — Priority Project -->
-          <div class="proj-card card reveal">
-            <div class="proj-thumb">
-              <img src="assets/projects/payment-chaser-preview.png"
-                alt="Payment Chaser Invoicing and Reminder Platform Interface">
-            </div>
+          <!-- MEDILENS -->
+          <div class="proj-card card reveal" id="project-medilens">
+            
             <div class="proj-top">
-              <h3>PAYMENT CHASER 💸</h3>
-              <span class="proj-status live">Live</span>
+              <h3>MEDILENS 🩺</h3>
+              <span class="proj-status ">SDP-1 · Source Code</span>
             </div>
-            <p>Automated accounts receivable and intelligent payment reminder platform for freelancers, agencies, and
-              businesses. Features real-time financial tracking, multi-tier reminder escalation across email and
-              WhatsApp, and client CRM management.</p>
+            <p>Bilingual (Bangla + English) medicine information app covering veterinary, herbal, Unani, Ayurvedic, and conventional English medicine, with natural ingredient details and offline datasets.</p>
             <div class="feature-tags">
-              <span class="feature-tag">Financial KPIs</span>
-              <span class="feature-tag">Multi-Tier Escalation</span>
-              <span class="feature-tag">Client CRM</span>
-              <span class="feature-tag">Next.js 16</span>
+              <span class="feature-tag">Bilingual</span>
+              <span class="feature-tag">Unani & Herbal</span>
+              <span class="feature-tag">Offline Support</span>
             </div>
-            <span class="proj-stack">Next.js 16 · TypeScript · Tailwind CSS v4 · Supabase RLS · Vercel</span>
+            <span class="proj-stack">Flutter · Multi-language · Dart</span>
             <div class="proj-links">
-              <a class="proj-link live-link" href="https://payment-chaser-x45p.vercel.app/" target="_blank"
-                rel="noopener noreferrer">Live Demo ↗</a>
-              <a class="proj-link" href="https://github.com/altafur-fuad/Payment_Chaser" target="_blank"
-                rel="noopener noreferrer">View on GitHub →</a>
-            </div>
-          </div>
-
-          <!-- AUPA — Priority Project -->
-          <div class="proj-card card reveal">
-            <div class="proj-thumb">
-              <img src="assets/projects/aupa-preview.png" alt="Aupa Food Delivery Platform Bangladesh Interface">
-            </div>
-            <div class="proj-top">
-              <h3>AUPA ⚡</h3>
-              <span class="proj-status live">Live</span>
-            </div>
-            <p>Modern food-delivery platform for Bangladesh engineered with a high-performance Flutter mobile client, Go
-              REST backend API under /v1, Supabase PostgreSQL with defense-in-depth RLS, and server-authoritative
-              checkout in poisha.</p>
-            <div class="feature-tags">
-              <span class="feature-tag">Food Delivery</span>
-              <span class="feature-tag">Go REST API</span>
-              <span class="feature-tag">Poisha Currency</span>
-              <span class="feature-tag">Idempotent Orders</span>
-            </div>
-            <span class="proj-stack">Flutter · Go REST API · Supabase PostgreSQL · Docker · Vercel</span>
-            <div class="proj-links">
-              <a class="proj-link live-link" href="https://aupa-ten.vercel.app/" target="_blank"
-                rel="noopener noreferrer">Live Demo ↗</a>
-              <a class="proj-link" href="https://github.com/altafur-fuad/Aupa" target="_blank"
-                rel="noopener noreferrer">View on GitHub →</a>
-              <span class="apk-badge">APK Coming Soon</span>
-            </div>
-          </div>
-
-          <!-- ASRAR-E-TIBB -->
-          <div class="proj-card card reveal">
-            <div class="proj-thumb">
-              <img src="assets/projects/asrar-farmacia.png" alt="Asrar-E-Tibb Healthcare Platform Interface">
-            </div>
-            <div class="proj-top">
-              <h3>ASRAR-E-TIBB 💊</h3>
-              <span class="proj-status live">Live</span>
-            </div>
-            <p>Comprehensive healthcare ecosystem combining a responsive web storefront, native Flutter Android app, and
-              high-performance Rust Axum API with 2,900+ curated medicine records, Farmacia e-pharmacy checkout, and
-              TibbNews social feed.</p>
-            <div class="feature-tags">
-              <span class="feature-tag">Medicine Catalog</span>
-              <span class="feature-tag">Farmacia Checkout</span>
-              <span class="feature-tag">TibbNews Feed</span>
-              <span class="feature-tag">Rust Axum</span>
-            </div>
-            <span class="proj-stack">Flutter · Next.js 14 · Rust Axum · Supabase Realtime</span>
-            <div class="proj-links">
-              <a class="proj-link live-link" href="https://asrar-e-tibb.vercel.app/" target="_blank"
-                rel="noopener noreferrer">Live Demo ↗</a>
-              <a class="proj-link" href="https://github.com/altafur-fuad/Asrar-E-Tibb" target="_blank"
-                rel="noopener noreferrer">View on GitHub →</a>
-              <span class="apk-badge">APK Coming Soon</span>
-            </div>
-          </div>
-
-          <!-- CROSSMAMBA-AGRI TRACKER -->
-          <div class="proj-card card reveal">
-            <div class="proj-thumb">
-              <img src="assets/projects/crossmamba-tracker-preview.png"
-                alt="CrossMamba-Agri Thesis Progress Tracker Interface">
-            </div>
-            <div class="proj-top">
-              <h3>CROSSMAMBA-AGRI TRACKER</h3>
-              <span class="proj-status live">Live</span>
-            </div>
-            <p>Live progress tracker for the CrossMamba-Agri undergraduate thesis proposal — logging research
-              milestones, dataset preprocessing protocols, and dual-task diagnostic results as the research advances.
-            </p>
-            <div class="feature-tags">
-              <span class="feature-tag">Thesis Tooling</span>
-              <span class="feature-tag">Vision Mamba</span>
-              <span class="feature-tag">Milestone Logging</span>
-            </div>
-            <span class="proj-stack">Research Tooling · HTML/CSS/JS · Vercel</span>
-            <div class="proj-links">
-              <a class="proj-link live-link" href="https://crossmamba-agri-tracker.vercel.app/" target="_blank"
-                rel="noopener noreferrer">Live Tracker ↗</a>
-              <a class="proj-link" href="https://github.com/altafur-fuad/crossmamba-agri-tracker" target="_blank"
-                rel="noopener noreferrer">Tracker Repo →</a>
-              <a class="proj-link" href="https://github.com/altafur-fuad/CrossMamba-Agri-Thesis" target="_blank"
-                rel="noopener noreferrer">Model Repo →</a>
+              
+              <a class="proj-link" href="https://github.com/altafur-fuad/Medilens" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+              
+              
             </div>
           </div>
 
           <!-- TAQWA TRACKER -->
-          <div class="proj-card card reveal">
+          <div class="proj-card card reveal" id="project-taqwa-tracker">
             <div class="proj-thumb">
               <img src="assets/projects/taqwa-tracker-preview.png" alt="Taqwa Tracker Prayer Times Web App Interface">
             </div>
             <div class="proj-top">
-              <h3>TAQWA TRACKER</h3>
+              <h3>TAQWA TRACKER 🕌</h3>
               <span class="proj-status live">Live</span>
             </div>
-            <p>Daily Salah prayer times calculation, Hijri date tracking, and sunrise/sunset monitoring app built to
-              help Muslims stay consistent with daily religious practice across web and mobile.</p>
+            <p>Daily Salah prayer times calculation, Hijri date tracking, and sunrise/sunset monitoring app built to help Muslims stay consistent with daily religious practice across web and mobile.</p>
             <div class="feature-tags">
               <span class="feature-tag">Prayer Times</span>
               <span class="feature-tag">Hijri Calendar</span>
@@ -2716,23 +586,45 @@
             </div>
             <span class="proj-stack">Flutter · Android · Web · Codemagic</span>
             <div class="proj-links">
-              <a class="proj-link live-link" href="https://taqwa-tracker-three.vercel.app/" target="_blank"
-                rel="noopener noreferrer">Live Demo ↗</a>
-              <a class="proj-link" href="https://github.com/altafur-fuad/Taqwa_Tracker" target="_blank"
-                rel="noopener noreferrer">View on GitHub →</a>
+              <a class="proj-link live-link" href="https://taqwa-tracker-three.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a class="proj-link" href="https://github.com/altafur-fuad/Taqwa_Tracker" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+              
               <span class="apk-badge">APK Coming Soon</span>
             </div>
           </div>
 
-          <!-- APPLYX — Discovered from Audit -->
-          <div class="proj-card card reveal">
+          <!-- CROSSMAMBA-AGRI TRACKER -->
+          <div class="proj-card card reveal" id="project-crossmamba-tracker">
+            <div class="proj-thumb">
+              <img src="assets/projects/crossmamba-tracker-preview.png" alt="CrossMamba-Agri Thesis Progress Tracker Interface">
+            </div>
+            <div class="proj-top">
+              <h3>CROSSMAMBA-AGRI TRACKER 🌾</h3>
+              <span class="proj-status live">Live</span>
+            </div>
+            <p>Live progress tracker for the CrossMamba-Agri undergraduate thesis — logging research milestones, dataset preprocessing protocols, clean parent split evaluation, and dual-task diagnostic results as the research advances.</p>
+            <div class="feature-tags">
+              <span class="feature-tag">Thesis Tooling</span>
+              <span class="feature-tag">Vision Mamba</span>
+              <span class="feature-tag">Milestone Logging</span>
+            </div>
+            <span class="proj-stack">Research Tooling · HTML/CSS/JS · Vercel</span>
+            <div class="proj-links">
+              <a class="proj-link live-link" href="https://crossmamba-agri-tracker.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a class="proj-link" href="https://github.com/altafur-fuad/crossmamba-agri-tracker" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+              <a class="proj-link" href="https://github.com/altafur-fuad/CrossMamba-Agri-Thesis" target="_blank" rel="noopener noreferrer">Model Repo →</a>
+              
+            </div>
+          </div>
+
+          <!-- APPLYX -->
+          <div class="proj-card card reveal" id="project-applyx">
+            
             <div class="proj-top">
               <h3>APPLYX 🎯</h3>
-              <span class="proj-status">In Progress</span>
+              <span class="proj-status ">In Progress</span>
             </div>
-            <p>Mobile-first agentic AI opportunity-management app for students and early-career users. Built around
-              observable tool-using agent workflows for opportunity research, eligibility analysis, and application
-              preparation with human-in-the-loop approvals.</p>
+            <p>Mobile-first agentic AI opportunity-management app for students and early-career users. Built around observable tool-using agent workflows for opportunity research, eligibility analysis, and application preparation with human-in-the-loop approvals.</p>
             <div class="feature-tags">
               <span class="feature-tag">Agentic AI</span>
               <span class="feature-tag">FastAPI</span>
@@ -2741,40 +633,21 @@
             </div>
             <span class="proj-stack">Flutter · FastAPI (Python) · Supabase RLS · LangGraph</span>
             <div class="proj-links">
-              <a class="proj-link" href="https://github.com/altafur-fuad/ApplyX" target="_blank"
-                rel="noopener noreferrer">View on GitHub →</a>
+              
+              <a class="proj-link" href="https://github.com/altafur-fuad/ApplyX" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+              
               <span class="apk-badge">Source Code Available</span>
             </div>
           </div>
 
-          <!-- MEDILENS -->
-          <div class="proj-card card reveal">
-            <div class="proj-top">
-              <h3>MEDILENS</h3>
-              <span class="proj-status">SDP-1 · Source Code</span>
-            </div>
-            <p>Bilingual (Bangla + English) medicine information app covering veterinary, herbal, Unani, Ayurvedic, and
-              conventional English medicine, with natural ingredient details and offline datasets.</p>
-            <div class="feature-tags">
-              <span class="feature-tag">Bilingual</span>
-              <span class="feature-tag">Unani & Herbal</span>
-              <span class="feature-tag">Offline Support</span>
-            </div>
-            <span class="proj-stack">Flutter · Multi-language · Dart</span>
-            <div class="proj-links">
-              <a class="proj-link" href="https://github.com/altafur-fuad/SDP1_Medilens" target="_blank"
-                rel="noopener noreferrer">View on GitHub →</a>
-            </div>
-          </div>
-
           <!-- DSA PRACTICE -->
-          <div class="proj-card card reveal">
+          <div class="proj-card card reveal" id="project-dsa">
+            
             <div class="proj-top">
-              <h3>DSA PRACTICE</h3>
-              <span class="proj-status">Ongoing</span>
+              <h3>DSA PRACTICE 💻</h3>
+              <span class="proj-status ">Ongoing</span>
             </div>
-            <p>A running repository of data structures and algorithms practice — problems, solutions, and notes as I
-              sharpen core CS fundamentals across trees, graphs, dynamic programming, and system design.</p>
+            <p>A running repository of data structures and algorithms practice — problems, solutions, and notes as I sharpen core CS fundamentals across trees, graphs, dynamic programming, and system design.</p>
             <div class="feature-tags">
               <span class="feature-tag">Algorithms</span>
               <span class="feature-tag">Data Structures</span>
@@ -2782,11 +655,12 @@
             </div>
             <span class="proj-stack">DSA · Problem Solving · Core CS</span>
             <div class="proj-links">
-              <a class="proj-link" href="https://github.com/altafur-fuad/DSA" target="_blank"
-                rel="noopener noreferrer">View on GitHub →</a>
+              
+              <a class="proj-link" href="https://github.com/altafur-fuad/DSA" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+              
+              
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -2990,6 +864,8 @@
 
   </main>
 
+  </main>
+
   <footer>
     <div class="wrap">
       <p>© 2026 Altafur Rahman Fuad <span class="footer-dot"></span> Crafted with Passion & Purpose ✦</p>
@@ -2999,182 +875,11 @@
   <!-- Back to Top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-  <script>
-    /* ============================================================
-       PROFESSIONAL PORTFOLIO — INTERACTIONS & ANIMATIONS
-       ============================================================ */
-
-    // === Header scroll shadow ===
-    const header = document.getElementById('siteHeader');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
-
-    // === Nav toggle (mobile) ===
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    let menuOpen = false;
-    navToggle.addEventListener('click', () => {
-      menuOpen = !menuOpen;
-      navLinks.classList.toggle('open');
-      navToggle.textContent = menuOpen ? '✕' : '☰';
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuOpen = false;
-        navToggle.textContent = '☰';
-      });
-    });
-
-    // === Scroll spy ===
-    const sects = document.querySelectorAll('section[id]');
-    const navAs = document.querySelectorAll('.nav-center a');
-    function updateNav() {
-      const sy = window.scrollY + 200;
-      sects.forEach(s => {
-        const t = s.offsetTop, h = s.offsetHeight, id = s.getAttribute('id');
-        if (sy >= t && sy < t + h) {
-          navAs.forEach(a => {
-            a.classList.remove('active');
-            if (a.getAttribute('href') === '#' + id) a.classList.add('active');
-          });
-        }
-      });
-    }
-    window.addEventListener('scroll', updateNav, { passive: true });
-
-    // === Typing effect ===
-    const typedEl = document.getElementById('typedText');
-    const fullText = "Building AI-powered agriculture research and full-stack mobile apps with Flutter & Dart.";
-    let ci = 0;
-    function typeChar() {
-      if (ci < fullText.length) {
-        typedEl.textContent += fullText.charAt(ci);
-        ci++;
-        setTimeout(typeChar, 28 + Math.random() * 30);
-      }
-    }
-    const heroObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { setTimeout(typeChar, 600); heroObs.disconnect(); }
-      });
-    }, { threshold: 0.3 });
-    heroObs.observe(document.querySelector('.hero'));
-
-    // === Scroll reveal ===
-    const revEls = document.querySelectorAll('.reveal');
-    const revObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-    revEls.forEach(el => revObs.observe(el));
-
-    // === Counter animation ===
-    const counters = document.querySelectorAll('.counter');
-    const counterObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.dataset.target);
-          const decimal = el.dataset.decimal;
-          const duration = 1500;
-          const start = Date.now();
-
-          function updateCounter() {
-            const elapsed = Date.now() - start;
-            const progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
-            const eased = 1 - Math.pow(1 - progress, 3);
-
-            if (decimal) {
-              const fullValue = parseFloat(target + '.' + decimal);
-              const current = (eased * fullValue).toFixed(2);
-              el.textContent = current;
-            } else {
-              el.textContent = Math.round(eased * target);
-            }
-
-            if (progress < 1) {
-              requestAnimationFrame(updateCounter);
-            } else {
-              if (decimal) {
-                el.textContent = target + '.' + decimal;
-              } else {
-                el.textContent = target;
-              }
-            }
-          }
-          requestAnimationFrame(updateCounter);
-          counterObs.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(c => counterObs.observe(c));
-
-    // === 3D tilt on project cards and doc cards ===
-    document.querySelectorAll('.proj-card, .proj-featured, .doc-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const r = card.getBoundingClientRect();
-        const x = e.clientX - r.left, y = e.clientY - r.top;
-        const rx = ((y - r.height / 2) / (r.height / 2)) * -2;
-        const ry = ((x - r.width / 2) / (r.width / 2)) * 2;
-        card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
-      });
-    });
-
-    // === Back to top button ===
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('visible', window.scrollY > 500);
-    }, { passive: true });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // === Toast notification system ===
-    function showPortfolioToast(msg) {
-      const toast = document.getElementById('portfolioToast');
-      if (!toast) return;
-      toast.textContent = msg;
-      toast.classList.add('show');
-      setTimeout(() => { toast.classList.remove('show'); }, 3800);
-    }
-
-    // === CV & Resume PDF Handler ===
-    function handleDocDownload(e, docType, filePath) {
-      const btn = e.currentTarget;
-      if (btn.classList.contains('disabled')) {
-        e.preventDefault();
-        fetch(filePath, { method: 'HEAD' })
-          .then(res => {
-            if (res.ok && res.status !== 404) {
-              btn.classList.remove('disabled');
-              btn.removeAttribute('aria-disabled');
-              const badgeId = docType === 'CV' ? 'badgeCv' : 'badgeResume';
-              const badge = document.getElementById(badgeId);
-              if (badge) {
-                badge.textContent = 'Available Now';
-                badge.classList.add('live');
-              }
-              window.open(filePath, '_blank');
-            } else {
-              showPortfolioToast(`${docType} PDF is being prepared. Check back soon or email altafur.rahman.fuad@gmail.com!`);
-            }
-          })
-          .catch(() => {
-            showPortfolioToast(`${docType} PDF is being prepared. Check back soon or email altafur.rahman.fuad@gmail.com!`);
-          });
-      }
-    }
-  </script>
-
   <!-- Toast Notification Popup -->
   <div class="portfolio-toast" id="portfolioToast" role="alert" aria-live="polite"></div>
+
+
+  <script src="dist/js/bundle.js"></script>
 
 </body>
 

@@ -1,0 +1,72 @@
+/* ========== EDUCATION ========== */
+    .edu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .edu-row {
+      display: grid;
+      grid-template-columns: 130px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .edu-row::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--green-deep);
+      transform: scaleY(0);
+      transition: transform 0.4s ease;
+    }
+
+    .edu-row:hover::before {
+      transform: scaleY(1);
+    }
+
+    @media (max-width: 700px) {
+      .edu-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 22px;
+      }
+    }
+
+    .edu-year {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--green-deep);
+    }
+
+    .edu-name h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .edu-name p {
+      margin-top: 4px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .gpa-badge {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      border: 1px solid var(--gold);
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      background: var(--gold-bg);
+    }

@@ -1,0 +1,21 @@
+{
+  "name": "altafur-rahman-fuad-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Altafur Rahman Fuad — Personal Portfolio & Academic Research Showcase",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node -e \"const http=require('node:http'),fs=require('node:fs'),path=require('node:path');const mime={'html':'text/html','css':'text/css','js':'application/javascript','png':'image/png','jpeg':'image/jpeg','jpg':'image/jpeg','svg':'image/svg+xml','pdf':'application/pdf'};http.createServer((req,res)=>{let url=req.url.split('?')[0];let f=path.join(process.cwd(),url==='/'?'index.html':url);fs.readFile(f,(err,data)=>{if(err){res.writeHead(404,{'Content-Type':'text/plain'});res.end('404 Not Found');}else{let ext=path.extname(f).slice(1);res.writeHead(200,{'Content-Type':mime[ext]||'application/octet-stream'});res.end(data);}})}).listen(3000,()=>console.log('Preview server running on http://localhost:3000'))\""
+  },
+  "keywords": [
+    "portfolio",
+    "flutter",
+    "vision-mamba",
+    "ai-researcher",
+    "crossmamba-agri"
+  ],
+  "author": "Altafur Rahman Fuad <arfuad@bgctub.ac.bd>",
+  "license": "MIT"
+}
+

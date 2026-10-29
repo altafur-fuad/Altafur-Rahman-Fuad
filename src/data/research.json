@@ -1,0 +1,98 @@
+{
+  "title": "CrossMamba-Agri: A Vision Mamba-Based Framework for Joint Crop Disease and Pest Classification",
+  "subtitle": "A Vision Mamba-Based Framework for Joint Crop Disease and Pest Classification",
+  "authors": "Altafur Rahman Fuad",
+  "affiliation": "Department of Computer Science and Engineering, BGC Trust University Bangladesh",
+  "email": "arfuad@bgctub.ac.bd",
+  "supervisor": "Mohammad Salah Uddin Chowdhury, Assistant Professor & Chairman, Department of Computer Science & Engineering, BGC Trust University Bangladesh",
+  "statusBadge": "Research in Progress · 1 Ongoing Project",
+  "publishedPapersCount": 0,
+  "ongoingProjectsCount": 1,
+  "summary": "A dual-head Vision Mamba (State Space Model) framework designed for joint crop disease and pest classification on the CCMT benchmark (Cashew, Cassava, Maize, and Tomato). Incorporates a Background Suppression Module (BSM) using FFT filtering with SimAM parameter-free attention, Multi-Scale Patch Embeddings, an 8-layer Bidirectional Mamba (Bi-Mamba) encoder with linear sequence complexity, and Cross-Attention Fusion routing to dual task MLPs (17 plant-condition classes and 5 pest classes). Evaluated on a 100% leakage-free parent-level split audited via perceptual hashing (pHash).",
+  "dataset": {
+    "name": "CCMT Dataset",
+    "crops": ["Cashew", "Cassava", "Maize", "Tomato"],
+    "totalCategories": 22,
+    "plantConditionCategories": 17,
+    "pestCategories": 5,
+    "rawImages": 23275,
+    "honestTotalImages": 105557,
+    "description": "Captured from farms in Ghana across 4 major crop types, covering 17 plant-condition categories (diseases and healthy plants) and 5 insect pest categories."
+  },
+  "architecture": {
+    "totalParameters": "38.61M Parameters",
+    "exactParameters": "38,608,399",
+    "modules": [
+      {
+        "name": "Background Suppression Module (BSM)",
+        "params": "121",
+        "description": "Combines 2D Fast Fourier Transform (FFT) high-frequency filtering with SimAM 3D energy-based attention to suppress field noise and soil clutter."
+      },
+      {
+        "name": "Multi-Scale Patch Embedding",
+        "params": "1,742,720",
+        "description": "Extracts non-overlapping patches at 8×8, 16×16, and 32×32 resolutions, pooled and concatenated into 196 visual tokens (D = 512)."
+      },
+      {
+        "name": "Bidirectional Mamba (Bi-Mamba) Encoder",
+        "params": "31,322,112",
+        "description": "8 sequential State Space Model (SSM) layers processing forward and backward sweeps with linear O(N) token complexity (81.13% of total parameters)."
+      },
+      {
+        "name": "Cross-Attention Fusion Module",
+        "params": "4,478,464",
+        "description": "12 learnable query vectors attending over 196 encoded visual tokens with 8 attention heads, mean-pooled to feature vector Z ∈ ℝ⁵¹²."
+      },
+      {
+        "name": "Dual Task Classification Heads",
+        "params": "1,064,982",
+        "description": "Task-specific MLPs with oracle domain routing: Head 1 for 17 plant conditions, Head 2 for 5 pest categories."
+      }
+    ]
+  },
+  "leakageAudit": {
+    "summary": "Perceptual hashing (pHash) audit on standard benchmark splits revealed 1,851 instances of identical parent images appearing in both training and test sets (Hamming distance < 6), causing a 7.41% data leakage flaw. CrossMamba-Agri establishes a 100% clean parent-level split where all variations of any plant exist exclusively in one partition.",
+    "leakagePercent": "7.41%"
+  },
+  "results": {
+    "cleanSplit": {
+      "overallAccuracy": "89.20%",
+      "diseaseAccuracy": "87.39%",
+      "pestAccuracy": "97.58%",
+      "precision": "0.89",
+      "recall": "0.89",
+      "f1": "0.89",
+      "rocAucDisease": "0.993",
+      "rocAucPest": "0.998"
+    },
+    "leakedSplit": {
+      "overallAccuracy": "93.25%",
+      "precision": "0.93",
+      "recall": "0.93",
+      "f1": "0.93"
+    },
+    "rawSplit": {
+      "overallAccuracy": "82.23%",
+      "precision": "0.80",
+      "recall": "0.79",
+      "f1": "0.79"
+    }
+  },
+  "publicationPlaceholder": {
+    "title": "CrossMamba-Agri: A Vision Mamba-Based Framework for Joint Crop Disease and Pest Classification",
+    "statusBadge": "Publication Details — Coming Soon",
+    "note": "The manuscript and publication information will be added when they are ready for public release. Currently an active research manuscript under preparation for submission.",
+    "futurePdfPath": "assets/papers/crossmamba-agri-paper.pdf",
+    "isPublished": false,
+    "doi": null,
+    "venue": null,
+    "year": null,
+    "publisherUrl": null
+  },
+  "links": {
+    "proposalPdf": "assets/crossmamba-agri-thesis-proposal.pdf",
+    "trackerLive": "https://crossmamba-agri-tracker.vercel.app/",
+    "thesisRepo": "https://github.com/altafur-fuad/CrossMamba-Agri-Thesis"
+  }
+}
+

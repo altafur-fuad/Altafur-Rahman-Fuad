@@ -1,0 +1,121 @@
+<!-- ==================== RESEARCH ==================== -->
+    <section id="research" style="background: var(--bg-warm);">
+      <div class="wrap">
+        <div class="section-header reveal">
+          <p class="section-overline">Research</p>
+          <h2 class="section-title">ACADEMIC RESEARCH</h2>
+        </div>
+
+        <!-- Primary Ongoing Research Card -->
+        <div class="thesis-card reveal">
+          <span class="thesis-status">Research in Progress · 1 Ongoing Project</span>
+          <h3>CROSSMAMBA-AGRI</h3>
+          <p class="thesis-sub">CrossMamba-Agri: A Vision Mamba-Based Framework for Joint Crop Disease and Pest Classification</p>
+          <p class="desc">
+            A dual-head Vision Mamba (State Space Model) framework designed for joint crop disease and insect pest
+            classification on the multi-crop CCMT dataset (Cashew, Cassava, Maize, and Tomato). Incorporates a
+            Background Suppression Module (BSM) combining 2D Fast Fourier Transform (FFT) filtering with SimAM
+            parameter-free 3D attention to suppress irregular field clutter, Multi-Scale Patch Embeddings (8×8, 16×16,
+            and 32×32 patches mapped into 196 tokens, D = 512), an 8-layer Bidirectional Mamba (Bi-Mamba) encoder
+            providing linear sequence complexity O(N), and Cross-Attention Fusion (12 adaptive queries, 8 attention
+            heads) routing features to dual task-specific MLPs. Evaluated on an audited, 100% leakage-free parent-level split.
+            Supervised by Mohammad Salah Uddin Chowdhury, Assistant Professor &amp; Chairman, Department of Computer Science &amp;
+            Engineering, BGC Trust University Bangladesh.
+          </p>
+
+          <div class="branch-tags">
+            <span class="btag dis">Plant Condition Head — CCMT (17 Classes: Cashew, Cassava, Maize, Tomato)</span>
+            <span class="btag pest">Pest Head — CCMT (5 Classes)</span>
+            <span class="btag"
+              style="color: var(--gold-dark); border-color: var(--gold); background: var(--gold-bg);">Architecture:
+              38.61M Parameters (8 SSM Layers)</span>
+            <span class="btag"
+              style="color: var(--green-deep); border-color: var(--green-mid); background: var(--green-light);">Honest
+              Parent Split: 89.20% Accuracy</span>
+          </div>
+
+          <!-- Verified Evaluation Protocol Comparison -->
+          <div class="research-eval-grid">
+            <div class="eval-card">
+              <span class="eval-tag honest">Honest Test (Protocol C)</span>
+              <div class="eval-stat">89.20%</div>
+              <p class="eval-label">Clean Parent Split (No Leakage)</p>
+              <span class="eval-sub">Disease: 87.39% · Pest: 97.58% · ROC-AUC: 0.993 / 0.998</span>
+            </div>
+            <div class="eval-card">
+              <span class="eval-tag audit">Leakage Audit (Protocol B)</span>
+              <div class="eval-stat">93.25%</div>
+              <p class="eval-label">Standard Benchmark Split</p>
+              <span class="eval-sub">7.41% leakage (1,851 pHash duplicate pairs with Hamming &lt; 6)</span>
+            </div>
+            <div class="eval-card">
+              <span class="eval-tag raw">Raw Baseline (Protocol A)</span>
+              <div class="eval-stat">82.23%</div>
+              <p class="eval-label">Unaugmented Base Split</p>
+              <span class="eval-sub">23,275 clean farm images (80% Train / 10% Val / 10% Test)</span>
+            </div>
+          </div>
+
+          <div class="thesis-links">
+            <a href="assets/crossmamba-agri-thesis-proposal.pdf" target="_blank" rel="noopener noreferrer">Read Full
+              Proposal (PDF) →</a>
+            <a href="https://crossmamba-agri-tracker.vercel.app/" target="_blank" rel="noopener noreferrer">Progress
+              Tracker (Live) ↗</a>
+            <a href="https://github.com/altafur-fuad/CrossMamba-Agri-Thesis" target="_blank"
+              rel="noopener noreferrer">Model &amp; Research Repo →</a>
+          </div>
+        </div>
+
+        <!-- Dedicated Future Publication Placeholder Card -->
+        <div class="doc-card card reveal publication-doc-card" style="margin-top: 24px;">
+          <div class="doc-icon">📜</div>
+          <div class="doc-content">
+            <div class="doc-top">
+              <h3>CROSSMAMBA-AGRI MANUSCRIPT</h3>
+              <span class="proj-status" id="badgePaper">Publication Details — Coming Soon</span>
+            </div>
+            <p><strong>CrossMamba-Agri: A Vision Mamba-Based Framework for Joint Crop Disease and Pest Classification</strong></p>
+            <p class="doc-subtext" style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">
+              Authored by Altafur Rahman Fuad (Department of Computer Science and Engineering, BGC Trust University Bangladesh).
+              The manuscript and publication information will be added when they are ready for public release. Currently an active
+              research manuscript under preparation; no DOI or publisher venue is prematurely assigned.
+            </p>
+            <div class="doc-meta">
+              <span class="doc-path">Target: assets/papers/crossmamba-agri-paper.pdf</span>
+              <span>0 Published Papers Currently · 1 Ongoing Research Project</span>
+            </div>
+            <div class="doc-actions">
+              <a href="assets/papers/crossmamba-agri-paper.pdf" class="doc-btn disabled" id="btnPaperDownload"
+                aria-disabled="true" onclick="handlePaperDownload(event, 'assets/papers/crossmamba-agri-paper.pdf')">
+                <span>Download Paper (PDF)</span>
+                <span class="doc-state">Coming Soon</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub Grid: Research Interests & Status -->
+        <div class="research-sub-grid">
+          <div class="research-sub card reveal">
+            <span class="tag">Primary Interests</span>
+            <h4>RESEARCH INTERESTS</h4>
+            <p>Active exploration in <strong>Artificial Intelligence &amp; Machine Learning</strong>, <strong>Medical and
+                Healthcare AI</strong>, <strong>Computer Vision &amp; Vision Mamba</strong>, and <strong>Agricultural
+                AI</strong> (joint plant disease and pest diagnostics on edge hardware).</p>
+          </div>
+          <div class="research-sub card reveal">
+            <span class="tag">Emerging Focus</span>
+            <h4>QUANTUM COMPUTING</h4>
+            <p>Actively exploring quantum computing fundamentals, quantum algorithms, and potential applications to
+              hybrid quantum-classical machine learning architectures.</p>
+          </div>
+          <div class="research-sub card reveal" style="grid-column: 1 / -1;">
+            <span class="tag">Publication Record</span>
+            <h4>CURRENT STATUS · 0 PUBLISHED PAPERS</h4>
+            <p>I currently have <strong>0 published papers</strong> and <strong>1 ongoing research project</strong>.
+              Experimental evaluations for the CrossMamba-Agri thesis are conducted using our honest parent-level split,
+              with formal submissions targeted upon completion of peer review.</p>
+          </div>
+        </div>
+      </div>
+    </section>

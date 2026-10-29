@@ -1,0 +1,167 @@
+/* ========== CV & RESUME (CREDENTIALS) ========== */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 760px) {
+      .doc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .doc-card {
+      padding: 32px;
+      display: flex;
+      gap: 22px;
+      position: relative;
+      overflow: hidden;
+      align-items: flex-start;
+    }
+
+    .doc-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--green-deep), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .doc-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .doc-icon {
+      font-size: 2.2rem;
+      width: 58px;
+      height: 58px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .doc-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .doc-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .doc-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      color: var(--text-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .doc-card p {
+      color: var(--text-body);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.72rem;
+      color: var(--gold-dark);
+    }
+
+    .doc-meta .doc-path {
+      color: var(--text-muted);
+      background: var(--bg-warm);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .doc-actions {
+      margin-top: 6px;
+    }
+
+    .doc-btn {
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid var(--green-deep);
+      background: var(--green-deep);
+      color: var(--text-white);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .doc-btn:hover:not(.disabled) {
+      background: var(--green-mid);
+      border-color: var(--green-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(26, 77, 46, 0.25);
+    }
+
+    .doc-btn.disabled {
+      background: var(--bg-card-alt);
+      border-color: var(--border-medium);
+      color: var(--text-muted);
+      cursor: default;
+    }
+
+    .doc-state {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    /* Toast notice popup */
+    .portfolio-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--bg-dark);
+      color: var(--text-white);
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      font-size: 0.88rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 9999;
+      opacity: 0;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .portfolio-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }

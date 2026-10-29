@@ -1,0 +1,121 @@
+/* ========== SERVICES / WHAT I DO ========== */
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .view-all-btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green-deep);
+      border: 1px solid var(--green-deep);
+      padding: 8px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .view-all-btn:hover {
+      background: var(--green-deep);
+      color: var(--text-white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 800px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, var(--green-deep), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      background: var(--green-light);
+      border: 1px solid rgba(26, 77, 46, 0.1);
+      transition: all 0.35s ease;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--green-deep);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    .service-card:hover .service-icon-text {
+      filter: brightness(10);
+    }
+
+    .service-card h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .service-learn-more {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green-deep);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: auto;
+      transition: gap 0.3s ease;
+    }
+
+    .service-learn-more:hover {
+      gap: 8px;
+    }

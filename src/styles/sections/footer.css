@@ -1,0 +1,33 @@
+/* ========== FOOTER ========== */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      background: var(--bg-cream);
+    }
+
+    footer::before {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 1px;
+      margin: 0 auto 20px;
+      background: linear-gradient(to right, transparent, var(--green-deep), var(--gold), transparent);
+    }
+
+    footer p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    footer .footer-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+    }

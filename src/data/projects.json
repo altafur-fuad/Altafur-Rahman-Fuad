@@ -1,0 +1,214 @@
+[
+  {
+    "id": "asrar-e-tibb",
+    "title": "ASRAR-E-TIBB",
+    "icon": "💊",
+    "featured": true,
+    "status": "Live",
+    "isLive": true,
+    "description": "Comprehensive healthcare ecosystem combining a responsive web storefront, native Flutter Android app, and high-performance Rust Axum API with 2,900+ curated medicine records, Farmacia e-pharmacy checkout, and TibbNews social feed.",
+    "features": [
+      "Curated catalog of 2,900+ medicines with bilingual search & classifications",
+      "Farmacia online pharmacy checkout flow with prescription management",
+      "High-performance backend API powered by Rust Axum with sub-millisecond responses",
+      "TibbNews community feed delivering medical and health updates in real time"
+    ],
+    "tags": [
+      "Medicine Catalog",
+      "Farmacia Checkout",
+      "TibbNews Feed",
+      "Rust Axum"
+    ],
+    "stack": "Flutter · Next.js 14 · Rust Axum · Supabase Realtime",
+    "image": "assets/projects/asrar-farmacia.png",
+    "imageAlt": "Asrar-E-Tibb Healthcare Platform Interface",
+    "liveUrl": "https://asrar-e-tibb.vercel.app/",
+    "githubUrl": "https://github.com/altafur-fuad/Asrar-E-Tibb",
+    "apkUrl": null,
+    "apkBadge": "APK Coming Soon"
+  },
+  {
+    "id": "aupa",
+    "title": "AUPA",
+    "icon": "⚡",
+    "featured": false,
+    "status": "Live",
+    "isLive": true,
+    "description": "Modern food-delivery platform for Bangladesh engineered with a high-performance Flutter mobile client, Go REST backend API under /v1, Supabase PostgreSQL with defense-in-depth RLS, and server-authoritative checkout in poisha.",
+    "tags": [
+      "Food Delivery",
+      "Go REST API",
+      "Poisha Currency",
+      "Idempotent Orders"
+    ],
+    "stack": "Flutter · Go REST API · Supabase PostgreSQL · Docker · Vercel",
+    "image": "assets/projects/aupa-preview.png",
+    "imageAlt": "Aupa Food Delivery Platform Bangladesh Interface",
+    "liveUrl": "https://aupa-ten.vercel.app/",
+    "githubUrl": "https://github.com/altafur-fuad/Aupa",
+    "apkUrl": null,
+    "apkBadge": "APK Coming Soon"
+  },
+  {
+    "id": "payment-chaser",
+    "title": "PAYMENT CHASER",
+    "icon": "💸",
+    "featured": false,
+    "status": "Live",
+    "isLive": true,
+    "description": "Automated accounts receivable and intelligent payment reminder platform for freelancers, agencies, and businesses. Features real-time financial tracking, multi-tier reminder escalation across email and WhatsApp, and client CRM management.",
+    "tags": [
+      "Financial KPIs",
+      "Multi-Tier Escalation",
+      "Client CRM",
+      "Next.js 16"
+    ],
+    "stack": "Next.js 16 · TypeScript · Tailwind CSS v4 · Supabase RLS · Vercel",
+    "image": "assets/projects/payment-chaser-preview.png",
+    "imageAlt": "Payment Chaser Invoicing and Reminder Platform Interface",
+    "liveUrl": "https://payment-chaser-x45p.vercel.app/",
+    "githubUrl": "https://github.com/altafur-fuad/Payment_Chaser",
+    "apkUrl": null,
+    "apkBadge": null
+  },
+  {
+    "id": "lumio",
+    "title": "LUMIO",
+    "icon": "🚀",
+    "featured": true,
+    "status": "Live",
+    "isLive": true,
+    "description": "Share moments. Connect people. — A modern, high-performance social media application built with Flutter & Dart, supporting Android and Responsive Web from a single codebase.",
+    "features": [
+      "Social Feed with stories row, post cards, like animations",
+      "Immersive 9:16 Reels with double-tap heart animations",
+      "Explore & Search with adaptive staggered media grid",
+      "Create Studio with image filters & aspect ratio switches",
+      "Adaptive Navigation — bottom bar, rail, or full sidebar",
+      "100% Dark & Light Mode with custom design system"
+    ],
+    "tags": [
+      "Social Feed",
+      "Stories",
+      "Reels",
+      "Explore",
+      "Create Studio",
+      "Profile"
+    ],
+    "stack": "Flutter 3.35+ · Dart 3.9+ · Outfit + Inter · Mate Design System",
+    "image": "assets/projects/lumio-preview.png",
+    "imageAlt": "Lumio Social Media App Desktop & Mobile Interface Preview",
+    "liveUrl": "https://lumio-ebon.vercel.app/",
+    "githubUrl": "https://github.com/altafur-fuad/Lumio",
+    "apkUrl": null,
+    "apkBadge": "APK Coming Soon"
+  },
+  {
+    "id": "medilens",
+    "title": "MEDILENS",
+    "icon": "🩺",
+    "featured": false,
+    "status": "SDP-1 · Source Code",
+    "isLive": false,
+    "description": "Bilingual (Bangla + English) medicine information app covering veterinary, herbal, Unani, Ayurvedic, and conventional English medicine, with natural ingredient details and offline datasets.",
+    "tags": [
+      "Bilingual",
+      "Unani & Herbal",
+      "Offline Support"
+    ],
+    "stack": "Flutter · Multi-language · Dart",
+    "image": null,
+    "imageAlt": null,
+    "liveUrl": null,
+    "githubUrl": "https://github.com/altafur-fuad/Medilens",
+    "apkUrl": null,
+    "apkBadge": null
+  },
+  {
+    "id": "taqwa-tracker",
+    "title": "TAQWA TRACKER",
+    "icon": "🕌",
+    "featured": false,
+    "status": "Live",
+    "isLive": true,
+    "description": "Daily Salah prayer times calculation, Hijri date tracking, and sunrise/sunset monitoring app built to help Muslims stay consistent with daily religious practice across web and mobile.",
+    "tags": [
+      "Prayer Times",
+      "Hijri Calendar",
+      "Spiritual Habits"
+    ],
+    "stack": "Flutter · Android · Web · Codemagic",
+    "image": "assets/projects/taqwa-tracker-preview.png",
+    "imageAlt": "Taqwa Tracker Prayer Times Web App Interface",
+    "liveUrl": "https://taqwa-tracker-three.vercel.app/",
+    "githubUrl": "https://github.com/altafur-fuad/Taqwa_Tracker",
+    "apkUrl": null,
+    "apkBadge": "APK Coming Soon"
+  },
+  {
+    "id": "crossmamba-tracker",
+    "title": "CROSSMAMBA-AGRI TRACKER",
+    "icon": "🌾",
+    "featured": false,
+    "status": "Live",
+    "isLive": true,
+    "description": "Live progress tracker for the CrossMamba-Agri undergraduate thesis — logging research milestones, dataset preprocessing protocols, clean parent split evaluation, and dual-task diagnostic results as the research advances.",
+    "tags": [
+      "Thesis Tooling",
+      "Vision Mamba",
+      "Milestone Logging"
+    ],
+    "stack": "Research Tooling · HTML/CSS/JS · Vercel",
+    "image": "assets/projects/crossmamba-tracker-preview.png",
+    "imageAlt": "CrossMamba-Agri Thesis Progress Tracker Interface",
+    "liveUrl": "https://crossmamba-agri-tracker.vercel.app/",
+    "githubUrl": "https://github.com/altafur-fuad/crossmamba-agri-tracker",
+    "modelUrl": "https://github.com/altafur-fuad/CrossMamba-Agri-Thesis",
+    "apkUrl": null,
+    "apkBadge": null
+  },
+  {
+    "id": "applyx",
+    "title": "APPLYX",
+    "icon": "🎯",
+    "featured": false,
+    "status": "In Progress",
+    "isLive": false,
+    "description": "Mobile-first agentic AI opportunity-management app for students and early-career users. Built around observable tool-using agent workflows for opportunity research, eligibility analysis, and application preparation with human-in-the-loop approvals.",
+    "tags": [
+      "Agentic AI",
+      "FastAPI",
+      "LangGraph",
+      "Tool-Using Agents"
+    ],
+    "stack": "Flutter · FastAPI (Python) · Supabase RLS · LangGraph",
+    "image": null,
+    "imageAlt": null,
+    "liveUrl": null,
+    "githubUrl": "https://github.com/altafur-fuad/ApplyX",
+    "apkUrl": null,
+    "apkBadge": "Source Code Available"
+  },
+  {
+    "id": "dsa",
+    "title": "DSA PRACTICE",
+    "icon": "💻",
+    "featured": false,
+    "status": "Ongoing",
+    "isLive": false,
+    "description": "A running repository of data structures and algorithms practice — problems, solutions, and notes as I sharpen core CS fundamentals across trees, graphs, dynamic programming, and system design.",
+    "tags": [
+      "Algorithms",
+      "Data Structures",
+      "Problem Solving"
+    ],
+    "stack": "DSA · Problem Solving · Core CS",
+    "image": null,
+    "imageAlt": null,
+    "liveUrl": null,
+    "githubUrl": "https://github.com/altafur-fuad/DSA",
+    "apkUrl": null,
+    "apkBadge": null
+  }
+]
+

@@ -1,0 +1,21 @@
+/* ============================================================
+   ALTAFUR RAHMAN FUAD PORTFOLIO — MASTER STYLESHEET
+   Assembled from modular section stylesheets in src/styles/
+   ============================================================ */
+
+@import "tokens.css";
+@import "base.css";
+@import "layout.css";
+@import "components.css";
+@import "sections/navbar.css";
+@import "sections/hero.css";
+@import "sections/about.css";
+@import "sections/services.css";
+@import "sections/education.css";
+@import "sections/research.css";
+@import "sections/projects.css";
+@import "sections/skills.css";
+@import "sections/vision.css";
+@import "sections/resume.css";
+@import "sections/contact.css";
+@import "sections/footer.css";

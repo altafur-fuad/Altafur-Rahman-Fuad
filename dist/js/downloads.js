@@ -77,3 +77,4 @@ if (typeof window !== 'undefined') {
   window.handlePaperDownload = handlePaperDownload;
   window.showPortfolioToast = showPortfolioToast;
 }
+
